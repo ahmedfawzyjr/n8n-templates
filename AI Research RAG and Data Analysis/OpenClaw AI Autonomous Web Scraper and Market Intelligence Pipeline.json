@@ -1,0 +1,381 @@
+{
+  "name": "OpenClaw AI Autonomous Web Scraper and Market Intelligence Pipeline",
+  "nodes": [
+    {
+      "id": "e4f40004-0004-4000-8000-000000000001",
+      "name": "Scrape Task Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -780,
+        220
+      ],
+      "webhookId": "openclaw-scrape-trigger",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "openclaw-market-scraper",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000002",
+      "name": "Prepare Scraper Parameters",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst targetUrl = item.body?.url || item.url || 'https://news.ycombinator.com';\nconst category = item.body?.category || item.category || 'Competitor Analysis';\nconst extractionSchema = item.body?.schema || 'pricing_and_features';\n\nreturn [{\n  json: {\n    targetUrl,\n    category,\n    extractionSchema,\n    jobId: 'OPENCLAW-' + Date.now(),\n    initiatedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000003",
+      "name": "Dispatch OpenClaw Scraper API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -340,
+        220
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openclaw.dev/v1/crawl",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.OPENCLAW_API_KEY || 'OPENCLAW_API_KEY_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $json.targetUrl }}"
+            },
+            {
+              "name": "render_js",
+              "value": "true"
+            },
+            {
+              "name": "anti_bot_bypass",
+              "value": "true"
+            },
+            {
+              "name": "extract_markdown",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000004",
+      "name": "Sanitize & Optimize Clean Markdown",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -120,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst initial = $('Prepare Scraper Parameters').first().json;\nconst rawMarkdown = item.json.markdown || item.json.content || item.json.html || 'No markdown returned from OpenClaw scraper.';\n\n// Clean up excessive whitespace, scripts, headers\nconst cleanContent = rawMarkdown\n  .replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '')\n  .replace(/<style\\b[^<]*(?:(?!<\\/style>)<[^<]*)*<\\/style>/gi, '')\n  .replace(/\\n{3,}/g, '\\n\\n')\n  .trim()\n  .slice(0, 12000);\n\nreturn [{\n  json: {\n    jobId: initial.jobId,\n    targetUrl: initial.targetUrl,\n    category: initial.category,\n    scrapedContent: cleanContent,\n    contentLength: cleanContent.length,\n    scrapedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000005",
+      "name": "OpenClaw Market Intelligence AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        120,
+        220
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Analyze the scraped web content from {{ $json.targetUrl }} and extract structured market intelligence:\n\nScraped Content:\n{{ $json.scrapedContent }}\n\nExtract and return pure JSON with:\n1. 'product_or_company_name' (string)\n2. 'headline' (string summary of page value proposition)\n3. 'key_pricing_tiers': array of objects { tier_name, price, billing_period, notable_features }\n4. 'detected_features': array of strings\n5. 'competitor_moves_or_updates': string summary of any new product announcements or changes\n6. 'sentiment_or_market_stance': 'aggressive', 'neutral', 'discounted', or 'premium'\n7. 'price_drop_detected': boolean (true if discounts/promotions found)",
+        "options": {
+          "systemMessage": "You are OpenClaw Market Intelligence AI. You parse raw scraped web content into highly accurate structured competitor and pricing data in pure JSON format."
+        }
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000006",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        120,
+        440
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000007",
+      "name": "Parse Intelligence & Alert Flags",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        360,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst scrapeMeta = $('Sanitize & Optimize Clean Markdown').first().json;\nlet parsed = item.json.output || item.json.text || item.json;\n\nif (typeof parsed === 'string') {\n  try {\n    parsed = JSON.parse(parsed);\n  } catch (e) {\n    const match = parsed.match(/\\{[\\s\\S]*\\}/);\n    if (match) parsed = JSON.parse(match[0]);\n  }\n}\n\nconst hasPriceDrop = !!parsed.price_drop_detected || parsed.sentiment_or_market_stance === 'discounted';\nconst summaryText = `${parsed.product_or_company_name || 'Competitor'}: ${parsed.headline || ''}`;\n\nreturn [{\n  json: {\n    ...parsed,\n    jobId: scrapeMeta.jobId,\n    targetUrl: scrapeMeta.targetUrl,\n    category: scrapeMeta.category,\n    summaryText: summaryText,\n    hasPriceDrop: hasPriceDrop,\n    processedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000008",
+      "name": "Baserow Save Market Intel Record",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        600,
+        140
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.baserow.io/api/database/rows/table/your_baserow_table_id/?user_field_names=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Token {{ $env.BASEROW_TOKEN || 'BASEROW_API_TOKEN' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "Company",
+              "value": "={{ $json.product_or_company_name }}"
+            },
+            {
+              "name": "URL",
+              "value": "={{ $json.targetUrl }}"
+            },
+            {
+              "name": "Headline",
+              "value": "={{ $json.headline }}"
+            },
+            {
+              "name": "Sentiment",
+              "value": "={{ $json.sentiment_or_market_stance }}"
+            },
+            {
+              "name": "Pricing Data",
+              "value": "={{ JSON.stringify($json.key_pricing_tiers) }}"
+            },
+            {
+              "name": "Competitor Moves",
+              "value": "={{ $json.competitor_moves_or_updates }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000009",
+      "name": "If Price Drop or Major Intel Alert",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        820,
+        220
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "price-drop-check",
+              "leftValue": "={{ $json.hasPriceDrop }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "e4f40004-0004-4000-8000-000000000010",
+      "name": "Telegram Market Intelligence Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1060,
+        140
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "@market_intel_alerts",
+        "text": "=⚡ *OpenClaw Market Intelligence Alert*\n• *Target:* [{{ $json.product_or_company_name }}]({{ $json.targetUrl }})\n• *Headline:* {{ $json.headline }}\n• *Market Stance:* `{{ $json.sentiment_or_market_stance }}`\n• *Competitor Moves:* {{ $json.competitor_moves_or_updates }}\n\n🏷️ *Price/Discount Event Detected:* Review updated tiers in Baserow.",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramCredentials",
+          "name": "Telegram Alert Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Scrape Task Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Scraper Parameters",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Scraper Parameters": {
+      "main": [
+        [
+          {
+            "node": "Dispatch OpenClaw Scraper API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dispatch OpenClaw Scraper API": {
+      "main": [
+        [
+          {
+            "node": "Sanitize & Optimize Clean Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sanitize & Optimize Clean Markdown": {
+      "main": [
+        [
+          {
+            "node": "OpenClaw Market Intelligence AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "OpenClaw Market Intelligence AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenClaw Market Intelligence AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Parse Intelligence & Alert Flags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Intelligence & Alert Flags": {
+      "main": [
+        [
+          {
+            "node": "Baserow Save Market Intel Record",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If Price Drop or Major Intel Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Price Drop or Major Intel Alert": {
+      "main": [
+        [
+          {
+            "node": "Telegram Market Intelligence Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "6a1948ba201e491298418012984ba10294819e91823908f51a23801298371902"
+  },
+  "tags": [
+    {
+      "name": "OpenClaw"
+    },
+    {
+      "name": "Web Scraping"
+    },
+    {
+      "name": "Market Intelligence"
+    },
+    {
+      "name": "AI Agents"
+    }
+  ]
+}

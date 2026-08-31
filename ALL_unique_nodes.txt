@@ -1,0 +1,262 @@
+# n8n Awesome Templates - Complete Unique Nodes Catalog
+Total Workflows Analyzed: 358
+Total Unique Node Types: 209
+Total Node Instances in Repository: 6459
+================================================================================
+
+## All Unique Node Types (Alphabetical Order)
+
+- @cradl/n8n-nodes-cradlai.cradlAi (used in 1 nodes)
+- @n8n/n8n-nodes-langchain.agent (used in 137 nodes)
+- @n8n/n8n-nodes-langchain.chainLlm (used in 80 nodes)
+- @n8n/n8n-nodes-langchain.chainRetrievalQa (used in 9 nodes)
+- @n8n/n8n-nodes-langchain.chainSummarization (used in 15 nodes)
+- @n8n/n8n-nodes-langchain.chatTrigger (used in 54 nodes)
+- @n8n/n8n-nodes-langchain.code (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.documentBinaryInputLoader (used in 1 nodes)
+- @n8n/n8n-nodes-langchain.documentDefaultDataLoader (used in 35 nodes)
+- @n8n/n8n-nodes-langchain.documentJsonInputLoader (used in 1 nodes)
+- @n8n/n8n-nodes-langchain.embeddingsGoogleGemini (used in 9 nodes)
+- @n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.embeddingsMistralCloud (used in 6 nodes)
+- @n8n/n8n-nodes-langchain.embeddingsOpenAi (used in 46 nodes)
+- @n8n/n8n-nodes-langchain.informationExtractor (used in 25 nodes)
+- @n8n/n8n-nodes-langchain.lmChatAnthropic (used in 7 nodes)
+- @n8n/n8n-nodes-langchain.lmChatDeepSeek (used in 1 nodes)
+- @n8n/n8n-nodes-langchain.lmChatGoogleGemini (used in 34 nodes)
+- @n8n/n8n-nodes-langchain.lmChatGroq (used in 7 nodes)
+- @n8n/n8n-nodes-langchain.lmChatMistralCloud (used in 7 nodes)
+- @n8n/n8n-nodes-langchain.lmChatOllama (used in 8 nodes)
+- @n8n/n8n-nodes-langchain.lmChatOpenAi (used in 234 nodes)
+- @n8n/n8n-nodes-langchain.lmChatOpenRouter (used in 4 nodes)
+- @n8n/n8n-nodes-langchain.lmOllama (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.lmOpenAi (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.manualChatTrigger (used in 6 nodes)
+- @n8n/n8n-nodes-langchain.memoryBufferWindow (used in 62 nodes)
+- @n8n/n8n-nodes-langchain.memoryManager (used in 6 nodes)
+- @n8n/n8n-nodes-langchain.memoryPostgresChat (used in 6 nodes)
+- @n8n/n8n-nodes-langchain.openAi (used in 98 nodes)
+- @n8n/n8n-nodes-langchain.openAiAssistant (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.outputParserAutofixing (used in 11 nodes)
+- @n8n/n8n-nodes-langchain.outputParserItemList (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.outputParserStructured (used in 55 nodes)
+- @n8n/n8n-nodes-langchain.retrieverVectorStore (used in 8 nodes)
+- @n8n/n8n-nodes-langchain.retrieverWorkflow (used in 1 nodes)
+- @n8n/n8n-nodes-langchain.sentimentAnalysis (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.textClassifier (used in 15 nodes)
+- @n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter (used in 27 nodes)
+- @n8n/n8n-nodes-langchain.textSplitterTokenSplitter (used in 12 nodes)
+- @n8n/n8n-nodes-langchain.toolCalculator (used in 7 nodes)
+- @n8n/n8n-nodes-langchain.toolCode (used in 5 nodes)
+- @n8n/n8n-nodes-langchain.toolHttpRequest (used in 33 nodes)
+- @n8n/n8n-nodes-langchain.toolSerpApi (used in 3 nodes)
+- @n8n/n8n-nodes-langchain.toolVectorStore (used in 9 nodes)
+- @n8n/n8n-nodes-langchain.toolWikipedia (used in 11 nodes)
+- @n8n/n8n-nodes-langchain.toolWorkflow (used in 46 nodes)
+- @n8n/n8n-nodes-langchain.vectorStoreInMemory (used in 6 nodes)
+- @n8n/n8n-nodes-langchain.vectorStorePGVector (used in 2 nodes)
+- @n8n/n8n-nodes-langchain.vectorStorePinecone (used in 16 nodes)
+- @n8n/n8n-nodes-langchain.vectorStoreQdrant (used in 27 nodes)
+- @n8n/n8n-nodes-langchain.vectorStoreSupabase (used in 13 nodes)
+- n8n-nodes-base.aggregate (used in 48 nodes)
+- n8n-nodes-base.airtable (used in 70 nodes)
+- n8n-nodes-base.airtableTool (used in 9 nodes)
+- n8n-nodes-base.airtableTrigger (used in 2 nodes)
+- n8n-nodes-base.awsComprehend (used in 1 nodes)
+- n8n-nodes-base.bambooHr (used in 5 nodes)
+- n8n-nodes-base.bannerbear (used in 1 nodes)
+- n8n-nodes-base.baserow (used in 3 nodes)
+- n8n-nodes-base.baserowTool (used in 2 nodes)
+- n8n-nodes-base.clickUp (used in 1 nodes)
+- n8n-nodes-base.code (used in 264 nodes)
+- n8n-nodes-base.compression (used in 3 nodes)
+- n8n-nodes-base.convertToFile (used in 15 nodes)
+- n8n-nodes-base.cron (used in 2 nodes)
+- n8n-nodes-base.crypto (used in 5 nodes)
+- n8n-nodes-base.dataTable (used in 2 nodes)
+- n8n-nodes-base.dataTableTool (used in 1 nodes)
+- n8n-nodes-base.dateTime (used in 5 nodes)
+- n8n-nodes-base.dhl (used in 1 nodes)
+- n8n-nodes-base.discord (used in 7 nodes)
+- n8n-nodes-base.dropbox (used in 2 nodes)
+- n8n-nodes-base.editImage (used in 18 nodes)
+- n8n-nodes-base.elasticsearch (used in 1 nodes)
+- n8n-nodes-base.emailReadImap (used in 7 nodes)
+- n8n-nodes-base.emailSend (used in 19 nodes)
+- n8n-nodes-base.erpNext (used in 3 nodes)
+- n8n-nodes-base.errorTrigger (used in 1 nodes)
+- n8n-nodes-base.executeCommand (used in 4 nodes)
+- n8n-nodes-base.executeWorkflow (used in 21 nodes)
+- n8n-nodes-base.executeWorkflowTrigger (used in 44 nodes)
+- n8n-nodes-base.executionData (used in 3 nodes)
+- n8n-nodes-base.extractFromFile (used in 37 nodes)
+- n8n-nodes-base.facebookGraphApi (used in 4 nodes)
+- n8n-nodes-base.filter (used in 45 nodes)
+- n8n-nodes-base.form (used in 19 nodes)
+- n8n-nodes-base.formTrigger (used in 23 nodes)
+- n8n-nodes-base.function (used in 4 nodes)
+- n8n-nodes-base.functionItem (used in 1 nodes)
+- n8n-nodes-base.github (used in 2 nodes)
+- n8n-nodes-base.gmail (used in 52 nodes)
+- n8n-nodes-base.gmailTool (used in 7 nodes)
+- n8n-nodes-base.gmailTrigger (used in 18 nodes)
+- n8n-nodes-base.googleAnalytics (used in 8 nodes)
+- n8n-nodes-base.googleAnalyticsTool (used in 1 nodes)
+- n8n-nodes-base.googleCalendar (used in 7 nodes)
+- n8n-nodes-base.googleCalendarTool (used in 8 nodes)
+- n8n-nodes-base.googleCloudNaturalLanguage (used in 5 nodes)
+- n8n-nodes-base.googleCloudStorage (used in 1 nodes)
+- n8n-nodes-base.googleDocs (used in 8 nodes)
+- n8n-nodes-base.googleDocsTool (used in 5 nodes)
+- n8n-nodes-base.googleDrive (used in 56 nodes)
+- n8n-nodes-base.googleDriveTrigger (used in 9 nodes)
+- n8n-nodes-base.googlePerspective (used in 1 nodes)
+- n8n-nodes-base.googleSheets (used in 100 nodes)
+- n8n-nodes-base.googleSheetsTool (used in 2 nodes)
+- n8n-nodes-base.googleSheetsTrigger (used in 3 nodes)
+- n8n-nodes-base.graphql (used in 1 nodes)
+- n8n-nodes-base.hackerNews (used in 3 nodes)
+- n8n-nodes-base.html (used in 45 nodes)
+- n8n-nodes-base.httpRequest (used in 461 nodes)
+- n8n-nodes-base.httpRequestTool (used in 1 nodes)
+- n8n-nodes-base.hubspot (used in 7 nodes)
+- n8n-nodes-base.hubspotTrigger (used in 1 nodes)
+- n8n-nodes-base.humanticAi (used in 3 nodes)
+- n8n-nodes-base.if (used in 192 nodes)
+- n8n-nodes-base.interval (used in 1 nodes)
+- n8n-nodes-base.itemLists (used in 7 nodes)
+- n8n-nodes-base.jira (used in 14 nodes)
+- n8n-nodes-base.jiraTool (used in 1 nodes)
+- n8n-nodes-base.lemlist (used in 2 nodes)
+- n8n-nodes-base.lemlistTrigger (used in 2 nodes)
+- n8n-nodes-base.limit (used in 21 nodes)
+- n8n-nodes-base.linear (used in 4 nodes)
+- n8n-nodes-base.linearTrigger (used in 1 nodes)
+- n8n-nodes-base.linkedIn (used in 3 nodes)
+- n8n-nodes-base.localFileTrigger (used in 4 nodes)
+- n8n-nodes-base.manualTrigger (used in 118 nodes)
+- n8n-nodes-base.markdown (used in 24 nodes)
+- n8n-nodes-base.mattermost (used in 2 nodes)
+- n8n-nodes-base.merge (used in 100 nodes)
+- n8n-nodes-base.microsoftOneDrive (used in 1 nodes)
+- n8n-nodes-base.microsoftOutlook (used in 20 nodes)
+- n8n-nodes-base.microsoftOutlookTool (used in 1 nodes)
+- n8n-nodes-base.microsoftOutlookTrigger (used in 2 nodes)
+- n8n-nodes-base.mondayCom (used in 1 nodes)
+- n8n-nodes-base.mongoDb (used in 1 nodes)
+- n8n-nodes-base.mongoDbTool (used in 1 nodes)
+- n8n-nodes-base.moveBinaryData (used in 2 nodes)
+- n8n-nodes-base.mySql (used in 3 nodes)
+- n8n-nodes-base.mySqlTool (used in 1 nodes)
+- n8n-nodes-base.n8n (used in 4 nodes)
+- n8n-nodes-base.noOp (used in 65 nodes)
+- n8n-nodes-base.nocoDb (used in 1 nodes)
+- n8n-nodes-base.notion (used in 19 nodes)
+- n8n-nodes-base.notionTool (used in 1 nodes)
+- n8n-nodes-base.notionTrigger (used in 3 nodes)
+- n8n-nodes-base.openAi (used in 38 nodes)
+- n8n-nodes-base.pipedrive (used in 4 nodes)
+- n8n-nodes-base.pipedriveTrigger (used in 1 nodes)
+- n8n-nodes-base.postgres (used in 14 nodes)
+- n8n-nodes-base.postgresTool (used in 7 nodes)
+- n8n-nodes-base.quickChart (used in 1 nodes)
+- n8n-nodes-base.readBinaryFile (used in 2 nodes)
+- n8n-nodes-base.readBinaryFiles (used in 1 nodes)
+- n8n-nodes-base.readPDF (used in 1 nodes)
+- n8n-nodes-base.readWriteFile (used in 12 nodes)
+- n8n-nodes-base.reddit (used in 1 nodes)
+- n8n-nodes-base.redis (used in 8 nodes)
+- n8n-nodes-base.removeDuplicates (used in 8 nodes)
+- n8n-nodes-base.respondToWebhook (used in 84 nodes)
+- n8n-nodes-base.rssFeedRead (used in 1 nodes)
+- n8n-nodes-base.rssFeedReadTrigger (used in 2 nodes)
+- n8n-nodes-base.s3 (used in 2 nodes)
+- n8n-nodes-base.scheduleTrigger (used in 58 nodes)
+- n8n-nodes-base.set (used in 519 nodes)
+- n8n-nodes-base.slack (used in 34 nodes)
+- n8n-nodes-base.sort (used in 6 nodes)
+- n8n-nodes-base.splitInBatches (used in 53 nodes)
+- n8n-nodes-base.splitOut (used in 94 nodes)
+- n8n-nodes-base.spotify (used in 8 nodes)
+- n8n-nodes-base.spreadsheetFile (used in 1 nodes)
+- n8n-nodes-base.ssh (used in 8 nodes)
+- n8n-nodes-base.start (used in 1 nodes)
+- n8n-nodes-base.stickyNote (used in 1693 nodes)
+- n8n-nodes-base.stopAndError (used in 7 nodes)
+- n8n-nodes-base.strapi (used in 3 nodes)
+- n8n-nodes-base.stravaTrigger (used in 1 nodes)
+- n8n-nodes-base.summarize (used in 7 nodes)
+- n8n-nodes-base.supabase (used in 19 nodes)
+- n8n-nodes-base.switch (used in 63 nodes)
+- n8n-nodes-base.telegram (used in 126 nodes)
+- n8n-nodes-base.telegramTool (used in 1 nodes)
+- n8n-nodes-base.telegramTrigger (used in 23 nodes)
+- n8n-nodes-base.todoist (used in 2 nodes)
+- n8n-nodes-base.trello (used in 1 nodes)
+- n8n-nodes-base.twilio (used in 4 nodes)
+- n8n-nodes-base.twilioTrigger (used in 2 nodes)
+- n8n-nodes-base.twitter (used in 6 nodes)
+- n8n-nodes-base.typeformTrigger (used in 3 nodes)
+- n8n-nodes-base.venafiTlsProtectCloud (used in 2 nodes)
+- n8n-nodes-base.wait (used in 39 nodes)
+- n8n-nodes-base.webflow (used in 1 nodes)
+- n8n-nodes-base.webhook (used in 81 nodes)
+- n8n-nodes-base.whatsApp (used in 12 nodes)
+- n8n-nodes-base.whatsAppTrigger (used in 2 nodes)
+- n8n-nodes-base.whatsapp (used in 2 nodes)
+- n8n-nodes-base.wooCommerce (used in 1 nodes)
+- n8n-nodes-base.wooCommerceTool (used in 1 nodes)
+- n8n-nodes-base.wordpress (used in 13 nodes)
+- n8n-nodes-base.writeBinaryFile (used in 2 nodes)
+- n8n-nodes-base.youTube (used in 4 nodes)
+- n8n-nodes-base.zendesk (used in 2 nodes)
+- n8n-nodes-base.zoom (used in 1 nodes)
+- n8n-nodes-fiwano.fiwano (used in 2 nodes)
+- n8n-nodes-fiwano.fiwanoTrigger (used in 1 nodes)
+- n8n-nodes-gcf.gcf (used in 2 nodes)
+- n8n-nodes-youtube-transcription.youtubeTranscripter (used in 1 nodes)
+
+================================================================================
+
+## Top 40 Most Frequently Used Node Types
+
+ 1. n8n-nodes-base.stickyNote                                         : 1693 instances
+ 2. n8n-nodes-base.set                                                :  519 instances
+ 3. n8n-nodes-base.httpRequest                                        :  461 instances
+ 4. n8n-nodes-base.code                                               :  264 instances
+ 5. @n8n/n8n-nodes-langchain.lmChatOpenAi                             :  234 instances
+ 6. n8n-nodes-base.if                                                 :  192 instances
+ 7. @n8n/n8n-nodes-langchain.agent                                    :  137 instances
+ 8. n8n-nodes-base.telegram                                           :  126 instances
+ 9. n8n-nodes-base.manualTrigger                                      :  118 instances
+10. n8n-nodes-base.merge                                              :  100 instances
+11. n8n-nodes-base.googleSheets                                       :  100 instances
+12. @n8n/n8n-nodes-langchain.openAi                                   :   98 instances
+13. n8n-nodes-base.splitOut                                           :   94 instances
+14. n8n-nodes-base.respondToWebhook                                   :   84 instances
+15. n8n-nodes-base.webhook                                            :   81 instances
+16. @n8n/n8n-nodes-langchain.chainLlm                                 :   80 instances
+17. n8n-nodes-base.airtable                                           :   70 instances
+18. n8n-nodes-base.noOp                                               :   65 instances
+19. n8n-nodes-base.switch                                             :   63 instances
+20. @n8n/n8n-nodes-langchain.memoryBufferWindow                       :   62 instances
+21. n8n-nodes-base.scheduleTrigger                                    :   58 instances
+22. n8n-nodes-base.googleDrive                                        :   56 instances
+23. @n8n/n8n-nodes-langchain.outputParserStructured                   :   55 instances
+24. @n8n/n8n-nodes-langchain.chatTrigger                              :   54 instances
+25. n8n-nodes-base.splitInBatches                                     :   53 instances
+26. n8n-nodes-base.gmail                                              :   52 instances
+27. n8n-nodes-base.aggregate                                          :   48 instances
+28. @n8n/n8n-nodes-langchain.embeddingsOpenAi                         :   46 instances
+29. @n8n/n8n-nodes-langchain.toolWorkflow                             :   46 instances
+30. n8n-nodes-base.filter                                             :   45 instances
+31. n8n-nodes-base.html                                               :   45 instances
+32. n8n-nodes-base.executeWorkflowTrigger                             :   44 instances
+33. n8n-nodes-base.wait                                               :   39 instances
+34. n8n-nodes-base.openAi                                             :   38 instances
+35. n8n-nodes-base.extractFromFile                                    :   37 instances
+36. @n8n/n8n-nodes-langchain.documentDefaultDataLoader                :   35 instances
+37. n8n-nodes-base.slack                                              :   34 instances
+38. @n8n/n8n-nodes-langchain.lmChatGoogleGemini                       :   34 instances
+39. @n8n/n8n-nodes-langchain.toolHttpRequest                          :   33 instances
+40. @n8n/n8n-nodes-langchain.vectorStoreQdrant                        :   27 instances

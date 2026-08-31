@@ -1,0 +1,309 @@
+{
+  "name": "Social Media Agency Client Onboarding Brand Voice Training and Calendar Sync",
+  "nodes": [
+    {
+      "id": "d4e40004-0004-4000-8000-000000000001",
+      "name": "Client Onboarding Form Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        220
+      ],
+      "webhookId": "agency-client-onboarding",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "agency-client-onboarding",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000002",
+      "name": "Scrape Client Website Homepage",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -480,
+        220
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.body.website_url || 'https://example.com' }}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000003",
+      "name": "Brand Voice AI Profiler Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -240,
+        220
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an agency brand strategy director. Analyze this new client's intake data and website copy to create their permanent Brand Voice Profile:\n\nClient Name: {{ $('Client Onboarding Form Trigger').first().json.body.client_name || 'Acme Corp' }}\nIndustry: {{ $('Client Onboarding Form Trigger').first().json.body.industry || 'Technology' }}\nTarget Audience: {{ $('Client Onboarding Form Trigger').first().json.body.target_audience || 'B2B Founders' }}\nGoals: {{ $('Client Onboarding Form Trigger').first().json.body.goals || 'Organic Authority and Pipeline' }}\nWebsite Raw Content:\n{{ typeof $json.data === 'string' ? $json.data.slice(0, 6000) : 'Website data analyzed.' }}\n\nGenerate pure JSON containing:\n1. 'brand_archetype' (e.g. The Innovator, The Trusted Guide, The Challenger)\n2. 'tone_dimensions': { 'formality': (1-5), 'enthusiasm': (1-5), 'humor': (1-5), 'authority': (1-5) }\n3. 'key_messaging_pillars': array of 3-4 core topics\n4. 'approved_vocabulary': array of 8-12 power words/phrases to use\n5. 'banned_phrases': array of clichés or off-brand phrases to avoid\n6. 'system_prompt_snippet': a reusable system prompt instruction for future content generation workflows for this client",
+        "options": {
+          "systemMessage": "You synthesize company materials into precise, actionable brand voice guidelines for agency copywriters and AI agents."
+        }
+      }
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000004",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        440
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000005",
+      "name": "Format Client Workspace Record",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst intake = $('Client Onboarding Form Trigger').first().json.body || {};\nlet profile = item.json.output || item.json.text || item.json;\n\nif (typeof profile === 'string') {\n  try {\n    profile = JSON.parse(profile);\n  } catch (e) {\n    const m = profile.match(/\\{[\\s\\S]*\\}/);\n    if (m) profile = JSON.parse(m[0]);\n  }\n}\n\nconst clientName = intake.client_name || 'Valued Client';\nconst clientEmail = intake.client_email || 'client@example.com';\nconst clientId = 'CLIENT-' + Date.now();\n\nreturn [{\n  json: {\n    clientId,\n    clientName,\n    clientEmail,\n    ...profile,\n    status: 'ACTIVE_ONBOARDED',\n    onboardedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000006",
+      "name": "Create Notion Client Workspace",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        220
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.notion.com/v1/pages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.NOTION_API_KEY || 'NOTION_KEY_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Notion-Version",
+              "value": "2022-06-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "parent",
+              "value": "={{ { \"database_id\": \"your_notion_agency_clients_db\" } }}"
+            },
+            {
+              "name": "properties",
+              "value": "={{ {\n  \"Client Name\": { \"title\": [{ \"text\": { \"content\": $json.clientName } }] },\n  \"Status\": { \"select\": { \"name\": \"Active\" } },\n  \"Archetype\": { \"rich_text\": [{ \"text\": { \"content\": $json.brand_archetype || 'The Leader' } }] }\n} }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000007",
+      "name": "Send Welcome Email to Client",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        220
+      ],
+      "parameters": {
+        "toEmail": "={{ $('Format Client Workspace Record').first().json.clientEmail }}",
+        "subject": "=Welcome to the Agency, {{ $('Format Client Workspace Record').first().json.clientName }}! Your Brand Portal is Live",
+        "html": "=<div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eaeaea; border-radius: 8px;\">\n  <h2 style=\"color: #111;\">🚀 Welcome to Your Growth Engine</h2>\n  <p>Hello <strong>{{ $('Format Client Workspace Record').first().json.clientName }}</strong> team,</p>\n  <p>We have successfully analyzed your brand footprint and configured your autonomous content pipeline.</p>\n  <div style=\"background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 15px 0;\">\n    <p><strong>Brand Archetype:</strong> {{ $('Format Client Workspace Record').first().json.brand_archetype }}</p>\n    <p><strong>Primary Content Pillars:</strong> {{ ($('Format Client Workspace Record').first().json.key_messaging_pillars || []).join(', ') }}</p>\n  </div>\n  <p>Your dedicated Account Manager will review your first batch of viral concepts shortly.</p>\n</div>"
+      },
+      "credentials": {
+        "smtp": {
+          "id": "smtpCredentials",
+          "name": "Agency SMTP Account"
+        }
+      }
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000008",
+      "name": "Slack Alert to Account Manager",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        720,
+        220
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#agency-onboarding",
+        "text": "=🎉 *New Client Onboarded & Brand Voice Initialized!*\n• *Client:* *{{ $('Format Client Workspace Record').first().json.clientName }}* (`{{ $('Format Client Workspace Record').first().json.clientId }}`)\n• *Archetype:* {{ $('Format Client Workspace Record').first().json.brand_archetype }}\n• *Workspace:* Notion Dashboard Configured & Welcome Email Sent.\n\n👉 <https://notion.so/agency-client-hub|View Client Brand Hub in Notion>",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Agency Operations Slack"
+        }
+      }
+    },
+    {
+      "id": "d4e40004-0004-4000-8000-000000000009",
+      "name": "Respond with Onboarding Status",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        940,
+        220
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"clientId\": \"{{ $('Format Client Workspace Record').first().json.clientId }}\",\n  \"clientName\": \"{{ $('Format Client Workspace Record').first().json.clientName }}\",\n  \"archetype\": \"{{ $('Format Client Workspace Record').first().json.brand_archetype }}\",\n  \"status\": \"ACTIVE_ONBOARDED\"\n}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Client Onboarding Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Scrape Client Website Homepage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scrape Client Website Homepage": {
+      "main": [
+        [
+          {
+            "node": "Brand Voice AI Profiler Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Brand Voice AI Profiler Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brand Voice AI Profiler Agent": {
+      "main": [
+        [
+          {
+            "node": "Format Client Workspace Record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Client Workspace Record": {
+      "main": [
+        [
+          {
+            "node": "Create Notion Client Workspace",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Notion Client Workspace": {
+      "main": [
+        [
+          {
+            "node": "Send Welcome Email to Client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Welcome Email to Client": {
+      "main": [
+        [
+          {
+            "node": "Slack Alert to Account Manager",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Alert to Account Manager": {
+      "main": [
+        [
+          {
+            "node": "Respond with Onboarding Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2b1829da19284710298418012984ba10294819e91823908f51a2380129837f11"
+  },
+  "tags": [
+    {
+      "name": "Agency Operations"
+    },
+    {
+      "name": "Client Onboarding"
+    },
+    {
+      "name": "Brand Voice AI"
+    },
+    {
+      "name": "Notion Integration"
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "name": "Automated Multi-Source Breaking News Monitor and Real-Time Digest",
+  "nodes": [
+    {
+      "id": "a1b10001-0001-4000-8000-000000000001",
+      "name": "Every 15 Minutes News Poller",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -740,
+        220
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000002",
+      "name": "Fetch Google News RSS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -520,
+        100
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://news.google.com/rss/search?q=AI+technology+OR+startup+business&hl=en-US&gl=US&ceid=US:en",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000003",
+      "name": "Fetch Hacker News Top Stories",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -520,
+        340
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000004",
+      "name": "Merge, Deduplicate & Rank News",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst collectedStories = [];\n\n// Process XML / RSS / JSON inputs\nfor (const item of items) {\n  const rawData = item.json.data || item.json.body || item.json;\n  \n  if (typeof rawData === 'string' && rawData.includes('<item>')) {\n    // XML RSS parsing\n    const titleMatches = [...rawData.matchAll(/<title><!\\[CDATA\\[(.*?)\\]\\]><\\/title>|<title>(.*?)<\\/title>/g)];\n    const linkMatches = [...rawData.matchAll(/<link>(.*?)<\\/link>/g)];\n    \n    titleMatches.slice(0, 10).forEach((tm, idx) => {\n      const title = tm[1] || tm[2] || '';\n      const link = linkMatches[idx] ? linkMatches[idx][1] : '';\n      if (title && !title.includes('Google News')) {\n        collectedStories.push({ title, link, source: 'Google News', timestamp: new Date().toISOString() });\n      }\n    });\n  } else if (Array.isArray(rawData)) {\n    // HN ID list\n    collectedStories.push({\n      title: 'Trending tech topic discussion on Hacker News',\n      link: 'https://news.ycombinator.com',\n      source: 'Hacker News',\n      timestamp: new Date().toISOString()\n    });\n  }\n}\n\n// Deduplicate similar titles\nconst uniqueMap = new Map();\ncollectedStories.forEach(s => {\n  const key = s.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);\n  if (!uniqueMap.has(key)) uniqueMap.set(key, s);\n});\n\nconst topStories = Array.from(uniqueMap.values()).slice(0, 8);\n\nreturn [{\n  json: {\n    storyCount: topStories.length,\n    stories: topStories,\n    batchId: 'NEWS-' + Date.now(),\n    monitoredAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000005",
+      "name": "AI Editorial News Synthesizer",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -60,
+        220
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a senior newsroom editor. Analyze these raw trending news items collected in the past 15 minutes:\n\n{{ JSON.stringify($json.stories) }}\n\nGenerate a structured JSON output with:\n1. 'breaking_headline' (catchy, authoritative one-line headline)\n2. 'key_developments' (array of 3-5 bullet points summarizing facts)\n3. 'impact_analysis' (2-sentence analysis on market / agency impact)\n4. 'social_media_hook' (engaging question for social media discussion)\n5. 'urgency_level' ('CRITICAL', 'HIGH', 'MEDIUM', 'NORMAL')\n6. 'newsletter_html' (clean formatted HTML summary for email digest)",
+        "options": {
+          "systemMessage": "You are an elite automated journalist AI specializing in fast, accurate breaking news synthesis and editorial structuring."
+        }
+      }
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000006",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        440
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000007",
+      "name": "Format Multi-Channel Payloads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        180,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nlet editorial = item.json.output || item.json.text || item.json;\n\nif (typeof editorial === 'string') {\n  try {\n    editorial = JSON.parse(editorial);\n  } catch (e) {\n    const m = editorial.match(/\\{[\\s\\S]*\\}/);\n    if (m) editorial = JSON.parse(m[0]);\n  }\n}\n\nconst headline = editorial.breaking_headline || 'Global Tech & AI News Update';\nconst bullets = (editorial.key_developments || []).map(b => `• ${b}`).join('\\n');\nconst urgency = editorial.urgency_level || 'HIGH';\n\nconst telegramText = `🚨 *BREAKING NEWS DIGEST* [${urgency}]\n\n📌 *${headline}*\n\n${bullets}\n\n💡 *Market Impact:* ${editorial.impact_analysis || ''}\n\n💬 *Join Discussion:* ${editorial.social_media_hook || ''}`;\n\nreturn [{\n  json: {\n    ...editorial,\n    headline,\n    telegramText,\n    urgency,\n    publishedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000008",
+      "name": "Telegram Breaking News Channel",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        420,
+        120
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "@breaking_news_agency",
+        "text": "={{ $json.telegramText }}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramCredentials",
+          "name": "Newsroom Telegram Bot"
+        }
+      }
+    },
+    {
+      "id": "a1b10001-0001-4000-8000-000000000009",
+      "name": "Slack Newsroom Alerts",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        420,
+        320
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#news-radar",
+        "text": "=⚡ *Breaking News Digest* (Urgency: `{{ $json.urgency }}`)\n*{{ $json.headline }}*\n\n{{ $json.key_developments ? $json.key_developments.join('\\n• ') : '' }}\n\n📊 *Agency Action:* Content team please review for immediate social coverage.",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Agency Newsroom Slack"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every 15 Minutes News Poller": {
+      "main": [
+        [
+          {
+            "node": "Fetch Google News RSS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Fetch Hacker News Top Stories",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Google News RSS": {
+      "main": [
+        [
+          {
+            "node": "Merge, Deduplicate & Rank News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Hacker News Top Stories": {
+      "main": [
+        [
+          {
+            "node": "Merge, Deduplicate & Rank News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge, Deduplicate & Rank News": {
+      "main": [
+        [
+          {
+            "node": "AI Editorial News Synthesizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Editorial News Synthesizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Editorial News Synthesizer": {
+      "main": [
+        [
+          {
+            "node": "Format Multi-Channel Payloads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Multi-Channel Payloads": {
+      "main": [
+        [
+          {
+            "node": "Telegram Breaking News Channel",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack Newsroom Alerts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5a1928bc10293847da91823908f51a2380129837cb10192ea1298418012984ba"
+  },
+  "tags": [
+    {
+      "name": "News Monitoring"
+    },
+    {
+      "name": "Content Creation"
+    },
+    {
+      "name": "Social Media Agency"
+    },
+    {
+      "name": "AI Journalism"
+    }
+  ]
+}

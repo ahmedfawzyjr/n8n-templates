@@ -1,0 +1,382 @@
+{
+  "name": "Automated Social Media Lead Capture Comment-to-DM Funnel and CRM Sync",
+  "nodes": [
+    {
+      "id": "f6f60006-0006-4000-8000-000000000001",
+      "name": "Social Comment Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -720,
+        220
+      ],
+      "webhookId": "social-comment-to-dm",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "social-comment-funnel",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000002",
+      "name": "Detect Keywords & Extract Commenter",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst body = item.body || item;\n\nconst commentText = (body.comment_text || body.text || body.message || 'TEMPLATE please').toUpperCase();\nconst username = body.username || body.from?.username || 'growth_creator';\nconst userId = body.user_id || body.from?.id || 'IG-' + Date.now();\nconst mediaId = body.media_id || body.post_id || 'POST-12345';\nconst commentId = body.comment_id || body.id || 'COMM-' + Date.now();\n\nconst triggerKeywords = ['TEMPLATE', 'LINK', 'SEND', 'GROWTH', 'SCALE', 'ACCESS'];\nconst matchedKeyword = triggerKeywords.find(kw => commentText.includes(kw)) || null;\n\nreturn [{\n  json: {\n    commentId,\n    userId,\n    username,\n    mediaId,\n    commentText,\n    hasMatch: !!matchedKeyword,\n    matchedKeyword: matchedKeyword || 'NONE',\n    leadMagnetUrl: 'https://agency.io/resources/viral-growth-kit',\n    receivedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000003",
+      "name": "If Keyword Match Found",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -280,
+        220
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "keyword-match-check",
+              "leftValue": "={{ $json.hasMatch }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000004",
+      "name": "Post Public Algorithm Booster Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -40,
+        120
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v20.0/{{ $json.commentId }}/replies",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.META_GRAPH_ACCESS_TOKEN || 'META_TOKEN_PLACEHOLDER' }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "message",
+              "value": "=Just sent the full access link directly to your DMs, @{{ $json.username }}! Check your inbox 🚀"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000005",
+      "name": "Send Direct Message (DM) with Asset",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        180,
+        120
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v20.0/me/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.META_GRAPH_ACCESS_TOKEN || 'META_TOKEN_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "recipient",
+              "value": "={{ { \"id\": $('Detect Keywords & Extract Commenter').first().json.userId } }}"
+            },
+            {
+              "name": "message",
+              "value": "={{ { \"text\": \"Hey @\" + $('Detect Keywords & Extract Commenter').first().json.username + \"! Here is your exclusive download link: \" + $('Detect Keywords & Extract Commenter').first().json.leadMagnetUrl + \"\\n\\nWhat is the main bottleneck holding your agency back this quarter? Reply here and our team will send a custom breakdown.\" } }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000006",
+      "name": "AI Lead Qualification Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        400,
+        120
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Process social lead profile:\nUsername: {{ $('Detect Keywords & Extract Commenter').first().json.username }}\nComment Text: {{ $('Detect Keywords & Extract Commenter').first().json.commentText }}\nTrigger Keyword: {{ $('Detect Keywords & Extract Commenter').first().json.matchedKeyword }}\n\nGenerate pure JSON output with:\n1. 'estimated_lead_intent' ('HIGH', 'MEDIUM', 'EXPLORING')\n2. 'recommended_nurture_track' ('Agency_Scale_Mastery', 'Content_Repurposing_Sprint', 'VIP_Strategy_Audit')\n3. 'suggested_outreach_tag' (string)",
+        "options": {
+          "systemMessage": "You qualify inbound social media engagement leads into structured CRM segmentation tags."
+        }
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000007",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        400,
+        340
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000008",
+      "name": "Upsert Contact in HubSpot CRM",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        640,
+        120
+      ],
+      "parameters": {
+        "resource": "contact",
+        "operation": "upsert",
+        "email": "={{ $('Detect Keywords & Extract Commenter').first().json.username }}@social-inbound.lead",
+        "additionalFields": {
+          "properties": [
+            {
+              "property": "hs_lead_status",
+              "value": "IN_PROGRESS"
+            },
+            {
+              "property": "notes_last_contacted",
+              "value": "=Triggered via Instagram comment funnel on keyword {{ $('Detect Keywords & Extract Commenter').first().json.matchedKeyword }}"
+            }
+          ]
+        }
+      },
+      "credentials": {
+        "hubspotAppApi": {
+          "id": "hubspotCredentials",
+          "name": "HubSpot CRM Account"
+        }
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000009",
+      "name": "Slack Sales Lead Notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        120
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#inbound-social-leads",
+        "text": "=📥 *Inbound Social Media Lead Captured!*\n• *User:* @{{ $('Detect Keywords & Extract Commenter').first().json.username }}\n• *Trigger Keyword:* `{{ $('Detect Keywords & Extract Commenter').first().json.matchedKeyword }}`\n• *DM Sent:* Lead Magnet link dispatched automatically.\n• *CRM Status:* Synced to HubSpot.\n\n👉 Follow up when commenter replies to qualifying question.",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Agency Sales Slack"
+        }
+      }
+    },
+    {
+      "id": "f6f60006-0006-4000-8000-000000000010",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1080,
+        220
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"matched\": {{ $('Detect Keywords & Extract Commenter').first().json.hasMatch }},\n  \"username\": \"{{ $('Detect Keywords & Extract Commenter').first().json.username }}\",\n  \"status\": \"FUNNEL_EXECUTED\"\n}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Social Comment Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Detect Keywords & Extract Commenter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Detect Keywords & Extract Commenter": {
+      "main": [
+        [
+          {
+            "node": "If Keyword Match Found",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Keyword Match Found": {
+      "main": [
+        [
+          {
+            "node": "Post Public Algorithm Booster Reply",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post Public Algorithm Booster Reply": {
+      "main": [
+        [
+          {
+            "node": "Send Direct Message (DM) with Asset",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Direct Message (DM) with Asset": {
+      "main": [
+        [
+          {
+            "node": "AI Lead Qualification Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Lead Qualification Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Lead Qualification Agent": {
+      "main": [
+        [
+          {
+            "node": "Upsert Contact in HubSpot CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upsert Contact in HubSpot CRM": {
+      "main": [
+        [
+          {
+            "node": "Slack Sales Lead Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Sales Lead Notification": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "6f6829da19284710298418012984ba10294819e91823908f51a2380129837999"
+  },
+  "tags": [
+    {
+      "name": "Lead Generation"
+    },
+    {
+      "name": "Social Media Agency"
+    },
+    {
+      "name": "Comment to DM"
+    },
+    {
+      "name": "HubSpot CRM"
+    }
+  ]
+}

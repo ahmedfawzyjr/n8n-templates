@@ -1,0 +1,38 @@
+title: "Awesome n8n Templates"
+description: "A curated collection of 358+ n8n automation workflow template files. AI agents, RAG chatbots, email automation, social media, DevOps, and more."
+url: "https://ahmedfawzyjr.github.io"
+baseurl: "/N8N-Templates"
+
+remote_theme: pages-themes/minimal@v0.2.0
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+author:
+  name: "Ahmed Fawzy"
+  url: "https://github.com/ahmedfawzyjr"
+
+github:
+  repository_url: "https://github.com/ahmedfawzyjr/N8N-Templates"
+
+social:
+  name: "Ahmed Fawzy"
+  links:
+    - "https://github.com/ahmedfawzyjr"
+
+twitter:
+  card: "summary_large_image"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      image: "https://repository-images.githubusercontent.com/ahmedfawzyjr/N8N-Templates"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

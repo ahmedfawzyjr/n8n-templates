@@ -1,0 +1,437 @@
+{
+  "name": "Hermes Delivery Tracking and Customer Notification Automation",
+  "nodes": [
+    {
+      "id": "e3f30003-0003-4000-8000-000000000001",
+      "name": "Hermes Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        180
+      ],
+      "webhookId": "hermes-tracking-webhook",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hermes-delivery-events",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000002",
+      "name": "Scheduled Batch Tracker Poller",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -700,
+        420
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000003",
+      "name": "Query Active Shipments DB",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        -480,
+        420
+      ],
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT tracking_number, order_id, customer_name, customer_email, customer_phone, last_status, destination_postcode FROM hermes_shipments WHERE status NOT IN ('DELIVERED', 'RETURNED_TO_SENDER') ORDER BY updated_at ASC LIMIT 50;"
+      },
+      "credentials": {
+        "postgres": {
+          "id": "postgresCredentials",
+          "name": "Postgres Production Database"
+        }
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000004",
+      "name": "Hermes Tracking API Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -260,
+        420
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.hermes-europe.co.uk/v1/tracking/parcels/{{ $json.tracking_number }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.HERMES_API_TOKEN || 'HERMES_API_KEY_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000005",
+      "name": "Normalize Tracking Event & Milestones",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        280
+      ],
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst output = [];\n\nfor (const item of items) {\n  const payload = item.json.body || item.json;\n  const parcel = payload.parcel || payload;\n  \n  const rawStatus = (parcel.status || parcel.state || parcel.eventCode || '').toUpperCase();\n  let milestone = 'IN_TRANSIT';\n  \n  if (rawStatus.includes('OUT_FOR_DELIVERY') || rawStatus.includes('COURIER_ASSIGNED') || rawStatus.includes('ON_VAN')) {\n    milestone = 'OUT_FOR_DELIVERY';\n  } else if (rawStatus.includes('DELIVERED') || rawStatus.includes('SIGNED') || rawStatus.includes('SAFE_PLACE')) {\n    milestone = 'DELIVERED';\n  } else if (rawStatus.includes('DELAY') || rawStatus.includes('EXCEPTION') || rawStatus.includes('ATTEMPT_FAILED') || rawStatus.includes('ADDRESS_ISSUE')) {\n    milestone = 'EXCEPTION';\n  } else {\n    milestone = 'IN_TRANSIT';\n  }\n  \n  const trackingNumber = parcel.trackingNumber || parcel.barcode || item.json.tracking_number || 'HRM-' + Date.now();\n  const eta = parcel.estimatedDeliveryWindow || parcel.eta || 'Today between 1:00 PM - 3:00 PM';\n  const customerName = item.json.customer_name || parcel.recipientName || 'Valued Customer';\n  const customerPhone = item.json.customer_phone || parcel.recipientPhone || '+1234567890';\n  const customerEmail = item.json.customer_email || parcel.recipientEmail || 'customer@example.com';\n  const orderId = item.json.order_id || parcel.orderReference || 'ORD-' + trackingNumber.slice(-6);\n  \n  output.push({\n    json: {\n      trackingNumber,\n      orderId,\n      milestone,\n      rawStatus,\n      eta,\n      customerName,\n      customerPhone,\n      customerEmail,\n      carrier: 'Hermes / Evri',\n      trackingUrl: `https://www.hermesworld.com/tracking?barcode=${trackingNumber}`,\n      eventTimestamp: new Date().toISOString()\n    }\n  });\n}\n\nreturn output;"
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000006",
+      "name": "Route by Delivery Milestone",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        200,
+        280
+      ],
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "value": "OUT_FOR_DELIVERY",
+              "operation": "equal"
+            },
+            {
+              "value": "DELIVERED",
+              "operation": "equal"
+            },
+            {
+              "value": "EXCEPTION",
+              "operation": "equal"
+            }
+          ]
+        },
+        "value1": "={{ $json.milestone }}"
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000007",
+      "name": "WhatsApp Send Out for Delivery Alert",
+      "type": "n8n-nodes-base.whatsapp",
+      "typeVersion": 1,
+      "position": [
+        480,
+        100
+      ],
+      "parameters": {
+        "operation": "sendTemplate",
+        "phoneNumberId": "whatsappPhoneNumberId",
+        "recipientPhoneNumber": "={{ $json.customerPhone }}",
+        "templateName": "hermes_out_for_delivery",
+        "templateLanguage": "en_US",
+        "components": {
+          "values": [
+            {
+              "type": "body",
+              "parameters": [
+                {
+                  "type": "text",
+                  "text": "={{ $json.customerName }}"
+                },
+                {
+                  "type": "text",
+                  "text": "={{ $json.orderId }}"
+                },
+                {
+                  "type": "text",
+                  "text": "={{ $json.eta }}"
+                },
+                {
+                  "type": "text",
+                  "text": "={{ $json.trackingUrl }}"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "credentials": {
+        "whatsAppApi": {
+          "id": "whatsAppCredentials",
+          "name": "Customer Support WhatsApp"
+        }
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000008",
+      "name": "WhatsApp Send Delivered Confirmation",
+      "type": "n8n-nodes-base.whatsapp",
+      "typeVersion": 1,
+      "position": [
+        480,
+        280
+      ],
+      "parameters": {
+        "operation": "sendTemplate",
+        "phoneNumberId": "whatsappPhoneNumberId",
+        "recipientPhoneNumber": "={{ $json.customerPhone }}",
+        "templateName": "hermes_parcel_delivered",
+        "templateLanguage": "en_US",
+        "components": {
+          "values": [
+            {
+              "type": "body",
+              "parameters": [
+                {
+                  "type": "text",
+                  "text": "={{ $json.customerName }}"
+                },
+                {
+                  "type": "text",
+                  "text": "={{ $json.orderId }}"
+                },
+                {
+                  "type": "text",
+                  "text": "={{ $json.trackingUrl }}"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "credentials": {
+        "whatsAppApi": {
+          "id": "whatsAppCredentials",
+          "name": "Customer Support WhatsApp"
+        }
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000009",
+      "name": "Slack Escalation on Delivery Exception",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        480,
+        460
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#logistics-exceptions",
+        "text": "=🚨 *Hermes Delivery Exception Alert*\n• *Tracking Number:* `{{ $json.trackingNumber }}`\n• *Order ID:* `{{ $json.orderId }}`\n• *Customer:* {{ $json.customerName }} (`{{ $json.customerPhone }}`)\n• *Status Reason:* `{{ $json.rawStatus }}`\n• *Tracking Link:* <{{ $json.trackingUrl }}|View Hermes Tracking>\n\n⚠️ Action required: Logistics team please review address or contact customer.",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Logistics Ops Slack"
+        }
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000010",
+      "name": "Send Customer Email Notification",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        740,
+        280
+      ],
+      "parameters": {
+        "toEmail": "={{ $json.customerEmail }}",
+        "subject": "=Hermes Delivery Update: Your order {{ $json.orderId }} status is {{ $json.milestone }}",
+        "html": "=<div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eaeaea; border-radius: 8px;\">\n  <h2 style=\"color: #0056b3;\">📦 Shipment Status Update</h2>\n  <p>Hello <strong>{{ $json.customerName }}</strong>,</p>\n  <p>Your order <strong>{{ $json.orderId }}</strong> has been updated:</p>\n  <div style=\"background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 15px 0;\">\n    <p><strong>Status:</strong> {{ $json.milestone }}</p>\n    <p><strong>Tracking Number:</strong> {{ $json.trackingNumber }}</p>\n    <p><strong>Estimated Arrival:</strong> {{ $json.eta }}</p>\n  </div>\n  <p><a href=\"{{ $json.trackingUrl }}\" style=\"display: inline-block; padding: 10px 20px; background: #007bff; color: #fff; text-decoration: none; border-radius: 4px;\">Track Your Hermes Parcel</a></p>\n</div>"
+      },
+      "credentials": {
+        "smtp": {
+          "id": "smtpCredentials",
+          "name": "Transactional SMTP Account"
+        }
+      }
+    },
+    {
+      "id": "e3f30003-0003-4000-8000-000000000011",
+      "name": "Update PostgreSQL Shipment Table",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        980,
+        280
+      ],
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE hermes_shipments\nSET\n  status = '{{ $json.milestone }}',\n  last_raw_status = '{{ $json.rawStatus }}',\n  eta = '{{ $json.eta }}',\n  updated_at = NOW()\nWHERE tracking_number = '{{ $json.trackingNumber }}';"
+      },
+      "credentials": {
+        "postgres": {
+          "id": "postgresCredentials",
+          "name": "Postgres Production Database"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Hermes Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Normalize Tracking Event & Milestones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scheduled Batch Tracker Poller": {
+      "main": [
+        [
+          {
+            "node": "Query Active Shipments DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Query Active Shipments DB": {
+      "main": [
+        [
+          {
+            "node": "Hermes Tracking API Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hermes Tracking API Request": {
+      "main": [
+        [
+          {
+            "node": "Normalize Tracking Event & Milestones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Tracking Event & Milestones": {
+      "main": [
+        [
+          {
+            "node": "Route by Delivery Milestone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route by Delivery Milestone": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Send Out for Delivery Alert",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WhatsApp Send Delivered Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack Escalation on Delivery Exception",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Send Out for Delivery Alert": {
+      "main": [
+        [
+          {
+            "node": "Send Customer Email Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Send Delivered Confirmation": {
+      "main": [
+        [
+          {
+            "node": "Send Customer Email Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Escalation on Delivery Exception": {
+      "main": [
+        [
+          {
+            "node": "Send Customer Email Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Customer Email Notification": {
+      "main": [
+        [
+          {
+            "node": "Update PostgreSQL Shipment Table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7c48201a91e52391ea19385bf71829e01823908f51a2380129837cb10192ea12"
+  },
+  "tags": [
+    {
+      "name": "Hermes"
+    },
+    {
+      "name": "Logistics"
+    },
+    {
+      "name": "Package Tracking"
+    },
+    {
+      "name": "WhatsApp Automation"
+    }
+  ]
+}

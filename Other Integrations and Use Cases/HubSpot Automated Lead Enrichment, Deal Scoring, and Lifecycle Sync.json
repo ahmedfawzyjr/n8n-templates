@@ -1,0 +1,411 @@
+{
+  "name": "HubSpot Automated Lead Enrichment, Deal Scoring, and Lifecycle Sync",
+  "nodes": [
+    {
+      "id": "e2f20002-0002-4000-8000-000000000001",
+      "name": "HubSpot Contact & Deal Trigger",
+      "type": "n8n-nodes-base.hubspotTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -680,
+        220
+      ],
+      "parameters": {
+        "events": [
+          "contact.creation",
+          "deal.creation",
+          "contact.propertyChange"
+        ],
+        "additionalFields": {
+          "properties": [
+            "email",
+            "firstname",
+            "lastname",
+            "company",
+            "jobtitle",
+            "phone",
+            "hs_lead_status",
+            "annualrevenue"
+          ]
+        }
+      },
+      "credentials": {
+        "hubspotAppApi": {
+          "id": "hubspotCredentials",
+          "name": "HubSpot CRM Account"
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000002",
+      "name": "Extract & Prepare Lead Context",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst email = item.properties?.email?.value || item.email || '';\nconst domain = email.includes('@') ? email.split('@')[1] : '';\nconst companyName = item.properties?.company?.value || item.company || '';\nconst jobTitle = item.properties?.jobtitle?.value || item.jobtitle || '';\nconst fullName = `${item.properties?.firstname?.value || ''} ${item.properties?.lastname?.value || ''}`.trim() || 'Valued Lead';\n\nreturn [{\n  json: {\n    contactId: item.objectId || item.vid || item.id,\n    email: email,\n    fullName: fullName,\n    domain: domain,\n    companyName: companyName,\n    jobTitle: jobTitle,\n    rawLeadStatus: item.properties?.hs_lead_status?.value || 'NEW',\n    triggeredAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000003",
+      "name": "Enrich Company Data via API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -240,
+        220
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://company-enrichment.api.internal/v1/companies/lookup?domain={{ $json.domain }}&company={{ encodeURIComponent($json.companyName) }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {
+          "allowUnauthorizedCerts": false,
+          "timeout": 10000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000004",
+      "name": "AI Lead Scoring & Intent Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -20,
+        220
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Evaluate this HubSpot lead profile and return a structured JSON evaluation:\nLead Name: {{ $('Extract & Prepare Lead Context').first().json.fullName }}\nEmail: {{ $('Extract & Prepare Lead Context').first().json.email }}\nJob Title: {{ $('Extract & Prepare Lead Context').first().json.jobTitle }}\nCompany: {{ $('Extract & Prepare Lead Context').first().json.companyName }}\nDomain: {{ $('Extract & Prepare Lead Context').first().json.domain }}\nCompany Enrichment Data: {{ JSON.stringify($json) }}\n\nRequirements:\n1. Compute a 'lead_score' (integer 0-100) based on seniority, company size, and industry fit.\n2. Determine 'lifecycle_stage': 'marketingqualifiedlead' (score >= 60), 'salesqualifiedlead' (score >= 80), or 'lead'.\n3. Assign 'deal_priority': 'HIGH', 'MEDIUM', or 'LOW'.\n4. Generate a concise 2-sentence 'sales_talking_points' summary for the AE.\n5. Output pure JSON format.",
+        "options": {
+          "systemMessage": "You are an expert enterprise B2B sales development AI. You analyze lead data, estimate ICP fit, compute buying intent scores, and provide actionable deal insights in valid JSON."
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000005",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        440
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000006",
+      "name": "Process Score & Format Properties",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst leadContext = $('Extract & Prepare Lead Context').first().json;\nlet aiOutput = item.json.output || item.json.text || item.json;\n\nif (typeof aiOutput === 'string') {\n  try {\n    aiOutput = JSON.parse(aiOutput);\n  } catch (e) {\n    const match = aiOutput.match(/\\{[\\s\\S]*\\}/);\n    if (match) aiOutput = JSON.parse(match[0]);\n  }\n}\n\nconst score = aiOutput.lead_score || 50;\nconst isHighPriority = score >= 75;\nconst stage = aiOutput.lifecycle_stage || (score >= 75 ? 'salesqualifiedlead' : 'marketingqualifiedlead');\n\nreturn [{\n  json: {\n    contactId: leadContext.contactId,\n    email: leadContext.email,\n    fullName: leadContext.fullName,\n    companyName: leadContext.companyName,\n    jobTitle: leadContext.jobTitle,\n    leadScore: score,\n    isHighPriority: isHighPriority,\n    lifecycleStage: stage,\n    dealPriority: aiOutput.deal_priority || (isHighPriority ? 'HIGH' : 'MEDIUM'),\n    talkingPoints: aiOutput.sales_talking_points || 'Review lead activity and schedule discovery call.',\n    evaluatedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000007",
+      "name": "HubSpot Update Contact Properties",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        220
+      ],
+      "parameters": {
+        "resource": "contact",
+        "operation": "update",
+        "contactId": "={{ $json.contactId }}",
+        "updateFields": {
+          "properties": [
+            {
+              "property": "hs_lead_score",
+              "value": "={{ $json.leadScore }}"
+            },
+            {
+              "property": "lifecyclestage",
+              "value": "={{ $json.lifecycleStage }}"
+            },
+            {
+              "property": "notes_last_contacted",
+              "value": "={{ $json.talkingPoints }}"
+            }
+          ]
+        }
+      },
+      "credentials": {
+        "hubspotAppApi": {
+          "id": "hubspotCredentials",
+          "name": "HubSpot CRM Account"
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000008",
+      "name": "HubSpot Create AE Follow-up Task",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        680,
+        220
+      ],
+      "parameters": {
+        "resource": "engagement",
+        "operation": "create",
+        "engagementType": "task",
+        "additionalFields": {
+          "task": {
+            "subject": "=Follow up with {{ $json.fullName }} (Score: {{ $json.leadScore }}/100)",
+            "body": "=AI Insights:\n{{ $json.talkingPoints }}\n\nCompany: {{ $json.companyName }}\nRole: {{ $json.jobTitle }}\nPriority: {{ $json.dealPriority }}",
+            "status": "NOT_STARTED",
+            "priority": "={{ $json.dealPriority }}"
+          },
+          "associations": {
+            "contactIds": [
+              "={{ $json.contactId }}"
+            ]
+          }
+        }
+      },
+      "credentials": {
+        "hubspotAppApi": {
+          "id": "hubspotCredentials",
+          "name": "HubSpot CRM Account"
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000009",
+      "name": "If High Priority Lead",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        900,
+        220
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "priority-condition",
+              "leftValue": "={{ $json.isHighPriority }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000010",
+      "name": "Slack Alert for VIP Deal Lead",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        1140,
+        120
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#sales-vip-leads",
+        "text": "=🔥 *High-Priority HubSpot Lead Detected!*\n• *Lead:* {{ $json.fullName }} ({{ $json.jobTitle || 'Executive' }} at *{{ $json.companyName || 'Enterprise' }}*)\n• *Email:* `{{ $json.email }}`\n• *AI Lead Score:* `{{ $json.leadScore }}/100` ({{ $json.lifecycleStage }})\n• *Talking Points:* {{ $json.talkingPoints }}\n\n👉 <https://app.hubspot.com/contacts/your_portal_id/contact/{{ $json.contactId }}|Open in HubSpot CRM>",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Sales Ops Slack"
+        }
+      }
+    },
+    {
+      "id": "e2f20002-0002-4000-8000-000000000011",
+      "name": "PostgreSQL Log CRM Sync",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1140,
+        320
+      ],
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO hubspot_lead_sync_audit (contact_id, email, full_name, company, lead_score, lifecycle_stage, priority, sync_timestamp)\nVALUES (\n  '{{ $json.contactId }}',\n  '{{ $json.email }}',\n  '{{ $json.fullName }}',\n  '{{ $json.companyName }}',\n  {{ $json.leadScore }},\n  '{{ $json.lifecycleStage }}',\n  '{{ $json.dealPriority }}',\n  NOW()\n);"
+      },
+      "credentials": {
+        "postgres": {
+          "id": "postgresCredentials",
+          "name": "Postgres Production Database"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "HubSpot Contact & Deal Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract & Prepare Lead Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract & Prepare Lead Context": {
+      "main": [
+        [
+          {
+            "node": "Enrich Company Data via API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrich Company Data via API": {
+      "main": [
+        [
+          {
+            "node": "AI Lead Scoring & Intent Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Lead Scoring & Intent Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Lead Scoring & Intent Agent": {
+      "main": [
+        [
+          {
+            "node": "Process Score & Format Properties",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Score & Format Properties": {
+      "main": [
+        [
+          {
+            "node": "HubSpot Update Contact Properties",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HubSpot Update Contact Properties": {
+      "main": [
+        [
+          {
+            "node": "HubSpot Create AE Follow-up Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HubSpot Create AE Follow-up Task": {
+      "main": [
+        [
+          {
+            "node": "If High Priority Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If High Priority Lead": {
+      "main": [
+        [
+          {
+            "node": "Slack Alert for VIP Deal Lead",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PostgreSQL Log CRM Sync",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PostgreSQL Log CRM Sync",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8a329df0281b3793da82619472bfec1927cb0991823bc110a12908f51a41e992"
+  },
+  "tags": [
+    {
+      "name": "HubSpot"
+    },
+    {
+      "name": "CRM Automation"
+    },
+    {
+      "name": "AI Lead Scoring"
+    },
+    {
+      "name": "Sales Ops"
+    }
+  ]
+}

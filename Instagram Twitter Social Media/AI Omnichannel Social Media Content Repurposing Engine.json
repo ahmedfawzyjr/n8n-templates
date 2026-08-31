@@ -1,0 +1,335 @@
+{
+  "name": "AI Omnichannel Social Media Content Repurposing Engine",
+  "nodes": [
+    {
+      "id": "b2c20002-0002-4000-8000-000000000001",
+      "name": "Content Ingestion Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        220
+      ],
+      "webhookId": "omnichannel-content-repurposer",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "repurpose-social-content",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000002",
+      "name": "Prepare Source Text & Brand Persona",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -480,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst sourceTitle = item.body?.title || item.title || 'Transformative AI & Agency Strategies';\nconst rawContent = item.body?.content || item.content || item.body?.text || 'Content creation and AI automation are transforming how modern agencies scale.';\nconst brandTone = item.body?.tone || item.tone || 'Authoritative, engaging, data-backed and inspiring';\nconst clientName = item.body?.client || item.client || 'Agency Client';\n\nreturn [{\n  json: {\n    sourceTitle,\n    rawContent: rawContent.slice(0, 10000),\n    brandTone,\n    clientName,\n    jobId: 'REPURPOSE-' + Date.now(),\n    submittedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000003",
+      "name": "Omnichannel Content AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -240,
+        220
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an elite social media growth director. Repurpose this source content into 5 tailored channel assets:\n\nTitle: {{ $json.sourceTitle }}\nClient: {{ $json.clientName }}\nTone: {{ $json.brandTone }}\nSource Content:\n{{ $json.rawContent }}\n\nGenerate pure JSON containing:\n1. 'linkedin_post': Full thought-leadership post (Hook line, 4 structured takeaways, actionable conclusion, 3 relevant hashtags).\n2. 'twitter_thread': Array of 4-6 tweets (Tweet 1 is a viral hook; last tweet is a CTA).\n3. 'instagram_caption': High-engagement caption with line breaks, emojis, and a 'dalle_image_prompt' for generating the matching visual.\n4. 'tiktok_script': 60s short video script formatted with timestamps, [Visual Action] cues, and spoken voiceover text.\n5. 'facebook_post': Community-oriented conversational post asking a discussion question.\n6. 'seo_keywords': Array of 5 target keywords.",
+        "options": {
+          "systemMessage": "You are a master social media copywriter and growth strategist. You create platform-native content with maximum organic engagement."
+        }
+      }
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000004",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        440
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.3
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000005",
+      "name": "Parse Assets & Prepare Calendar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nconst initial = $('Prepare Source Text & Brand Persona').first().json;\nlet assets = item.json.output || item.json.text || item.json;\n\nif (typeof assets === 'string') {\n  try {\n    assets = JSON.parse(assets);\n  } catch (e) {\n    const match = assets.match(/\\{[\\s\\S]*\\}/);\n    if (match) assets = JSON.parse(match[0]);\n  }\n}\n\nreturn [{\n  json: {\n    jobId: initial.jobId,\n    clientName: initial.clientName,\n    sourceTitle: initial.sourceTitle,\n    linkedinPost: assets.linkedin_post || '',\n    twitterThread: assets.twitter_thread || [],\n    instagramCaption: assets.instagram_caption || '',\n    dallePrompt: assets.dalle_image_prompt || 'Modern 3D render representing agency growth, clean futuristic aesthetics, vibrant gradient lighting',\n    tiktokScript: assets.tiktok_script || '',\n    facebookPost: assets.facebook_post || '',\n    seoKeywords: assets.seo_keywords || [],\n    status: 'READY_FOR_APPROVAL',\n    generatedAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000006",
+      "name": "Generate DALL-E 3 Visual Graphic",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        220
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.OPENAI_API_KEY || 'OPENAI_KEY_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "dall-e-3"
+            },
+            {
+              "name": "prompt",
+              "value": "={{ $json.dallePrompt }}"
+            },
+            {
+              "name": "n",
+              "value": 1
+            },
+            {
+              "name": "size",
+              "value": "1024x1024"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000007",
+      "name": "Save to Notion Content Calendar",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        220
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.notion.com/v1/pages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{ $env.NOTION_API_KEY || 'NOTION_KEY_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Notion-Version",
+              "value": "2022-06-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "parent",
+              "value": "={{ { \"database_id\": \"your_notion_content_calendar_database_id\" } }}"
+            },
+            {
+              "name": "properties",
+              "value": "={{ {\n  \"Title\": { \"title\": [{ \"text\": { \"content\": $('Parse Assets & Prepare Calendar').first().json.sourceTitle } }] },\n  \"Client\": { \"rich_text\": [{ \"text\": { \"content\": $('Parse Assets & Prepare Calendar').first().json.clientName } }] },\n  \"Status\": { \"select\": { \"name\": \"Review Needed\" } }\n} }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000008",
+      "name": "Notify Agency Content Director",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        720,
+        220
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#content-approvals",
+        "text": "=✨ *New Omnichannel Content Package Ready for Review*\n• *Client:* {{ $('Parse Assets & Prepare Calendar').first().json.clientName }}\n• *Campaign Title:* *{{ $('Parse Assets & Prepare Calendar').first().json.sourceTitle }}*\n• *Generated Assets:* 1 LinkedIn Article, 1 Twitter Thread ({{ $('Parse Assets & Prepare Calendar').first().json.twitterThread.length }} tweets), 1 Instagram Carousel + DALL-E Image, 1 TikTok/Reel Video Script.\n• *Status:* `READY_FOR_APPROVAL`\n\n👉 <https://notion.so/agency-workspace|Open Notion Content Board to Review & Approve>",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Agency Content Slack"
+        }
+      }
+    },
+    {
+      "id": "b2c20002-0002-4000-8000-000000000009",
+      "name": "Respond with Generated Package",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        940,
+        220
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"jobId\": \"{{ $('Parse Assets & Prepare Calendar').first().json.jobId }}\",\n  \"clientName\": \"{{ $('Parse Assets & Prepare Calendar').first().json.clientName }}\",\n  \"status\": \"READY_FOR_APPROVAL\",\n  \"assets\": {\n    \"linkedin\": {{ JSON.stringify($('Parse Assets & Prepare Calendar').first().json.linkedinPost) }},\n    \"twitterThread\": {{ JSON.stringify($('Parse Assets & Prepare Calendar').first().json.twitterThread) }},\n    \"instagram\": {{ JSON.stringify($('Parse Assets & Prepare Calendar').first().json.instagramCaption) }},\n    \"tiktokScript\": {{ JSON.stringify($('Parse Assets & Prepare Calendar').first().json.tiktokScript) }},\n    \"facebookPost\": {{ JSON.stringify($('Parse Assets & Prepare Calendar').first().json.facebookPost) }}\n  }\n}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Content Ingestion Webhook": {
+      "main": [
+        [
+          {
+            "node": "Prepare Source Text & Brand Persona",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Source Text & Brand Persona": {
+      "main": [
+        [
+          {
+            "node": "Omnichannel Content AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Omnichannel Content AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Omnichannel Content AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Parse Assets & Prepare Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Assets & Prepare Calendar": {
+      "main": [
+        [
+          {
+            "node": "Generate DALL-E 3 Visual Graphic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate DALL-E 3 Visual Graphic": {
+      "main": [
+        [
+          {
+            "node": "Save to Notion Content Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save to Notion Content Calendar": {
+      "main": [
+        [
+          {
+            "node": "Notify Agency Content Director",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Agency Content Director": {
+      "main": [
+        [
+          {
+            "node": "Respond with Generated Package",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4b2819da29184710298418012984ba10294819e91823908f51a2380129837190"
+  },
+  "tags": [
+    {
+      "name": "Social Media Agency"
+    },
+    {
+      "name": "Content Repurposing"
+    },
+    {
+      "name": "Omnichannel"
+    },
+    {
+      "name": "AI Copywriting"
+    }
+  ]
+}

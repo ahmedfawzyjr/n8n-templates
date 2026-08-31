@@ -1,0 +1,306 @@
+{
+  "name": "Automated AI Viral Reel and Short Video Script Generator with Voiceover",
+  "nodes": [
+    {
+      "id": "c3d30003-0003-4000-8000-000000000001",
+      "name": "Video Topic Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -720,
+        220
+      ],
+      "webhookId": "viral-video-generator",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "generate-viral-video-script",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000002",
+      "name": "Short-Form Video Script Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -480,
+        220
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a viral TikTok and Instagram Reels director. Write a high-retention 45-second vertical video script on this topic:\nTopic: {{ $json.body.topic || 'How AI automation creates 7-figure agency leverage' }}\nTarget Audience: {{ $json.body.audience || 'Entrepreneurs and Creators' }}\nTone: Fast-paced, punchy, curiosity-inducing\n\nGenerate pure JSON containing:\n1. 'video_title' (viral title)\n2. 'opening_hook_3s' (visual + verbal hook to stop the scroll)\n3. 'voiceover_script' (full narration text without brackets, optimized for spoken voiceover)\n4. 'scenes': array of 4-6 scene objects { scene_number, timestamp, visual_action, on_screen_caption, b_roll_search_keyword }\n5. 'call_to_action' (ending CTA)",
+        "options": {
+          "systemMessage": "You craft viral short-form video scripts designed for 100% viewer retention and maximum watch time."
+        }
+      }
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000003",
+      "name": "OpenAI GPT-4o Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        440
+      ],
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0.3
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openAiApiCredential",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000004",
+      "name": "Extract Script & B-Roll Queries",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const item = $input.first();\nlet scriptData = item.json.output || item.json.text || item.json;\n\nif (typeof scriptData === 'string') {\n  try {\n    scriptData = JSON.parse(scriptData);\n  } catch (e) {\n    const match = scriptData.match(/\\{[\\s\\S]*\\}/);\n    if (match) scriptData = JSON.parse(match[0]);\n  }\n}\n\nconst voiceoverText = scriptData.voiceover_script || 'Discover how automation is changing digital agencies forever.';\nconst bRollQueries = (scriptData.scenes || []).map(s => s.b_roll_search_keyword).filter(Boolean);\n\nreturn [{\n  json: {\n    ...scriptData,\n    voiceoverText,\n    primaryBRollKeyword: bRollQueries[0] || 'technology business',\n    scriptId: 'REEL-' + Date.now(),\n    createdAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000005",
+      "name": "ElevenLabs Generate AI Voiceover",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        220
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "xi-api-key",
+              "value": "={{ $env.ELEVENLABS_API_KEY || 'ELEVENLABS_KEY_PLACEHOLDER' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $json.voiceoverText }}"
+            },
+            {
+              "name": "model_id",
+              "value": "eleven_multilingual_v2"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000006",
+      "name": "Search Pexels Stock B-Roll",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        220
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.pexels.com/videos/search?query={{ encodeURIComponent($('Extract Script & B-Roll Queries').first().json.primaryBRollKeyword) }}&orientation=portrait&per_page=3",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $env.PEXELS_API_KEY || 'PEXELS_API_KEY_PLACEHOLDER' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "continueOnFail": true
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000007",
+      "name": "Compile Production Storyboard",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        220
+      ],
+      "parameters": {
+        "jsCode": "const scriptMeta = $('Extract Script & B-Roll Queries').first().json;\nconst pexelsItem = $('Search Pexels Stock B-Roll').first().json;\nconst bRollVideos = (pexelsItem.videos || []).map(v => v.video_files?.[0]?.link).filter(Boolean);\n\nreturn [{\n  json: {\n    scriptId: scriptMeta.scriptId,\n    title: scriptMeta.video_title || 'Viral Agency Short',\n    hook: scriptMeta.opening_hook_3s,\n    narrationScript: scriptMeta.voiceoverText,\n    scenes: scriptMeta.scenes || [],\n    cta: scriptMeta.call_to_action,\n    bRollStockLinks: bRollVideos,\n    status: 'READY_FOR_EDITING',\n    readyAt: new Date().toISOString()\n  }\n}];"
+      }
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000008",
+      "name": "Slack Alert Video Editors",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [
+        720,
+        220
+      ],
+      "parameters": {
+        "operation": "post",
+        "channel": "#video-production",
+        "text": "=🎬 *New Viral Short/Reel Storyboard Ready!*\n• *Title:* *{{ $json.title }}*\n• *Hook (0-3s):* {{ $json.hook }}\n• *Scene Count:* {{ $json.scenes.length }} scenes with curated B-Roll suggestions\n• *AI Voiceover:* Generated & Ready for Timeline\n• *Status:* `READY_FOR_EDITING`\n\n👉 Editors can pick up the storyboard and assemble the cut.",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slackCredentials",
+          "name": "Agency Production Slack"
+        }
+      }
+    },
+    {
+      "id": "c3d30003-0003-4000-8000-000000000009",
+      "name": "Respond with Storyboard Package",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        940,
+        220
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"scriptId\": \"{{ $json.scriptId }}\",\n  \"title\": \"{{ $json.title }}\",\n  \"hook\": \"{{ $json.hook }}\",\n  \"narration\": \"{{ $json.narrationScript }}\",\n  \"scenes\": {{ JSON.stringify($json.scenes) }},\n  \"cta\": \"{{ $json.cta }}\",\n  \"bRollStockLinks\": {{ JSON.stringify($json.bRollStockLinks) }}\n}",
+        "options": {
+          "responseCode": 200
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Video Topic Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Short-Form Video Script Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Short-Form Video Script Agent": {
+      "main": [
+        [
+          {
+            "node": "Extract Script & B-Roll Queries",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI GPT-4o Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Short-Form Video Script Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Script & B-Roll Queries": {
+      "main": [
+        [
+          {
+            "node": "ElevenLabs Generate AI Voiceover",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ElevenLabs Generate AI Voiceover": {
+      "main": [
+        [
+          {
+            "node": "Search Pexels Stock B-Roll",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Pexels Stock B-Roll": {
+      "main": [
+        [
+          {
+            "node": "Compile Production Storyboard",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compile Production Storyboard": {
+      "main": [
+        [
+          {
+            "node": "Slack Alert Video Editors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Alert Video Editors": {
+      "main": [
+        [
+          {
+            "node": "Respond with Storyboard Package",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3c1829da19284710298418012984ba10294819e91823908f51a2380129837a01"
+  },
+  "tags": [
+    {
+      "name": "Short-Form Video"
+    },
+    {
+      "name": "TikTok & Reels"
+    },
+    {
+      "name": "AI Voiceover"
+    },
+    {
+      "name": "Social Media Agency"
+    }
+  ]
+}
