@@ -1,8 +1,66 @@
----
-layout: default
-title: "Awesome n8n Templates - 358+ Production-Ready Workflows"
-description: "Curated directory of 358+ n8n automation templates. Instant copy-and-paste workflows for AI agents, RAG, Gmail, Telegram, Slack, and DevOps."
----
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="base-url" content=".">
+  <title>Awesome n8n Templates - 358+ Workflow Automations</title>
+  <meta name="description" content="Curated collection of 358+ n8n automation templates.">
+  
+  <meta name="description" content="Curated collection of 350+ n8n workflow templates.">
+  
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <!-- Ambient Background Glow Mesh -->
+  <div class="bg-glow-orb bg-glow-orb-1"></div>
+  <div class="bg-glow-orb bg-glow-orb-2"></div>
+  <div class="bg-glow-orb bg-glow-orb-3"></div>
+
+  <!-- Floating Island Glass Navigation -->
+  <header class="site-header">
+    <nav class="nav-island">
+      <a href="./" class="nav-brand">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span>Awesome n8n</span>
+        <span class="nav-badge-pill">350+ Workflows</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="./#explorer" class="nav-link">⚡ Explorer</a>
+        <a href="./#categories" class="nav-link">📁 Categories</a>
+        <a href="./#how-it-works" class="nav-link">🚀 Quickstart</a>
+        <a href="./#faq" class="nav-link">❓ FAQ</a>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates" target="_blank" rel="noopener" class="nav-link">
+          ⭐ GitHub
+        </a>
+        <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe" target="_blank" rel="noopener" class="nav-cta-btn">
+          <span>Start n8n Cloud Trial</span>
+          <span>↗</span>
+        </a>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle theme">
+          ☀️
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main View Container -->
+  <main>
+    <div class="container">
+      
 
 <section class="hero-section">
   <div class="hero-eyebrow">
@@ -131,7 +189,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
   <h2>Browse by Category Hub</h2>
   <p>Deep-dive into 18 dedicated collections categorized for specific tools, platforms, and use-cases.</p>
   <div class="categories-bento-grid">
-    <a href="{{ site.baseurl }}/categories/gmail-email-automation" class="category-bento-card" style="--cat-accent: #EA4335;">
+    <a href="./categories/gmail-email-automation" class="category-bento-card" style="--cat-accent: #EA4335;">
       <div class="cat-card-header">
         <span class="cat-card-icon">✉️</span>
         <span class="cat-card-count">26 templates</span>
@@ -139,7 +197,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Gmail & Email Automation</div>
       <div class="cat-card-desc">AI email labeling, phishing detection, auto-reply drafts, and Outlook automation.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/telegram-bots" class="category-bento-card" style="--cat-accent: #229ED9;">
+    <a href="./categories/telegram-bots" class="category-bento-card" style="--cat-accent: #229ED9;">
       <div class="cat-card-header">
         <span class="cat-card-icon">✈️</span>
         <span class="cat-card-count">26 templates</span>
@@ -147,7 +205,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Telegram</div>
       <div class="cat-card-desc">AI chatbots with LangChain, voice-to-text in 55 languages, PDF chat, and Spotify integration.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/google-drive-sheets" class="category-bento-card" style="--cat-accent: #0F9D58;">
+    <a href="./categories/google-drive-sheets" class="category-bento-card" style="--cat-accent: #0F9D58;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📁</span>
         <span class="cat-card-count">21 templates</span>
@@ -155,7 +213,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Google Drive & Google Sheets</div>
       <div class="cat-card-desc">RAG chatbots for documents, OpenAI fine-tuning, lead qualification, and HR screening.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/wordpress" class="category-bento-card" style="--cat-accent: #21759B;">
+    <a href="./categories/wordpress" class="category-bento-card" style="--cat-accent: #21759B;">
       <div class="cat-card-header">
         <span class="cat-card-icon">🌐</span>
         <span class="cat-card-count">6 templates</span>
@@ -163,7 +221,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">WordPress</div>
       <div class="cat-card-desc">AI blog categorization, content generation with DeepSeek, and chatbot embedding.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/pdf-document-processing" class="category-bento-card" style="--cat-accent: #DC2626;">
+    <a href="./categories/pdf-document-processing" class="category-bento-card" style="--cat-accent: #DC2626;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📄</span>
         <span class="cat-card-count">19 templates</span>
@@ -171,7 +229,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">PDF & Document Processing</div>
       <div class="cat-card-desc">PDF Q&A with source quoting, resume parsing, invoice extraction, and OCR pipelines.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/discord" class="category-bento-card" style="--cat-accent: #5865F2;">
+    <a href="./categories/discord" class="category-bento-card" style="--cat-accent: #5865F2;">
       <div class="cat-card-header">
         <span class="cat-card-icon">💬</span>
         <span class="cat-card-count">4 templates</span>
@@ -179,7 +237,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Discord</div>
       <div class="cat-card-desc">AI Discord bot routing, daily comic translations, and YouTube summary sharing.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/database-storage" class="category-bento-card" style="--cat-accent: #3B82F6;">
+    <a href="./categories/database-storage" class="category-bento-card" style="--cat-accent: #3B82F6;">
       <div class="cat-card-header">
         <span class="cat-card-icon">🗄️</span>
         <span class="cat-card-count">5 templates</span>
@@ -187,7 +245,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Database & Storage</div>
       <div class="cat-card-desc">Natural language SQL generation, PostgreSQL chat, and MongoDB recommendation engines.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/devops-server-automation" class="category-bento-card" style="--cat-accent: #6366F1;">
+    <a href="./categories/devops-server-automation" class="category-bento-card" style="--cat-accent: #6366F1;">
       <div class="cat-card-header">
         <span class="cat-card-icon">⚙️</span>
         <span class="cat-card-count">6 templates</span>
@@ -195,7 +253,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">DevOps / Server Automation</div>
       <div class="cat-card-desc">Disk space monitoring, Docker controller webhooks, Linux updates, and server health checks.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/airtable" class="category-bento-card" style="--cat-accent: #F59E0B;">
+    <a href="./categories/airtable" class="category-bento-card" style="--cat-accent: #F59E0B;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📊</span>
         <span class="cat-card-count">5 templates</span>
@@ -203,7 +261,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Airtable</div>
       <div class="cat-card-desc">AI agents querying Airtable, meeting notes sync from Fireflies, and Obsidian integration.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/notion" class="category-bento-card" style="--cat-accent: #64748B;">
+    <a href="./categories/notion" class="category-bento-card" style="--cat-accent: #64748B;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📝</span>
         <span class="cat-card-count">10 templates</span>
@@ -211,7 +269,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Notion</div>
       <div class="cat-card-desc">Customer feedback logging, AI paper summaries, competitor research, and task generation.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/slack" class="category-bento-card" style="--cat-accent: #4A154B;">
+    <a href="./categories/slack" class="category-bento-card" style="--cat-accent: #4A154B;">
       <div class="cat-card-header">
         <span class="cat-card-icon">💼</span>
         <span class="cat-card-count">9 templates</span>
@@ -219,7 +277,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Slack</div>
       <div class="cat-card-desc">Gemini AI Slack bots, Linear ticketing sync, info monitoring, and daily digests.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/openai-llms" class="category-bento-card" style="--cat-accent: #10A37F;">
+    <a href="./categories/openai-llms" class="category-bento-card" style="--cat-accent: #10A37F;">
       <div class="cat-card-header">
         <span class="cat-card-icon">🧠</span>
         <span class="cat-card-count">93 templates</span>
@@ -227,7 +285,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">OpenAI & LLMs</div>
       <div class="cat-card-desc">Autonomous agents, LangChain tool calling, multi-agent evaluation, lead scoring, and vision pipelines.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/whatsapp" class="category-bento-card" style="--cat-accent: #25D366;">
+    <a href="./categories/whatsapp" class="category-bento-card" style="--cat-accent: #25D366;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📱</span>
         <span class="cat-card-count">8 templates</span>
@@ -235,7 +293,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">WhatsApp</div>
       <div class="cat-card-desc">WhatsApp chatbots, meeting prep with Apify, lead capture, and payment reminders.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/social-media" class="category-bento-card" style="--cat-accent: #E1306C;">
+    <a href="./categories/social-media" class="category-bento-card" style="--cat-accent: #E1306C;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📢</span>
         <span class="cat-card-count">20 templates</span>
@@ -243,7 +301,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Instagram, Twitter, Social Media</div>
       <div class="cat-card-desc">Omnichannel repurposing, Instagram DM AI inbox, YouTube transcription, and competitor monitoring.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/other-integrations" class="category-bento-card" style="--cat-accent: #8B5CF6;">
+    <a href="./categories/other-integrations" class="category-bento-card" style="--cat-accent: #8B5CF6;">
       <div class="cat-card-header">
         <span class="cat-card-icon">🔌</span>
         <span class="cat-card-count">47 templates</span>
@@ -251,7 +309,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Other Integrations & Use Cases</div>
       <div class="cat-card-desc">Web scraping, e-commerce workflows, Mattermost integration, AWS analysis, and webhook pipelines.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/forms-surveys" class="category-bento-card" style="--cat-accent: #06B6D4;">
+    <a href="./categories/forms-surveys" class="category-bento-card" style="--cat-accent: #06B6D4;">
       <div class="cat-card-header">
         <span class="cat-card-icon">📋</span>
         <span class="cat-card-count">4 templates</span>
@@ -259,7 +317,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">Forms & Surveys</div>
       <div class="cat-card-desc">Conversational AI interviews, appointment qualification, and automated survey analysis.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/ai-research-rag" class="category-bento-card" style="--cat-accent: #EC4899;">
+    <a href="./categories/ai-research-rag" class="category-bento-card" style="--cat-accent: #EC4899;">
       <div class="cat-card-header">
         <span class="cat-card-icon">🔬</span>
         <span class="cat-card-count">45 templates</span>
@@ -267,7 +325,7 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
       <div class="cat-card-title">AI Research, RAG & Data Analysis</div>
       <div class="cat-card-desc">Deep research agents, vector database RAG, financial document analysis, and web scraping pipelines.</div>
     </a>
-    <a href="{{ site.baseurl }}/categories/hr-recruitment" class="category-bento-card" style="--cat-accent: #14B8A6;">
+    <a href="./categories/hr-recruitment" class="category-bento-card" style="--cat-accent: #14B8A6;">
       <div class="cat-card-header">
         <span class="cat-card-icon">👥</span>
         <span class="cat-card-count">4 templates</span>
@@ -383,3 +441,88 @@ description: "Curated directory of 358+ n8n automation templates. Instant copy-a
     </div>
   </div>
 </section>
+
+    </div>
+  </main>
+
+  <!-- Template Inspection Modal -->
+  <div class="modal-overlay" id="template-detail-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" id="template-modal-dialog">
+      <!-- Injected dynamically by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-notification-container"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom: 12px;">
+            <div class="nav-logo-icon" style="width: 26px; height: 26px;">
+              <svg viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span>Awesome n8n Templates</span>
+          </div>
+          <p style="font-size: 0.9rem; margin-bottom: 12px;">
+            The ultimate open-source directory of production-ready n8n automation workflows, AI agents, RAG pipelines, and enterprise integrations.
+          </p>
+          <small class="affiliate-note">
+            * Referral link notice: Some links on this site are affiliate/referral links. This project may earn a commission on eligible sign-ups at no additional cost to you.
+          </small>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Integrations</h4>
+          <ul>
+            <li><a href="./categories/openai-llms">🧠 OpenAI & AI Agents</a></li>
+            <li><a href="./categories/ai-research-rag">🔬 AI Research & RAG</a></li>
+            <li><a href="./categories/gmail-email-automation">✉️ Gmail Automation</a></li>
+            <li><a href="./categories/telegram-bots">✈️ Telegram Chatbots</a></li>
+            <li><a href="./categories/whatsapp">📱 WhatsApp Bots</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Business Hubs</h4>
+          <ul>
+            <li><a href="./categories/notion">📝 Notion Hubs</a></li>
+            <li><a href="./categories/airtable">📊 Airtable Workflows</a></li>
+            <li><a href="./categories/google-drive-sheets">📁 Google Workspace</a></li>
+            <li><a href="./categories/devops-server-automation">⚙️ DevOps & Infra</a></li>
+            <li><a href="./categories/hr-recruitment">👥 HR & Hiring</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Project & Links</h4>
+          <ul>
+            <li><a href="https://github.com/ahmedfawzyjr/N8N-Templates" target="_blank" rel="noopener">GitHub Repository</a></li>
+            <li><a href="https://github.com/ahmedfawzyjr/N8N-Templates/issues" target="_blank" rel="noopener">Submit a Workflow</a></li>
+            <li><a href="https://n8n.partnerlinks.io/h1pwwf5m4toe" target="_blank" rel="noopener">Start n8n Cloud Trial</a></li>
+            <li><a href="https://github.com/ahmedfawzyjr" target="_blank" rel="noopener">Curated by Ahmed Fawzy</a></li>
+            <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Awesome n8n Templates</strong>. MIT Licensed.
+        </div>
+        <div>
+          Built with high-end modern glassmorphism & lightning-fast client search.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/templates-data.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

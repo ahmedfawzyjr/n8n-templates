@@ -1,12 +1,13 @@
 # Awesome n8n Templates [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of 358+ awesome n8n workflow templates, integrations, and automation resources.
+> A curated collection of **358+** production-ready n8n automation workflow templates, AI agents, RAG pipelines, and enterprise integrations.
 
-Workflows are ready-to-import `.json` files. Download any template and import it directly into your n8n instance (Cloud or self-hosted). Always review and test imported templates before deploying them in production.
+Workflows are ready-to-import `.json` files. Download or copy any template and import it directly into your n8n instance (Cloud or self-hosted). Always review and test imported templates before deploying them in production.
 
 [![Templates](https://img.shields.io/badge/Templates-358+-blue.svg?style=flat-square)](#categories--template-list)
 [![Categories](https://img.shields.io/badge/Categories-18-green.svg?style=flat-square)](#categories--template-list)
 [![n8n](https://img.shields.io/badge/n8n-Compatible-FF6D5A.svg?style=flat-square&logo=n8n)](https://n8n.partnerlinks.io/h1pwwf5m4toe)
+[![Interactive Directory](https://img.shields.io/badge/Interactive_Directory-Live-success.svg?style=flat-square)](https://ahmedfawzyjr.github.io/N8N-Templates/)
 
 ---
 
@@ -20,25 +21,26 @@ Workflows are ready-to-import `.json` files. Download any template and import it
 
 ## Table of Contents
 
+- [Interactive Web Directory](https://ahmedfawzyjr.github.io/N8N-Templates/)
 - [Categories & Template List](#categories--template-list)
-  - [Gmail & Email Automation (26)](#what-n8n-templates-are-available-for-gmail-and-email-automation)
-  - [Telegram (26)](#how-can-i-automate-telegram-bots-with-n8n)
-  - [Google Drive & Google Sheets (21)](#what-are-the-best-n8n-templates-for-google-drive-and-google-sheets)
-  - [WordPress (6)](#how-do-i-automate-wordpress-with-n8n)
-  - [PDF & Document Processing (19)](#what-n8n-templates-exist-for-pdf-and-document-processing)
-  - [Discord (4)](#how-can-i-automate-discord-with-n8n)
-  - [Database & Storage (5)](#what-are-the-best-n8n-database-and-storage-automation-templates)
-  - [DevOps / Server Automation (6)](#what-n8n-templates-are-available-for-devops-and-server-automation)
-  - [Airtable (5)](#how-do-i-automate-airtable-with-n8n)
-  - [Notion (10)](#what-are-the-best-n8n-templates-for-notion)
-  - [Slack (9)](#how-can-i-automate-slack-with-n8n)
-  - [OpenAI & LLMs (93)](#what-n8n-templates-are-available-for-openai-llms-and-ai-agents)
-  - [WhatsApp (8)](#how-do-i-build-whatsapp-chatbots-with-n8n)
-  - [Instagram, Twitter, Social Media (20)](#what-are-the-best-n8n-templates-for-social-media-automation)
-  - [Other Integrations & Use Cases (47)](#what-other-n8n-integration-templates-are-available)
-  - [Forms & Surveys (4)](#how-do-i-automate-forms-and-surveys-with-n8n)
-  - [AI Research, RAG, and Data Analysis (45)](#what-n8n-templates-exist-for-ai-research-rag-and-data-analysis)
-  - [HR & Recruitment (4)](#what-n8n-templates-are-available-for-hr-and-recruitment-automation)
+  - [✉️ Gmail & Email Automation (26)](#what-n8n-templates-are-available-for-gmail-and-email-automation)
+  - [✈️ Telegram (26)](#how-can-i-automate-telegram-bots-with-n8n)
+  - [📁 Google Drive & Google Sheets (21)](#what-are-the-best-n8n-templates-for-google-drive-and-google-sheets)
+  - [🌐 WordPress (6)](#how-do-i-automate-wordpress-with-n8n)
+  - [📄 PDF & Document Processing (19)](#what-n8n-templates-exist-for-pdf-and-document-processing)
+  - [💬 Discord (4)](#how-can-i-automate-discord-with-n8n)
+  - [🗄️ Database & Storage (5)](#what-are-the-best-n8n-database-and-storage-automation-templates)
+  - [⚙️ DevOps / Server Automation (6)](#what-n8n-templates-are-available-for-devops-and-server-automation)
+  - [📊 Airtable (5)](#how-do-i-automate-airtable-with-n8n)
+  - [📝 Notion (10)](#what-are-the-best-n8n-templates-for-notion)
+  - [💼 Slack (9)](#how-can-i-automate-slack-with-n8n)
+  - [🧠 OpenAI & LLMs (93)](#what-n8n-templates-are-available-for-openai-llms-and-ai-agents)
+  - [📱 WhatsApp (8)](#how-do-i-build-whatsapp-chatbots-with-n8n)
+  - [📢 Instagram, Twitter, Social Media (20)](#what-are-the-best-n8n-templates-for-social-media-automation)
+  - [🔌 Other Integrations & Use Cases (47)](#what-other-n8n-integration-templates-are-available)
+  - [📋 Forms & Surveys (4)](#how-do-i-automate-forms-and-surveys-with-n8n)
+  - [🔬 AI Research, RAG & Data Analysis (45)](#what-n8n-templates-exist-for-ai-research-rag-and-data-analysis)
+  - [👥 HR & Recruitment (4)](#what-n8n-templates-are-available-for-hr-and-recruitment-automation)
 - [Unique Nodes Reference](#unique-nodes-reference)
 - [FAQ](#faq)
 - [Contributing](#contributing)
@@ -575,19 +577,11 @@ For a complete inventory of all 200+ distinct n8n node types and node packages u
 
 ---
 
-<p align="center">
-  <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe">
-    <img src="https://img.shields.io/badge/n8n_Cloud-Start_Trial-orange?style=for-the-badge" alt="Start an n8n Cloud trial" />
-  </a>
-  <br />
-  <small>* Referral link — this project receives a commission on eligible purchases.</small>
-</p>
-
 ## FAQ
 
 ### How do I import an n8n template from this repository?
 
-Download the `.json` file for any template you want to use. Open your n8n instance (either self-hosted or on [n8n Cloud](https://n8n.partnerlinks.io/h1pwwf5m4toe)), navigate to Workflows, click "Import from File," and select the downloaded JSON file. The workflow will appear in your editor ready for configuration. You will need to add your own credentials for each connected service before activating the workflow.
+Download the `.json` file for any template you want to use. Open your n8n instance (either self-hosted or on [n8n Cloud](https://n8n.partnerlinks.io/h1pwwf5m4toe)), navigate to Workflows, click "Import from File," and select the downloaded JSON file. Or use the [Interactive Web Directory](https://ahmedfawzyjr.github.io/N8N-Templates/) to click "Copy JSON" and paste (Ctrl+V) directly into your n8n canvas!
 <br />
 <small>* Referral link — this project receives a commission on eligible purchases.</small>
 
@@ -603,7 +597,7 @@ Yes, all templates in this repository are free and open-source under the MIT lic
 
 ### Can I contribute my own templates?
 
-Contributions are welcome! If you have built an n8n workflow that solves a useful problem, please submit a pull request. Make sure to export your workflow without credentials or sensitive data, place it in the appropriate category folder, and add it to the README.
+Contributions are welcome! If you have built an n8n workflow that solves a useful problem, please submit a pull request. Make sure to export your workflow without credentials or sensitive data, place it in the appropriate category folder, and run the sync script.
 
 ### What AI models are supported in these templates?
 
@@ -622,8 +616,7 @@ Contributions are welcome! Please read the contribution guidelines before submit
 1. Export your workflow from n8n as a `.json` file.
 2. **Remove all credentials, API keys, and sensitive data** before committing.
 3. Place the file in the appropriate category directory.
-4. Add an entry to the corresponding table in `README.md` with Title, Description, Department, and Link.
-5. Submit a pull request with a clear description of what the workflow does.
+4. Submit a pull request with a clear description of what the workflow does.
 
 ---
 
