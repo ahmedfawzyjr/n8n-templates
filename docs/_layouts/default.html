@@ -8,8 +8,14 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   
+  <!-- Canonical & Social Meta -->
   {% seo %}
   {% include head-custom.html %}
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/favicon.svg">
+  <link rel="alternate icon" href="{{ site.baseurl }}/favicon.svg">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/favicon.svg">
 
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,35 +33,117 @@
 
   <!-- Floating Island Glass Navigation -->
   <header class="site-header">
-    <nav class="nav-island">
-      <a href="{{ site.baseurl }}/" class="nav-brand">
+    <nav class="nav-island" aria-label="Main Navigation">
+      <a href="{{ site.baseurl }}/" class="nav-brand" title="n8n Portal Home">
         <div class="nav-logo-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
           </svg>
         </div>
-        <span>Awesome n8n</span>
-        <span class="nav-badge-pill">350+ Workflows</span>
+        <span class="nav-brand-text">n8n Portal</span>
+        <span class="nav-badge-pill">350+ Templates</span>
       </a>
 
+      <!-- Desktop Links -->
       <div class="nav-links">
-        <a href="{{ site.baseurl }}/#explorer" class="nav-link">⚡ Explorer</a>
-        <a href="{{ site.baseurl }}/#categories" class="nav-link">📁 Categories</a>
-        <a href="{{ site.baseurl }}/#how-it-works" class="nav-link">🚀 Quickstart</a>
-        <a href="{{ site.baseurl }}/#faq" class="nav-link">❓ FAQ</a>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates" target="_blank" rel="noopener" class="nav-link">
-          ⭐ GitHub
+        <a href="{{ site.baseurl }}/#explorer" class="nav-link">
+          <svg class="svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>Explorer</span>
+        </a>
+        <a href="{{ site.baseurl }}/#categories" class="nav-link">
+          <svg class="svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+          <span>Categories</span>
+        </a>
+        <a href="{{ site.baseurl }}/#how-it-works" class="nav-link">
+          <svg class="svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Quickstart</span>
+        </a>
+        <a href="{{ site.baseurl }}/#faq" class="nav-link">
+          <svg class="svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          <span>FAQ</span>
+        </a>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates" target="_blank" rel="noopener" class="nav-link" title="Star on GitHub">
+          <svg class="svg-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
         </a>
         <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe" target="_blank" rel="noopener" class="nav-cta-btn">
+          <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           <span>Start n8n Cloud Trial</span>
-          <span>↗</span>
+          <svg class="svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
         </a>
         <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle theme">
-          ☀️
+          <!-- Injected via JavaScript -->
         </button>
       </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg class="svg-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
     </nav>
   </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="nav-brand">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span class="nav-brand-text">n8n Portal</span>
+      </div>
+      <button class="mobile-drawer-close-btn" id="mobile-drawer-close-btn" aria-label="Close menu">
+        <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-links">
+      <a href="{{ site.baseurl }}/#explorer" class="mobile-drawer-link">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <span>Templates Explorer</span>
+      </a>
+      <a href="{{ site.baseurl }}/#categories" class="mobile-drawer-link">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+        <span>Workflow Categories</span>
+      </a>
+      <a href="{{ site.baseurl }}/#how-it-works" class="mobile-drawer-link">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span>Quickstart Guide</span>
+      </a>
+      <a href="{{ site.baseurl }}/#faq" class="mobile-drawer-link">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        <span>FAQ &amp; Troubleshooting</span>
+      </a>
+      <a href="https://github.com/ahmedfawzyjr/N8N-Templates" target="_blank" rel="noopener" class="mobile-drawer-link">
+        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>GitHub Repository</span>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <button class="mobile-theme-btn" id="mobile-theme-toggle-btn">
+        <!-- Injected via JavaScript -->
+      </button>
+      <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe" target="_blank" rel="noopener" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 12px;">
+        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span>Start n8n Cloud Trial</span>
+        <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </aside>
 
   <!-- Main View Container -->
   <main>
@@ -80,45 +168,44 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="nav-brand" style="margin-bottom: 12px;">
-            <div class="nav-logo-icon" style="width: 26px; height: 26px;">
-              <svg viewBox="0 0 24 24" style="width: 14px; height: 14px;">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            <div class="nav-logo-icon" style="width: 28px; height: 28px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px;">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
               </svg>
             </div>
-            <span>Awesome n8n Templates</span>
+            <span class="nav-brand-text">n8n Portal</span>
           </div>
-          <p style="font-size: 0.9rem; margin-bottom: 12px;">
-            The ultimate open-source directory of production-ready n8n automation workflows, AI agents, RAG pipelines, and enterprise integrations.
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            The premier open-source portal and interactive directory for production-ready n8n automation workflows, AI agents, RAG pipelines, and enterprise integrations.
           </p>
-          <small class="affiliate-note">
-            * Referral link notice: Some links on this site are affiliate/referral links. This project may earn a commission on eligible sign-ups at no additional cost to you.
-          </small>
         </div>
 
         <div class="footer-col">
           <h4>Popular Integrations</h4>
           <ul>
-            <li><a href="{{ site.baseurl }}/categories/openai-llms">🧠 OpenAI & AI Agents</a></li>
-            <li><a href="{{ site.baseurl }}/categories/ai-research-rag">🔬 AI Research & RAG</a></li>
-            <li><a href="{{ site.baseurl }}/categories/gmail-email-automation">✉️ Gmail Automation</a></li>
-            <li><a href="{{ site.baseurl }}/categories/telegram-bots">✈️ Telegram Chatbots</a></li>
-            <li><a href="{{ site.baseurl }}/categories/whatsapp">📱 WhatsApp Bots</a></li>
+            <li><a href="{{ site.baseurl }}/categories/openai-llms">OpenAI &amp; AI Agents</a></li>
+            <li><a href="{{ site.baseurl }}/categories/ai-research-rag">AI Research &amp; RAG</a></li>
+            <li><a href="{{ site.baseurl }}/categories/gmail-email-automation">Gmail Automation</a></li>
+            <li><a href="{{ site.baseurl }}/categories/telegram-bots">Telegram Chatbots</a></li>
+            <li><a href="{{ site.baseurl }}/categories/whatsapp">WhatsApp Bots</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Business Hubs</h4>
           <ul>
-            <li><a href="{{ site.baseurl }}/categories/notion">📝 Notion Hubs</a></li>
-            <li><a href="{{ site.baseurl }}/categories/airtable">📊 Airtable Workflows</a></li>
-            <li><a href="{{ site.baseurl }}/categories/google-drive-sheets">📁 Google Workspace</a></li>
-            <li><a href="{{ site.baseurl }}/categories/devops-server-automation">⚙️ DevOps & Infra</a></li>
-            <li><a href="{{ site.baseurl }}/categories/hr-recruitment">👥 HR & Hiring</a></li>
+            <li><a href="{{ site.baseurl }}/categories/notion">Notion Hubs</a></li>
+            <li><a href="{{ site.baseurl }}/categories/airtable">Airtable Workflows</a></li>
+            <li><a href="{{ site.baseurl }}/categories/google-drive-sheets">Google Workspace</a></li>
+            <li><a href="{{ site.baseurl }}/categories/devops-server-automation">DevOps &amp; Infra</a></li>
+            <li><a href="{{ site.baseurl }}/categories/hr-recruitment">HR &amp; Hiring</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Project & Links</h4>
+          <h4>Project &amp; Links</h4>
           <ul>
             <li><a href="https://github.com/ahmedfawzyjr/N8N-Templates" target="_blank" rel="noopener">GitHub Repository</a></li>
             <li><a href="https://github.com/ahmedfawzyjr/N8N-Templates/issues" target="_blank" rel="noopener">Submit a Workflow</a></li>
@@ -131,10 +218,10 @@
 
       <div class="footer-bottom">
         <div>
-          &copy; {{ site.time | date: '%Y' }} <strong>Awesome n8n Templates</strong>. MIT Licensed.
+          &copy; {{ site.time | date: '%Y' }} <strong>n8n Portal</strong>. MIT Licensed.
         </div>
         <div>
-          Built with high-end modern glassmorphism & lightning-fast client search.
+          Built with glassmorphism design system &amp; instant client search.
         </div>
       </div>
     </div>

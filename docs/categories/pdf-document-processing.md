@@ -1,30 +1,31 @@
 ---
 layout: default
-title: "PDF & Document Processing Templates for n8n | Awesome n8n Templates"
+title: "PDF & Document Processing Templates | n8n Portal"
 description: "19 n8n pdf & document processing templates. PDF Q&A with source quoting, resume parsing, invoice extraction, and OCR pipelines."
 ---
 
-<nav style="margin-bottom: 24px; font-size: 0.9rem; color: var(--text-muted);">
-  <a href="{{ site.baseurl }}/" style="color: var(--text-secondary);">Home</a> / 
-  <a href="{{ site.baseurl }}/#categories" style="color: var(--text-secondary);">Categories</a> / 
-  <span style="color: var(--n8n-coral);">PDF & Document Processing</span>
+<nav style="margin-bottom: 24px; font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+  <a href="{{ site.baseurl }}/" style="color: var(--text-secondary);">Home</a>
+  <span style="opacity: 0.4;">/</span>
+  <a href="{{ site.baseurl }}/#categories" style="color: var(--text-secondary);">Categories</a>
+  <span style="opacity: 0.4;">/</span>
+  <span style="color: var(--n8n-coral); font-weight: 600;">PDF & Document Processing</span>
 </nav>
 
 <div style="background: var(--surface-glass-card); border: 1px solid var(--border-glass); border-radius: var(--radius-xl); padding: 36px 32px; box-shadow: var(--shadow-glass); position: relative; overflow: hidden; margin-bottom: 40px;">
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #DC2626;"></div>
   <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
     <div style="display: flex; align-items: center; gap: 14px;">
-      <span style="font-size: 2.5rem;">📄</span>
+      <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #DC2626;"><svg class="svg-icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
       <h1 style="margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem);">PDF & Document Processing</h1>
     </div>
     <span class="nav-badge-pill" style="font-size: 0.85rem; padding: 6px 14px;">19 Workflows</span>
   </div>
   <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 820px; line-height: 1.6; margin-bottom: 24px;">Process documents at scale using n8n workflows for PDF parsing, OCR, and AI-driven data extraction. Templates cover conversational PDF chatbots with source citations, invoice parsing with LlamaParse and Mistral, and study note generation.</p>
   <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-    <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe" target="_blank" rel="noopener" class="btn-primary">🚀 Start n8n Cloud Trial</a>
-    <a href="{{ site.baseurl }}/?cat=pdf-document-processing#explorer" class="btn-secondary">⚡ Filter in Explorer</a>
+    <a href="https://n8n.partnerlinks.io/h1pwwf5m4toe" target="_blank" rel="noopener" class="btn-primary"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Start n8n Cloud Trial</a>
+    <a href="{{ site.baseurl }}/?cat=pdf-document-processing#explorer" class="btn-secondary"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Filter in Explorer</a>
   </div>
-  <small style="color: var(--text-muted); font-size: 0.75rem; display: block; margin-top: 10px;">* Referral link — this project receives a commission on eligible purchases.</small>
 </div>
 
 <h2>All 19 PDF & Document Processing Workflows</h2>
@@ -34,342 +35,342 @@ description: "19 n8n pdf & document processing templates. PDF Q&A with source qu
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Operations/Finance/AI</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-multi-engine-ocr-and-document-processing-pipeline')">AI-Powered Multi-Engine OCR and Document Processing Pipeline</h3>
-      <p class="card-desc">Ingests receipts, invoices, and documents via webhook, performs multimodal Vision OCR with GPT-4o, validates confidence thresholds, and stores records in Postgres / Google Sheets with human-in-the-loop review alerts.</p>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates OpenAI Chat, Respond to Webhook, PostgreSQL, Slack for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain llm</span><span class="node-tag">Code (JS/Python)</span><span class="node-tag">Google Sheets</span> <span class="node-tag">+7</span>
+        <span class="node-tag">Code JS/Python</span><span class="node-tag">Google Sheets</span><span class="node-tag">IF Condition</span> <span class="node-tag">+7</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('ai-powered-multi-engine-ocr-and-document-processing-pipeline')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('ai-powered-multi-engine-ocr-and-document-processing-pipeline')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/AI-Powered%20Multi-Engine%20OCR%20and%20Document%20Processing%20Pipeline.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('ai-powered-multi-engine-ocr-and-document-processing-pipeline')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('ai-powered-multi-engine-ocr-and-document-processing-pipeline')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/AI-Powered%20Multi-Engine%20OCR%20and%20Document%20Processing%20Pipeline.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Customer Support/Knowledge Management</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('ask-questions-about-a-pdf-using-ai')">Ask questions about a PDF using AI</h3>
-      <p class="card-desc">This workflow fetches a PDF from Google Drive, splits it into chunks, embeds the chunks using OpenAI embeddings, and enables chat interactions with the document content.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('ask-questions-about-a-pdf-using-ai')">Ask Questions About A Pdf Using Ai</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates document Default Data Loader, Google Drive, OpenAI Chat, embeddings Open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain retrieval qa</span><span class="node-tag">Chat trigger</span><span class="node-tag">Document default data loader</span> <span class="node-tag">+9</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Drive</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+9</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('ask-questions-about-a-pdf-using-ai')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('ask-questions-about-a-pdf-using-ai')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Ask%20Questions%20About%20a%20PDF%20Using%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('ask-questions-about-a-pdf-using-ai')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('ask-questions-about-a-pdf-using-ai')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Ask%20Questions%20About%20a%20PDF%20Using%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Education/Knowledge Management</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant')">Breakdown Documents into Study Notes using Templating MistralAI and Qdrant</h3>
-      <p class="card-desc">This workflow triggers on new files, processes documents with MistralAI embeddings, and stores data in Qdrant vector store for study note generation.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant')">Breakdown Documents Into Study Notes Using Templating Mistralai And Qdrant</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates aggregate, Extract from File, Merge, chain Llm for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Aggregate</span><span class="node-tag">Chain llm</span><span class="node-tag">Chain retrieval qa</span> <span class="node-tag">+19</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">Loop / Batches</span> <span class="node-tag">+19</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Breakdown%20Documents%20into%20Study%20Notes%20Using%20Templating%20MistralAI%20and%20Qdrant.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Breakdown%20Documents%20into%20Study%20Notes%20Using%20Templating%20MistralAI%20and%20Qdrant.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Support</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-pdf-docs-using-ai-quoting-sources')">Chat with PDF Docs Using AI (Quoting Sources)</h3>
-      <p class="card-desc">Automated workflow for chat with pdf docs using ai (quoting sources) using OpenAI, Google Workspace, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-pdf-docs-using-ai-quoting-sources')">Chat With Pdf Docs Using Ai (Quoting Sources)</h3>
+      <p class="card-desc">Autonomous support automation workflow connecting document Default Data Loader, Google Drive, OpenAI Chat, embeddings Open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain llm</span><span class="node-tag">Chat trigger</span><span class="node-tag">Code (JS/Python)</span> <span class="node-tag">+10</span>
+        <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Drive</span> <span class="node-tag">+10</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('chat-with-pdf-docs-using-ai-quoting-sources')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('chat-with-pdf-docs-using-ai-quoting-sources')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Chat%20with%20PDF%20Docs%20Using%20AI%20%28Quoting%20Sources%29.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('chat-with-pdf-docs-using-ai-quoting-sources')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('chat-with-pdf-docs-using-ai-quoting-sources')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Chat%20with%20PDF%20Docs%20Using%20AI%20%28Quoting%20Sources%29.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Marketing/Content</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('convert-url-html-to-markdown-format-and-get-page-links')">Convert URL HTML to Markdown Format and Get Page Links</h3>
-      <p class="card-desc">This workflow converts HTML content from a given URL into Markdown format and extracts all page links, useful for content scraping and analysis.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('convert-url-html-to-markdown-format-and-get-page-links')">Convert Url Html To Markdown Format And Get Page Links</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates split Out, Loop / Batches, sticky Note, limit for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Edit Fields</span><span class="node-tag">HTTP Request</span><span class="node-tag">Limit</span> <span class="node-tag">+6</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">Loop / Batches</span> <span class="node-tag">+6</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('convert-url-html-to-markdown-format-and-get-page-links')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('convert-url-html-to-markdown-format-and-get-page-links')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Convert%20URL%20HTML%20to%20Markdown%20Format%20and%20Get%20Page%20Links.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('convert-url-html-to-markdown-format-and-get-page-links')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('convert-url-html-to-markdown-format-and-get-page-links')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Convert%20URL%20HTML%20to%20Markdown%20Format%20and%20Get%20Page%20Links.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
         <span class="dept-badge">HR</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('cv-resume-pdf-parsing-with-multimodal-vision-ai')">CV Resume PDF Parsing with Multimodal Vision AI</h3>
-      <p class="card-desc">This workflow converts candidate resume PDFs to images, uses a Vision Language Model to assess candidate fit, and includes logic to bypass hidden AI prompts in resumes.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('cv-resume-pdf-parsing-with-multimodal-vision-ai')">Cv Resume Pdf Parsing With Multimodal Vision Ai</h3>
+      <p class="card-desc">End-to-end hr automation template for PDF & Document Processing. Integrates Google Drive, sticky Note, manual  (Trigger), chain Llm for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain llm</span><span class="node-tag">Edit image</span><span class="node-tag">Gemini</span> <span class="node-tag">+6</span>
+        <span class="node-tag">Gemini</span><span class="node-tag">Google Drive</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+6</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('cv-resume-pdf-parsing-with-multimodal-vision-ai')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('cv-resume-pdf-parsing-with-multimodal-vision-ai')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/CV%20Resume%20PDF%20Parsing%20with%20Multimodal%20Vision%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('cv-resume-pdf-parsing-with-multimodal-vision-ai')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('cv-resume-pdf-parsing-with-multimodal-vision-ai')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/CV%20Resume%20PDF%20Parsing%20with%20Multimodal%20Vision%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Data Analytics/IT</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('etl-pipeline-for-text-processing')">ETL pipeline for text processing</h3>
-      <p class="card-desc">This workflow implements an ETL pipeline for text processing, extracting data from Twitter, storing it in MongoDB and PostgreSQL, and sending alerts to Slack based on sentiment analysis.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('etl-pipeline-for-text-processing')">ETL pipeline</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates cron, PostgreSQL, twitter, MongoDB for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Cron</span><span class="node-tag">Edit Fields</span><span class="node-tag">Google cloud natural language</span> <span class="node-tag">+6</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span><span class="node-tag">MongoDB</span> <span class="node-tag">+6</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('etl-pipeline-for-text-processing')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('etl-pipeline-for-text-processing')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/ETL%20Pipeline%20for%20Text%20Processing.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('etl-pipeline-for-text-processing')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('etl-pipeline-for-text-processing')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/ETL%20Pipeline%20for%20Text%20Processing.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Data Extraction/IT</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-and-process-information-directly-from-pdf-using-claude-and-gemini')">Extract and process information directly from PDF using Claude and Gemini</h3>
-      <p class="card-desc">This workflow extracts and processes information directly from PDFs using advanced AI models like Claude and Gemini, enabling intelligent document analysis.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-and-process-information-directly-from-pdf-using-claude-and-gemini')">Extract And Process Information Directly From Pdf Using Claude And Gemini</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates Google Drive, Extract from File, sticky Note, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Edit Fields</span><span class="node-tag">Extract from file</span><span class="node-tag">Google Drive</span> <span class="node-tag">+3</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">Google Drive</span> <span class="node-tag">+3</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-and-process-information-directly-from-pdf-using-claude-and-gemini')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-and-process-information-directly-from-pdf-using-claude-and-gemini')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20and%20Process%20Information%20Directly%20from%20PDF%20Using%20Claude%20and%20Gemini.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-and-process-information-directly-from-pdf-using-claude-and-gemini')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-and-process-information-directly-from-pdf-using-claude-and-gemini')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20and%20Process%20Information%20Directly%20from%20PDF%20Using%20Claude%20and%20Gemini.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Finance/Logistics/Operations</span>
-      </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-human---in---the---loop-validation-and-auto---training-using-cradl-ai')">Extract data from PDFs with human-in-the-loop validation and auto-training using Cradl AI</h3>
-      <p class="card-desc">Extracts structured data from invoices and similar documents using Cradl AI. Flags low-confidence predictions for human review before they enter your system, automatically retrains the model on approved corrections, and applies built-in LLM guardrails to detect and reject hallucinations.</p>
-      <div class="card-nodes-list">
-        <span class="node-tag">Code (JS/Python)</span><span class="node-tag">Cradl ai</span><span class="node-tag">Gmail</span> <span class="node-tag">+4</span>
-      </div>
-      <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('invoice-data-extraction-with-human---in---the---loop-validation-and-auto---training-using-cradl-ai')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-human---in---the---loop-validation-and-auto---training-using-cradl-ai')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Invoice%20Data%20Extraction%20with%20Human%20-%20In%20-%20The%20-%20Loop%20Validation%20and%20Auto%20-%20Training%20Using%20Cradl%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
-      </div>
-    </div>
-  </div>
-  <div class="template-card">
-    <div class="template-card-inner">
-      <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
         <span class="dept-badge">HR</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-data-from-resume-and-create-pdf-with-gotenberg')">Extract data from resume and create PDF with Gotenberg</h3>
-      <p class="card-desc">This workflow extracts structured data from resumes using AI, converts it into HTML, and then generates a well-formatted PDF using Gotenberg.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-data-from-resume-and-create-pdf-with-gotenberg')">Extract Data From Resume And Create Pdf With Gotenberg</h3>
+      <p class="card-desc">End-to-end hr automation template for PDF & Document Processing. Integrates Telegram Trigger, OpenAI Chat, Extract from File, convert To File for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain llm</span><span class="node-tag">Code (JS/Python)</span><span class="node-tag">Convert to file</span> <span class="node-tag">+12</span>
+        <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span> <span class="node-tag">+12</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-data-from-resume-and-create-pdf-with-gotenberg')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-data-from-resume-and-create-pdf-with-gotenberg')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20Data%20from%20Resume%20and%20Create%20PDF%20with%20Gotenberg.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-data-from-resume-and-create-pdf-with-gotenberg')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-data-from-resume-and-create-pdf-with-gotenberg')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20Data%20from%20Resume%20and%20Create%20PDF%20with%20Gotenberg.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Operations/Logistics</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-license-plate-number-from-image-uploaded-via-an-n8n-form')">Extract license plate number from image uploaded via an n8n form</h3>
-      <p class="card-desc">This workflow extracts license plate numbers from images uploaded via an n8n form using a Vision Language Model, then displays the extracted information.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-text-from-pdf-and-image-using-vertex-ai-gemini-into-csv')">Extract text from PDF and image using Vertex AI (Gemini) into CSV</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates Google Drive, Switch, Extract from File, Google Drive Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain llm</span><span class="node-tag">Edit Fields</span><span class="node-tag">Form</span> <span class="node-tag">+2</span>
+        <span class="node-tag">Extract from File</span><span class="node-tag">Gemini</span><span class="node-tag">Google Drive</span> <span class="node-tag">+6</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-license-plate-number-from-image-uploaded-via-an-n8n-form')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-license-plate-number-from-image-uploaded-via-an-n8n-form')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20License%20Plate%20Number%20from%20Image%20Uploaded%20via%20an%20n8n%20Form.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-text-from-pdf-and-image-using-vertex-ai-gemini-into-csv')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-text-from-pdf-and-image-using-vertex-ai-gemini-into-csv')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20Text%20from%20PDF%20and%20Image%20Using%20Vertex%20AI%20%28Gemini%29%20into%20CSV.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-text-from-pdf-and-image-using-vertex-ai-gemini-into-csv')">Extract Text from PDF and Image Using Vertex AI (Gemini) into CSV</h3>
-      <p class="card-desc">Automated workflow for extract text from pdf and image using vertex ai (gemini) into csv using Google Workspace, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-license-plate-number-from-image-uploaded-via-an-n8n-form')">Image to license plate number</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates form, chain Llm, lm Chat Open Router, n8n Form Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Chain llm</span><span class="node-tag">Convert to file</span><span class="node-tag">Extract from file</span> <span class="node-tag">+6</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">chain Llm</span><span class="node-tag">form</span> <span class="node-tag">+2</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-text-from-pdf-and-image-using-vertex-ai-gemini-into-csv')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-text-from-pdf-and-image-using-vertex-ai-gemini-into-csv')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20Text%20from%20PDF%20and%20Image%20Using%20Vertex%20AI%20%28Gemini%29%20into%20CSV.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('extract-license-plate-number-from-image-uploaded-via-an-n8n-form')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('extract-license-plate-number-from-image-uploaded-via-an-n8n-form')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Extract%20License%20Plate%20Number%20from%20Image%20Uploaded%20via%20an%20n8n%20Form.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Finance/Admin</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Finance</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-llamaparse-and-openai')">Invoice data extraction with LlamaParse and OpenAI</h3>
-      <p class="card-desc">This workflow extracts structured data from invoices using LlamaParse and OpenAI, then processes it with a structured output parser for detailed invoice data extraction.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-llamaparse-and-openai')">Invoice Data Extraction With Llamaparse And Openai</h3>
+      <p class="card-desc">End-to-end finance automation template for PDF & Document Processing. Integrates aggregate, split Out, Switch, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Aggregate</span><span class="node-tag">Chain llm</span><span class="node-tag">Edit Fields</span> <span class="node-tag">+12</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+12</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('invoice-data-extraction-with-llamaparse-and-openai')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-llamaparse-and-openai')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Invoice%20Data%20Extraction%20with%20LlamaParse%20and%20OpenAI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('invoice-data-extraction-with-llamaparse-and-openai')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-llamaparse-and-openai')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Invoice%20Data%20Extraction%20with%20LlamaParse%20and%20OpenAI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
         <span class="dept-badge">Engineering</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('manipulate-pdf-with-adobe-developer-api')">Manipulate PDF with Adobe Developer API</h3>
-      <p class="card-desc">Automated workflow for manipulate pdf with adobe developer api, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('manipulate-pdf-with-adobe-developer-api')">Manipulate Pdf With Adobe Developer Api</h3>
+      <p class="card-desc">End-to-end engineering automation template for PDF & Document Processing. Integrates Switch, sticky Note, Merge, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Dropbox</span><span class="node-tag">Edit Fields</span><span class="node-tag">Execute workflow trigger</span> <span class="node-tag">+6</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">Merge</span> <span class="node-tag">+6</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('manipulate-pdf-with-adobe-developer-api')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('manipulate-pdf-with-adobe-developer-api')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Manipulate%20PDF%20with%20Adobe%20Developer%20API.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('manipulate-pdf-with-adobe-developer-api')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('manipulate-pdf-with-adobe-developer-api')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Manipulate%20PDF%20with%20Adobe%20Developer%20API.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('parse-pdf-with-llamaparse-and-save-to-airtable')">Parse PDF with LlamaParse and Save to Airtable</h3>
-      <p class="card-desc">Automated workflow for parse pdf with llamaparse and save to airtable using OpenAI, Google Workspace, Airtable, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('parse-pdf-with-llamaparse-and-save-to-airtable')">Parse Pdf With Llamaparse And Save To Airtable</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates Google Drive, Google Drive Trigger, sticky Note, Airtable for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Airtable</span><span class="node-tag">Code (JS/Python)</span><span class="node-tag">Edit Fields</span> <span class="node-tag">+5</span>
+        <span class="node-tag">Airtable</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+5</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('parse-pdf-with-llamaparse-and-save-to-airtable')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('parse-pdf-with-llamaparse-and-save-to-airtable')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Parse%20PDF%20with%20LlamaParse%20and%20Save%20to%20Airtable.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('parse-pdf-with-llamaparse-and-save-to-airtable')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('parse-pdf-with-llamaparse-and-save-to-airtable')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Parse%20PDF%20with%20LlamaParse%20and%20Save%20to%20Airtable.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Finance</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('prepare-csv-files-with-gpt---4')">Prepare CSV Files with GPT - 4</h3>
-      <p class="card-desc">Automated workflow for prepare csv files with gpt - 4 using OpenAI, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-human---in---the---loop-validation-and-auto---training-using-cradl-ai')">PDF invoice data extraction with human-in-the-loop from GMail to Google Sheets</h3>
+      <p class="card-desc">Production-grade finance workflow for automated data synchronization and pipeline processing using cradl Ai, split Out, sticky Note, Gmail.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Edit Fields</span><span class="node-tag">Item lists</span><span class="node-tag">Loop / Batch</span> <span class="node-tag">+6</span>
+        <span class="node-tag">Code JS/Python</span><span class="node-tag">Gmail</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+4</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('prepare-csv-files-with-gpt---4')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('prepare-csv-files-with-gpt---4')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Prepare%20CSV%20Files%20with%20GPT%20-%204.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('invoice-data-extraction-with-human---in---the---loop-validation-and-auto---training-using-cradl-ai')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('invoice-data-extraction-with-human---in---the---loop-validation-and-auto---training-using-cradl-ai')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Invoice%20Data%20Extraction%20with%20Human%20-%20In%20-%20The%20-%20Loop%20Validation%20and%20Auto%20-%20Training%20Using%20Cradl%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('remove-personally-identifiable-information-pii-from-csv-files-with-openai')">Remove Personally Identifiable Information (PII) from CSV Files with OpenAI</h3>
-      <p class="card-desc">Automated workflow for remove personally identifiable information (pii) from csv files with openai using OpenAI, Google Workspace, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('prepare-csv-files-with-gpt---4')">Prepare CSV files with GPT-4</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates move Binary Data, write Binary File, Loop / Batches, OpenAI for reliable automated execution.</p>
       <div class="card-nodes-list">
-        <span class="node-tag">Code (JS/Python)</span><span class="node-tag">Extract from file</span><span class="node-tag">Google Drive</span> <span class="node-tag">+5</span>
+        <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Loop / Batches</span><span class="node-tag">OpenAI</span> <span class="node-tag">+6</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('remove-personally-identifiable-information-pii-from-csv-files-with-openai')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('remove-personally-identifiable-information-pii-from-csv-files-with-openai')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Remove%20Personally%20Identifiable%20Information%20%28PII%29%20from%20CSV%20Files%20with%20OpenAI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('prepare-csv-files-with-gpt---4')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('prepare-csv-files-with-gpt---4')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Prepare%20CSV%20Files%20with%20GPT%20-%204.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
   <div class="template-card">
     <div class="template-card-inner">
       <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
       </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('transcribe-audio-files-summarize-with-gpt---4-and-store-in-notion')">Transcribe Audio Files, Summarize with GPT - 4, and Store in Notion</h3>
-      <p class="card-desc">Automated workflow for transcribe audio files, summarize with gpt - 4, and store in notion using OpenAI, Google Workspace, Notion, streamlining execution and data processing.</p>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('remove-personally-identifiable-information-pii-from-csv-files-with-openai')">Remove Personally Identifiable Information (Pii) From Csv Files With Openai</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates Google Drive, split Out, Extract from File, Google Drive Trigger for reliable automated execution.</p>
+      <div class="card-nodes-list">
+        <span class="node-tag">Code JS/Python</span><span class="node-tag">Extract from File</span><span class="node-tag">Google Drive</span> <span class="node-tag">+5</span>
+      </div>
+      <div class="card-actions">
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('remove-personally-identifiable-information-pii-from-csv-files-with-openai')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('remove-personally-identifiable-information-pii-from-csv-files-with-openai')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Remove%20Personally%20Identifiable%20Information%20%28PII%29%20from%20CSV%20Files%20with%20OpenAI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="template-card">
+    <div class="template-card-inner">
+      <div class="card-top-row">
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
+      </div>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('transcribing-bank-statements-to-markdown-using-gemini-vision-ai')">Transcribing Bank Statements To Markdown Using Gemini Vision Ai</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates Compression (Zip), Google Drive, sort, aggregate for reliable automated execution.</p>
+      <div class="card-nodes-list">
+        <span class="node-tag">Code JS/Python</span><span class="node-tag">Compression (Zip)</span><span class="node-tag">Gemini</span> <span class="node-tag">+9</span>
+      </div>
+      <div class="card-actions">
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('transcribing-bank-statements-to-markdown-using-gemini-vision-ai')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('transcribing-bank-statements-to-markdown-using-gemini-vision-ai')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Transcribing%20Bank%20Statements%20to%20Markdown%20Using%20Gemini%20Vision%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="template-card">
+    <div class="template-card-inner">
+      <div class="card-top-row">
+        <span class="category-chip"><svg class="svg-icon " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> PDF & Document Processing</span>
+        <span class="dept-badge">Operations</span>
+      </div>
+      <h3 class="card-title" onclick="window.n8nExplorer.openModal('transcribe-audio-files-summarize-with-gpt---4-and-store-in-notion')">Whisper Transkription copy</h3>
+      <p class="card-desc">End-to-end operations automation template for PDF & Document Processing. Integrates Notion, Google Drive, Google Drive Trigger, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Google Drive</span><span class="node-tag">Google Drive Trigger</span><span class="node-tag">Notion</span> <span class="node-tag">+2</span>
       </div>
       <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('transcribe-audio-files-summarize-with-gpt---4-and-store-in-notion')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('transcribe-audio-files-summarize-with-gpt---4-and-store-in-notion')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Transcribe%20Audio%20Files%2C%20Summarize%20with%20GPT%20-%204%2C%20and%20Store%20in%20Notion.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
-      </div>
-    </div>
-  </div>
-  <div class="template-card">
-    <div class="template-card-inner">
-      <div class="card-top-row">
-        <span class="category-chip">📄 PDF & Document Processing</span>
-        <span class="dept-badge">Ops</span>
-      </div>
-      <h3 class="card-title" onclick="window.n8nExplorer.openModal('transcribing-bank-statements-to-markdown-using-gemini-vision-ai')">Transcribing Bank Statements to Markdown Using Gemini Vision AI</h3>
-      <p class="card-desc">Automated workflow for transcribing bank statements to markdown using gemini vision ai using Google Workspace, streamlining execution and data processing.</p>
-      <div class="card-nodes-list">
-        <span class="node-tag">Aggregate</span><span class="node-tag">Chain llm</span><span class="node-tag">Code (JS/Python)</span> <span class="node-tag">+9</span>
-      </div>
-      <div class="card-actions">
-        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('transcribing-bank-statements-to-markdown-using-gemini-vision-ai')">⚡ Copy JSON</button>
-        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('transcribing-bank-statements-to-markdown-using-gemini-vision-ai')" title="Inspect">👁️</button>
-        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Transcribing%20Bank%20Statements%20to%20Markdown%20Using%20Gemini%20Vision%20AI.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub">↗️</a>
+        <button class="btn-card-primary" onclick="window.n8nExplorer.copyForN8n('transcribe-audio-files-summarize-with-gpt---4-and-store-in-notion')"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> <span>Copy JSON</span></button>
+        <button class="btn-card-icon" onclick="window.n8nExplorer.openModal('transcribe-audio-files-summarize-with-gpt---4-and-store-in-notion')" title="Inspect workflow details" aria-label="Inspect workflow"><svg class="svg-icon " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <a href="https://github.com/ahmedfawzyjr/N8N-Templates/blob/main/PDF%20and%20Document%20Processing/Transcribe%20Audio%20Files%2C%20Summarize%20with%20GPT%20-%204%2C%20and%20Store%20in%20Notion.json" target="_blank" rel="noopener" class="btn-card-icon" title="View on GitHub" aria-label="View on GitHub"><svg class="svg-icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg></a>
       </div>
     </div>
   </div>
@@ -378,23 +379,23 @@ description: "19 n8n pdf & document processing templates. PDF Q&A with source qu
 <div style="margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--border-glass);">
   <h3>Explore Other Category Hubs</h3>
   <div class="filter-pills-scroll" style="margin-top: 16px;">
-    <a href="{{ site.baseurl }}/categories/gmail-email-automation" class="filter-pill" >✉️ Gmail & Email Automation (26)</a>
-    <a href="{{ site.baseurl }}/categories/telegram-bots" class="filter-pill" >✈️ Telegram (26)</a>
-    <a href="{{ site.baseurl }}/categories/google-drive-sheets" class="filter-pill" >📁 Google Drive & Google Sheets (21)</a>
-    <a href="{{ site.baseurl }}/categories/wordpress" class="filter-pill" >🌐 WordPress (6)</a>
-    <a href="{{ site.baseurl }}/categories/pdf-document-processing" class="filter-pill" style="border-color: var(--n8n-coral);">📄 PDF & Document Processing (19)</a>
-    <a href="{{ site.baseurl }}/categories/discord" class="filter-pill" >💬 Discord (4)</a>
-    <a href="{{ site.baseurl }}/categories/database-storage" class="filter-pill" >🗄️ Database & Storage (5)</a>
-    <a href="{{ site.baseurl }}/categories/devops-server-automation" class="filter-pill" >⚙️ DevOps / Server Automation (6)</a>
-    <a href="{{ site.baseurl }}/categories/airtable" class="filter-pill" >📊 Airtable (5)</a>
-    <a href="{{ site.baseurl }}/categories/notion" class="filter-pill" >📝 Notion (10)</a>
-    <a href="{{ site.baseurl }}/categories/slack" class="filter-pill" >💼 Slack (9)</a>
-    <a href="{{ site.baseurl }}/categories/openai-llms" class="filter-pill" >🧠 OpenAI & LLMs (93)</a>
-    <a href="{{ site.baseurl }}/categories/whatsapp" class="filter-pill" >📱 WhatsApp (8)</a>
-    <a href="{{ site.baseurl }}/categories/social-media" class="filter-pill" >📢 Instagram, Twitter, Social Media (20)</a>
-    <a href="{{ site.baseurl }}/categories/other-integrations" class="filter-pill" >🔌 Other Integrations & Use Cases (47)</a>
-    <a href="{{ site.baseurl }}/categories/forms-surveys" class="filter-pill" >📋 Forms & Surveys (4)</a>
-    <a href="{{ site.baseurl }}/categories/ai-research-rag" class="filter-pill" >🔬 AI Research, RAG & Data Analysis (45)</a>
-    <a href="{{ site.baseurl }}/categories/hr-recruitment" class="filter-pill" >👥 HR & Recruitment (4)</a>
+    <a href="{{ site.baseurl }}/categories/gmail-email-automation" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> <span>Gmail & Email Automation</span> <span class="pill-count">26</span></a>
+    <a href="{{ site.baseurl }}/categories/telegram-bots" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg> <span>Telegram</span> <span class="pill-count">26</span></a>
+    <a href="{{ site.baseurl }}/categories/google-drive-sheets" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="2" y1="12" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" x2="6.01" y1="16" y2="16"/><line x1="10" x2="10.01" y1="16" y2="16"/></svg> <span>Google Drive & Google Sheets</span> <span class="pill-count">21</span></a>
+    <a href="{{ site.baseurl }}/categories/wordpress" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> <span>WordPress</span> <span class="pill-count">6</span></a>
+    <a href="{{ site.baseurl }}/categories/pdf-document-processing" class="filter-pill" style="border-color: var(--n8n-coral);"><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> <span>PDF & Document Processing</span> <span class="pill-count">19</span></a>
+    <a href="{{ site.baseurl }}/categories/discord" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Discord</span> <span class="pill-count">4</span></a>
+    <a href="{{ site.baseurl }}/categories/database-storage" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg> <span>Database & Storage</span> <span class="pill-count">5</span></a>
+    <a href="{{ site.baseurl }}/categories/devops-server-automation" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg> <span>DevOps / Server Automation</span> <span class="pill-count">6</span></a>
+    <a href="{{ site.baseurl }}/categories/airtable" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg> <span>Airtable</span> <span class="pill-count">5</span></a>
+    <a href="{{ site.baseurl }}/categories/notion" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <span>Notion</span> <span class="pill-count">10</span></a>
+    <a href="{{ site.baseurl }}/categories/slack" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> <span>Slack</span> <span class="pill-count">9</span></a>
+    <a href="{{ site.baseurl }}/categories/openai-llms" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> <span>OpenAI & LLMs</span> <span class="pill-count">93</span></a>
+    <a href="{{ site.baseurl }}/categories/whatsapp" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <span>WhatsApp</span> <span class="pill-count">8</span></a>
+    <a href="{{ site.baseurl }}/categories/social-media" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg> <span>Instagram, Twitter, Social Media</span> <span class="pill-count">20</span></a>
+    <a href="{{ site.baseurl }}/categories/other-integrations" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 2v6"/><path d="M18 8v5a6 6 0 0 1-12 0V8z"/></svg> <span>Other Integrations & Use Cases</span> <span class="pill-count">47</span></a>
+    <a href="{{ site.baseurl }}/categories/forms-surveys" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> <span>Forms & Surveys</span> <span class="pill-count">4</span></a>
+    <a href="{{ site.baseurl }}/categories/ai-research-rag" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M14 9.3 20.7 20.3c.7 1.1-.1 2.7-1.4 2.7H4.7c-1.3 0-2.1-1.6-1.4-2.7L10 9.3"/><path d="M6.3 17h11.4"/></svg> <span>AI Research, RAG & Data Analysis</span> <span class="pill-count">45</span></a>
+    <a href="{{ site.baseurl }}/categories/hr-recruitment" class="filter-pill" ><svg class="svg-icon " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span>HR & Recruitment</span> <span class="pill-count">4</span></a>
   </div>
 </div>

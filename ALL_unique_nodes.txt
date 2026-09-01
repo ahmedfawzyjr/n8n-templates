@@ -1,4 +1,4 @@
-# n8n Awesome Templates - Complete Unique Nodes Catalog
+# n8n Portal - Complete Unique Nodes Catalog
 Total Workflows Analyzed: 358
 Total Unique Node Types: 209
 Total Node Instances in Repository: 6459
