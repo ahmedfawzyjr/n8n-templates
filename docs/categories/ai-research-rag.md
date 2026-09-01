@@ -39,7 +39,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('vector-database-as-a-big-data-analysis-tool-for-ai-agents-1-3-anomaly1-2-knn')">[1/3 - anomaly detection] [1/2 - KNN classification] Batch upload dataset to Qdrant (crops dataset)</h3>
-      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, google Cloud Storage, filter, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates manual  (Trigger), filter, google Cloud Storage, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+5</span>
       </div>
@@ -57,7 +57,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('vector-database-as-a-big-data-analysis-tool-for-ai-agents-2-2-knn')">[2/2] KNN classifier (lands dataset)</h3>
-      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, execute Workflow  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates HTTP Request, execute Workflow  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+3</span>
       </div>
@@ -75,7 +75,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('vector-database-as-a-big-data-analysis-tool-for-ai-agents-2-3---anomaly')">[2/3] Set up medoids (2 types) for anomaly detection (crops dataset)</h3>
-      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates split Out, sticky Note, Merge, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates split Out, manual  (Trigger), Merge, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -93,7 +93,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automated-hugging-face-paper-summary-fetching--categorization-workflow')">[3/3] Anomaly detection tool (crops dataset)</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, execute Workflow  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates HTTP Request, execute Workflow  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -111,7 +111,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('vector-database-as-a-big-data-analysis-tool-for-ai-agents-3-3---anomaly')">[3/3] Anomaly detection tool (crops dataset)</h3>
-      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, execute Workflow  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates HTTP Request, execute Workflow  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -129,7 +129,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automated-multi-source-breaking-news-monitor-and-real-time-digest')">Automated Multi-Source Breaking News Monitor and Real-Time Digest</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, Slack, HTTP Request, Telegram for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates AI Agent, Slack, HTTP Request, Telegram for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -147,7 +147,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('autonomous-ai-crawler')">Autonomous Ai Crawler</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, markdown, split Out, HTML Extract for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates output Parser Structured, split Out, markdown, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+13</span>
       </div>
@@ -165,7 +165,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('bilig-workpaper-mcp-formula-engine-for-n8n-agents')">Bilig WorkPaper MCP formula engine for n8n agents</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting sticky Note, manual  (Trigger), HTTP Request. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting sticky Note, HTTP Request, manual  (Trigger). Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -183,7 +183,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('build-a-financial-documents-assistant-using-qdrant-and-mistralai')">Build A Financial Documents Assistant Using Qdrant And Mistral.Ai</h3>
-      <p class="card-desc">End-to-end support automation template for AI Research, RAG & Data Analysis. Integrates document Default Data Loader, embeddings Mistral Cloud, Switch, Qdrant for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for AI Research, RAG & Data Analysis. Integrates manual  (Trigger), chain Retrieval Qa, Switch, Qdrant for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span> <span class="node-tag">+13</span>
       </div>
@@ -201,7 +201,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('build-a-tax-code-assistant-with-qdrant-mistralai-and-openai')">Build A Tax Code Assistant With Qdrant, Mistral.Ai And Openai</h3>
-      <p class="card-desc">End-to-end support automation template for AI Research, RAG & Data Analysis. Integrates Compression (Zip), Extract from File, tool Workflow, filter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for AI Research, RAG & Data Analysis. Integrates wait, embeddings Mistral Cloud, Buffer Memory, Qdrant for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Compression (Zip)</span> <span class="node-tag">+18</span>
       </div>
@@ -219,7 +219,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('build-your-own-image-search-using-ai-object-detection-cdn-and-elasticsearch')">Build Your Own Image Search Using Ai Object Detection, Cdn And Elasticsearch</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates split Out, elasticsearch, sticky Note, filter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates split Out, manual  (Trigger), edit Image, filter for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">edit Image</span> <span class="node-tag">+5</span>
       </div>
@@ -237,7 +237,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('building-rag-chatbot-for-movie-recommendations-with-qdrant-and-open-ai')">Building RAG Chatbot for Movie Recommendations with Qdrant and Open AI</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting aggregate, Extract from File, tool Workflow, Merge. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting embeddings Open Ai, Buffer Memory, GitHub, Qdrant. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+16</span>
       </div>
@@ -255,7 +255,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-github-api-documentation---rag-powered-chatbot-with-pinecone--openai')">Chat with GitHub OpenAPI Specification using RAG (Pinecone and OpenAI)</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting document Default Data Loader, OpenAI Chat, embeddings Open Ai, chat  (Trigger). Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, manual  (Trigger), embeddings Open Ai, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+9</span>
       </div>
@@ -273,7 +273,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">HR</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('analyze-tradingviewcom-charts-with-chrome-extension-n8n-and-openai')">chrome extension backend with AI</h3>
-      <p class="card-desc">End-to-end hr automation template for AI Research, RAG & Data Analysis. Integrates Respond to Webhook, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end hr automation template for AI Research, RAG & Data Analysis. Integrates Respond to Webhook, sticky Note, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Respond to Webhook</span><span class="node-tag">Webhook</span><span class="node-tag">open Ai</span> <span class="node-tag">+1</span>
       </div>
@@ -291,7 +291,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('customer-insights-with-qdrant-python-and-information-extractor')">Customer Insights With Qdrant, Python And Information Extractor</h3>
-      <p class="card-desc">End-to-end support automation template for AI Research, RAG & Data Analysis. Integrates document Default Data Loader, OpenAI Chat, split Out, HTML Extract for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for AI Research, RAG & Data Analysis. Integrates Google Sheets, split Out, manual  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span> <span class="node-tag">+14</span>
       </div>
@@ -309,7 +309,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('dataforge-lite---ai-url-data-extractor')">DataForge Lite — Single URL AI Scraper</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI, Respond to Webhook, sticky Note, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI, Respond to Webhook, HTTP Request, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">OpenAI</span> <span class="node-tag">+3</span>
       </div>
@@ -327,7 +327,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('deduplicate-scraping-ai-grants-for-eligibility-using-ai')">Deduplicate Scraping Ai Grants For Eligibility Using Ai</h3>
-      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, split Out, HTML Extract, remove Duplicates for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates split Out, remove Duplicates, Gmail, Merge for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Gmail</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+8</span>
       </div>
@@ -345,7 +345,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('enrich-property-inventory-survey-with-image-recognition-and-ai-agent')">Enrich Property Inventory Survey With Image Recognition And Ai Agent</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting OpenAI Chat, output Parser Structured, Switch, tool Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting output Parser Structured, AI Agent, manual  (Trigger), Switch. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+10</span>
       </div>
@@ -363,7 +363,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-insights--analyse-youtube-comments-via-ai-agent-chat')">Extract Insights & Analyse Youtube Comments Via Ai Agent Chat</h3>
-      <p class="card-desc">Autonomous marketing automation workflow connecting OpenAI Chat, Switch, tool Workflow, chat  (Trigger). Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous marketing automation workflow connecting AI Agent, Switch, open Ai, tool Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+8</span>
       </div>
@@ -381,7 +381,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generate-seo-seed-keywords-using-ai')">Generate Seo Seed Keywords Using Ai</h3>
-      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates aggregate, split Out, sticky Note, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates no Op, split Out, AI Agent, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Claude</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+5</span>
       </div>
@@ -399,7 +399,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('send-google-analytics-data-to-ai-to-analyze-then-save-results-in-baserow')">Google analytics template</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates google Analytics, sticky Note, manual  (Trigger), baserow for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates manual  (Trigger), google Analytics, HTTP Request, baserow for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+4</span>
       </div>
@@ -417,7 +417,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('create-a-google-analytics-data-report-with-ai-and-sent-it-to-email-and-telegram')">Google Analytics: Weekly Report</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates google Analytics, open Ai, Send Email (SMTP), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates open Ai, tool Calculator, google Analytics, summarize for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+7</span>
       </div>
@@ -435,7 +435,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('hacker-news-to-video-content')">Hacker News to Video Template - AlexK1919</h3>
-      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates twitter, HTTP Request, limit, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates wait, linked In, Google Drive, s3 for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Drive</span> <span class="node-tag">+18</span>
       </div>
@@ -453,7 +453,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">HR</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('hacker-news-job-listing-scraper-and-parser')">HN Who is Hiring Scrape</h3>
-      <p class="card-desc">End-to-end hr automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, split Out, sticky Note, filter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end hr automation template for AI Research, RAG & Data Analysis. Integrates output Parser Structured, split Out, manual  (Trigger), limit for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+9</span>
       </div>
@@ -471,7 +471,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('host-your-own-ai-deep-research-agent-with-n8n-apify-and-openai-o3')">Host Your Own Ai Deep Research Agent With N8N, Apify And Openai O3</h3>
-      <p class="card-desc">Autonomous engineering automation workflow connecting aggregate, filter, form, Execute Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous engineering automation workflow connecting Execute Workflow, form, execute Workflow  (Trigger), no Op. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span> <span class="node-tag">+20</span>
       </div>
@@ -489,7 +489,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('intelligent-web-query-and-semantic-re-ranking-flow-using-brave-and-google-gemini')">Intelligent Web Query and Semantic Re-Ranking Flow</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates Gemini, OpenAI Chat, Respond to Webhook, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates output Parser Structured, Gemini, date Time, output Parser Autofixing for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Claude</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Gemini</span> <span class="node-tag">+9</span>
       </div>
@@ -507,7 +507,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('learn-anything-from-hn---get-top-resource-recommendations-from-hacker-news')">Learn Anything From Hn Get Top Resource Recommendations From Hacker News</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates aggregate, markdown, split Out, hacker News for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates no Op, split Out, markdown, Gemini for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Gemini</span><span class="node-tag">HTTP Request</span><span class="node-tag">Send Email (SMTP)</span> <span class="node-tag">+7</span>
       </div>
@@ -525,7 +525,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('live-web-research-agent-with-superhighway')">Live Web Research Agent with Superhighway</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting sticky Note, manual  (Trigger), HTTP Request. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting manual  (Trigger), HTTP Request, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -543,7 +543,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('make-openai-citation-for-file-retrieval-rag')">Make OpenAI Citation for File Retrieval RAG</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting aggregate, markdown, split Out, open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting split Out, markdown, open Ai, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+7</span>
       </div>
@@ -561,7 +561,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('scrape-and-summarize-posts-of-a-news-site-without-rss-feed-using-ai-and-save-them-to-a-nocodb')">News Extraction</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates HTML Extract, OpenAI, sticky Note, Merge for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI, item Lists, Merge, HTML Extract for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+7</span>
       </div>
@@ -579,7 +579,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('open-deep-research---ai-powered-autonomous-research-workflow')">Open Deep Research - AI-Powered Autonomous Research</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates tool Wikipedia, Loop / Batches, chat  (Trigger), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates AI Agent, Loop / Batches, Buffer Memory, tool Wikipedia for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+7</span>
       </div>
@@ -597,7 +597,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('openclaw-ai-autonomous-web-scraper-and-market-intelligence-pipeline')">OpenClaw AI Autonomous Web Scraper and Market Intelligence Pipeline</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, HTTP Request, Telegram, AI Agent for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates AI Agent, HTTP Request, Telegram, OpenAI Chat for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -615,7 +615,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('perplexity-research-to-html---ai-powered-content-creation')">Perplexity Researcher to HTML Web Page</h3>
-      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates execute Workflow  (Trigger), OpenAI Chat, Respond to Webhook, tool Workflow for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates output Parser Structured, no Op, AI Agent, tool Workflow for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+11</span>
       </div>
@@ -633,7 +633,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('query-perplexity-ai-from-your-n8n-workflows')">Query Perplexity Ai From Your N8N Workflows</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, manual  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, HTTP Request, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -651,7 +651,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('recipe-recommendations-with-qdrant-and-mistral')">Recipe Recommendations With Qdrant And Mistral</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates document Default Data Loader, embeddings Mistral Cloud, HTML Extract, Qdrant for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates wait, AI Agent, manual  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+14</span>
       </div>
@@ -669,7 +669,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Finance</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('reconcile-rent-payments-with-local-excel-spreadsheet-and-openai')">Reconcile Rent Payments With Local Excel Spreadsheet And Openai</h3>
-      <p class="card-desc">End-to-end finance automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, split Out, Extract from File, local File  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end finance automation template for AI Research, RAG & Data Analysis. Integrates output Parser Structured, split Out, AI Agent, Code Tool for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Code Tool</span> <span class="node-tag">+8</span>
       </div>
@@ -687,7 +687,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('scrape-and-summarize-webpages-with-ai')">Scrape And Summarize Webpages With Ai</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates document Default Data Loader, OpenAI Chat, split Out, HTML Extract for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates split Out, manual  (Trigger), limit, Merge for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+9</span>
       </div>
@@ -705,7 +705,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('scrape-trustpilot-reviews-with-deepseek-analyze-sentiment-with-openai')">Scrape Trustpilot Reviews with DeepSeek, Analyze Sentiment with OpenAI</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates sentiment Analysis, OpenAI Chat, split Out, HTML Extract for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates Google Sheets, split Out, manual  (Trigger), limit for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Sheets</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+9</span>
       </div>
@@ -723,7 +723,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ultimate-scraper-workflow-for-n8n')">Selenium Ultimate Scraper</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, HTML Extract, Respond to Webhook, convert To File for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates convert To File, limit, open Ai, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+10</span>
       </div>
@@ -741,7 +741,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('summarize-serpbear-data-with-ai-via-openrouter-and-save-it-to-baserow')">SERPBear analytics template</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, manual  (Trigger), baserow, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates manual  (Trigger), HTTP Request, baserow, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+3</span>
       </div>
@@ -759,7 +759,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('socialpulse-lite---reddit-trend-monitor')">SocialPulse Lite — Single Source Monitor (Reddit Only)</h3>
-      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates OpenAI, sticky Note, Google Sheets, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for AI Research, RAG & Data Analysis. Integrates Google Sheets, OpenAI, HTTP Request, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Google Sheets</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+3</span>
       </div>
@@ -777,7 +777,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('spot-workplace-discrimination-patterns-with-ai')">Spot Workplace Discrimination Patterns with AI</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates OpenAI Chat, HTML Extract, sticky Note, Merge for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates quick Chart, manual  (Trigger), Merge, HTML Extract for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+8</span>
       </div>
@@ -795,7 +795,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('survey-insights-with-qdrant-python-and-information-extractor')">Survey Insights With Qdrant, Python And Information Extractor</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates document Default Data Loader, OpenAI Chat, split Out, Loop / Batches for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates Google Sheets, split Out, sticky Note, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span> <span class="node-tag">+15</span>
       </div>
@@ -813,7 +813,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('summarize-umami-data-with-ai-via-openrouter-and-save-it-to-baserow')">Umami analytics template</h3>
-      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates sticky Note, manual  (Trigger), baserow, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end executive automation template for AI Research, RAG & Data Analysis. Integrates manual  (Trigger), HTTP Request, baserow, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+3</span>
       </div>
@@ -831,7 +831,7 @@ description: "45 n8n ai research, rag & data analysis templates. Deep research a
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('visual-regression-testing-with-apify-and-ai-vision-model')">Visual Regression Testing With Apify And Ai Vision Model</h3>
-      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates linear, Google Drive, aggregate, Loop / Batches for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for AI Research, RAG & Data Analysis. Integrates output Parser Structured, wait, Google Sheets, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gemini</span><span class="node-tag">Google Drive</span> <span class="node-tag">+13</span>
       </div>

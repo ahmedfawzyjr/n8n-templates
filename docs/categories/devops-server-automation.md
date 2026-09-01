@@ -39,7 +39,7 @@ description: "6 n8n devops / server automation templates. Disk space monitoring,
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('audit-a-public-page-and-build-an-automation-acceptance-pack')">Audit a Public Page and Build an Automation Acceptance Pack</h3>
-      <p class="card-desc">End-to-end engineering automation template for DevOps / Server Automation. Integrates sticky Note, manual  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for DevOps / Server Automation. Integrates manual  (Trigger), HTTP Request, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+3</span>
       </div>
@@ -57,7 +57,7 @@ description: "6 n8n devops / server automation templates. Disk space monitoring,
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('disk---space---watchdog')">Disk space watchdog with tiered thresholds and Telegram alert</h3>
-      <p class="card-desc">Real-time event-driven engineering alert and notification workflow leveraging SSH, Send Email (SMTP), Telegram.</p>
+      <p class="card-desc">Real-time event-driven engineering alert and notification workflow leveraging SSH, Telegram, Send Email (SMTP).</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">IF Condition</span><span class="node-tag">SSH</span> <span class="node-tag">+3</span>
       </div>
@@ -93,7 +93,7 @@ description: "6 n8n devops / server automation templates. Disk space monitoring,
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('docker---compose---controller')">Start/Stop a Docker service</h3>
-      <p class="card-desc">End-to-end engineering automation template for DevOps / Server Automation. Integrates SSH, Respond to Webhook, sticky Note, stop And Error for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for DevOps / Server Automation. Integrates stop And Error, SSH, Respond to Webhook, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">IF Condition</span><span class="node-tag">Respond to Webhook</span><span class="node-tag">SSH</span> <span class="node-tag">+3</span>
       </div>
@@ -111,7 +111,7 @@ description: "6 n8n devops / server automation templates. Disk space monitoring,
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('linux---update---via---webhook')">Update Server</h3>
-      <p class="card-desc">End-to-end engineering automation template for DevOps / Server Automation. Integrates SSH, sticky Note, Respond to Webhook for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for DevOps / Server Automation. Integrates Respond to Webhook, sticky Note, SSH for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Respond to Webhook</span><span class="node-tag">SSH</span><span class="node-tag">Webhook</span> <span class="node-tag">+1</span>
       </div>
@@ -129,7 +129,7 @@ description: "6 n8n devops / server automation templates. Disk space monitoring,
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('uptime---ping---alert')">Uptime Ping Alert — sai che un sito è giù prima dei tuoi utenti</h3>
-      <p class="card-desc">Real-time event-driven engineering alert and notification workflow leveraging Telegram, HTTP Request.</p>
+      <p class="card-desc">Real-time event-driven engineering alert and notification workflow leveraging HTTP Request, Telegram.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+1</span>
       </div>

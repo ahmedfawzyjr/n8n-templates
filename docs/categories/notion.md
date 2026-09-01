@@ -39,7 +39,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('add-positive-feedback-messages-to-a-table-in-notion')">Add Positive Feedback Messages To A Table In Notion</h3>
-      <p class="card-desc">End-to-end support automation template for Notion. Integrates Notion, typeform  (Trigger), google Cloud Natural Language, trello for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Notion. Integrates trello, typeform  (Trigger), google Cloud Natural Language, Slack for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">IF Condition</span><span class="node-tag">Notion</span><span class="node-tag">Slack</span> <span class="node-tag">+3</span>
       </div>
@@ -57,7 +57,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-competitor-research-with-exaai-notion-and-ai-agents')">Automate Competitor Research With Exa.Ai, Notion And Ai Agents</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting Notion, OpenAI Chat, split Out, Loop / Batches. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting output Parser Structured, wait, split Out, AI Agent. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+11</span>
       </div>
@@ -75,7 +75,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-linkedin-outreach-with-notion-and-openai')">Automate LinkedIn Posts with AI</h3>
-      <p class="card-desc">End-to-end marketing automation template for Notion. Integrates Notion, aggregate, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Notion. Integrates open Ai, Merge, HTTP Request, aggregate for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">Merge</span><span class="node-tag">Notion</span> <span class="node-tag">+5</span>
       </div>
@@ -93,7 +93,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('analyse-papers-from-hugging-face-with-ai-and-store-them-in-notion')">Hugging Face to Notion</h3>
-      <p class="card-desc">End-to-end operations automation template for Notion. Integrates Notion, split Out, Loop / Batches, HTML Extract for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Notion. Integrates split Out, open Ai, Loop / Batches, HTML Extract for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTML Extract</span><span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span> <span class="node-tag">+5</span>
       </div>
@@ -111,7 +111,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('turn-emails-into-ai---enhanced-tasks-in-notion-multi---user-support-with-gmail-airtable-and-softr')">mails2notion V2</h3>
-      <p class="card-desc">End-to-end support automation template for Notion. Integrates OpenAI Chat, sticky Note, filter, Airtable for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Notion. Integrates output Parser Structured, Gmail Trigger, no Op, AI Agent for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+11</span>
       </div>
@@ -129,7 +129,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('notion-ai-assistant-generator')">Notion Ai Assistant Generator</h3>
-      <p class="card-desc">End-to-end support automation template for Notion. Integrates Notion, Switch, text Classifier, chat  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Notion. Integrates output Parser Structured, text Classifier, AI Agent, Switch for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Claude</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+8</span>
       </div>
@@ -147,7 +147,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('notion-knowledge-base-ai-assistant')">Notion Knowledge Base Ai Assistant</h3>
-      <p class="card-desc">End-to-end support automation template for Notion. Integrates Notion, OpenAI Chat, chat  (Trigger), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Notion. Integrates AI Agent, Buffer Memory, HTTP Tool, chat  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+5</span>
       </div>
@@ -165,7 +165,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('notion-to-pinecone-vector-store-integration')">Prod: Notion to Vector Store - Dimension 768</h3>
-      <p class="card-desc">End-to-end operations automation template for Notion. Integrates Notion, document Default Data Loader, embeddings Google Gemini, filter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Notion. Integrates filter, embeddings Google Gemini, Notion Trigger, summarize for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Notion</span><span class="node-tag">Notion Trigger</span><span class="node-tag">Pinecone</span> <span class="node-tag">+5</span>
       </div>
@@ -183,7 +183,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('upsert-huge-documents-in-a-vector-store-with-supabase-and-notion')">RAG on living data</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting Notion, document Default Data Loader, OpenAI Chat, Loop / Batches. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting no Op, chain Retrieval Qa, limit, vector Store Supabase. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Loop / Batches</span><span class="node-tag">Notion</span><span class="node-tag">Notion Trigger</span> <span class="node-tag">+14</span>
       </div>
@@ -201,7 +201,7 @@ description: "10 n8n notion templates. Customer feedback logging, AI paper summa
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('store-notion---s-pages-as-vector-documents-into-supabase-with-openai')">Store Notion's Pages as Vector Documents into Supabase with OpenAI</h3>
-      <p class="card-desc">End-to-end operations automation template for Notion. Integrates Notion, document Default Data Loader, embeddings Open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Notion. Integrates vector Store Supabase, filter, embeddings Open Ai, Notion Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Notion</span><span class="node-tag">Notion Trigger</span><span class="node-tag">document Default Data Loader</span> <span class="node-tag">+6</span>
       </div>

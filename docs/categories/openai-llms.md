@@ -39,7 +39,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('force-ai-to-use-a-specific-output-format')">[AI/LangChain] Output Parser 4</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, sticky Note, output Parser Autofixing, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, manual  (Trigger), output Parser Autofixing, OpenAI Chat for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">chain Llm</span> <span class="node-tag">+4</span>
       </div>
@@ -129,7 +129,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('actioning-your-meeting-next-steps-using-transcripts-and-ai')">Actioning Your Meeting Next Steps Using Transcripts And Ai</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Google Drive, OpenAI Chat, split Out, Switch for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, split Out, AI Agent, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span> <span class="node-tag">+11</span>
       </div>
@@ -147,7 +147,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('advanced-ai-demo-presented-at-ai-developers-14-meetup')">Advanced Ai Demo (Presented At Ai Developers #14 Meetup)</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates HTTP Request, retriever Vector Store, Gmail, Slack for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates text Classifier, embeddings Open Ai, Buffer Memory, Pinecone for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Claude</span> <span class="node-tag">+19</span>
       </div>
@@ -165,7 +165,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-that-can-scrape-webpages')">Agent with custom HTTP Request</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting OpenAI Chat, markdown, tool Workflow, manual Chat  (Trigger). Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting manual Chat  (Trigger), AI Agent, markdown, tool Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+7</span>
       </div>
@@ -183,7 +183,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent---google-calendar-assistant-using-openai')">AI Agent : Google calendar assistant using OpenAI</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, chat  (Trigger), sticky Note, google Calendar Tool. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting google Calendar Tool, AI Agent, Buffer Memory, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+3</span>
       </div>
@@ -201,7 +201,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-chat')">Ai Agent Chat</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, chat  (Trigger), tool Serp Api, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Buffer Memory, tool Serp Api, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+2</span>
       </div>
@@ -219,7 +219,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-for-n8n-creators-leaderboard---find-popular-workflows')">AI Agent for n8n Creators Leaderboard - Find Popular Workflows</h3>
-      <p class="card-desc">Autonomous sales automation workflow connecting aggregate, OpenAI Chat, split Out, sort. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous sales automation workflow connecting convert To File, sort, split Out, AI Agent. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+15</span>
       </div>
@@ -237,7 +237,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-for-realtime-insights-on-meetings')">Ai Agent For Realtime Insights On Meetings</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting supabase, open Ai, sticky Note, PostgreSQL. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting open Ai, postgres Tool, HTTP Request, supabase. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span> <span class="node-tag">+6</span>
       </div>
@@ -255,7 +255,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-to-chat-with-files-in-supabase-storage')">Ai Agent To Chat With Files In Supabase Storage</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting document Default Data Loader, aggregate, OpenAI Chat, Loop / Batches. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting text Splitter Recursive Character Text Splitter, AI Agent, manual  (Trigger), OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Extract from File</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+15</span>
       </div>
@@ -273,7 +273,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-to-chat-with-supabase---postgresql-db')">Ai Agent To Chat With Supabase Postgresql Db</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, chat  (Trigger), sticky Note, postgres Tool. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, postgres Tool, chat  (Trigger), OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">chat  (Trigger)</span> <span class="node-tag">+2</span>
       </div>
@@ -291,7 +291,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-to-chat-with-you-search-console-data-using-openai-and-postgres')">AI Agent to chat with you Search Console Data, using OpenAI and Postgres</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, aggregate, Switch, Respond to Webhook. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Switch, tool Workflow, Respond to Webhook. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+9</span>
       </div>
@@ -309,7 +309,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-with-ollama-for-current-weather-and-wiki')">Ai Agent With Ollama For Current Weather And Wiki</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting tool Wikipedia, manual Chat  (Trigger), sticky Note, HTTP Tool. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting manual Chat  (Trigger), AI Agent, Ollama, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">HTTP Tool</span> <span class="node-tag">+4</span>
       </div>
@@ -327,7 +327,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-blog-writer-pipeline-with-ollama')">AI Blog Writer Pipeline (Ollama)</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates manual  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates HTTP Request, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> 
       </div>
@@ -345,7 +345,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-chat-with-any-data-source-using-the-n8n-workflow-tool')">Ai Chat With Any Data Source (Using The N8N Workflow Tool)</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, tool Workflow, manual Chat  (Trigger), hacker News. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting manual Chat  (Trigger), AI Agent, tool Workflow, hacker News. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+6</span>
       </div>
@@ -363,7 +363,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-chatbot-that-can-search-the-web')">Ai Chatbot That Can Search The Web</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting tool Wikipedia, OpenAI Chat, manual Chat  (Trigger), tool Serp Api. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting manual Chat  (Trigger), AI Agent, Buffer Memory, tool Wikipedia. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+4</span>
       </div>
@@ -381,7 +381,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-customer-feedback-sentiment-analysis')">Ai Customer Feedback Sentiment Analysis</h3>
-      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates OpenAI, sticky Note, Merge, Google Sheets for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates Google Sheets, OpenAI, Merge, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Google Sheets</span><span class="node-tag">Merge</span><span class="node-tag">OpenAI</span> <span class="node-tag">+2</span>
       </div>
@@ -399,7 +399,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-data-extraction-with-dynamic-prompts-and-airtable')">Ai Data Extraction With Dynamic Prompts And Airtable</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, Switch, Loop / Batches, Extract from File for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates no Op, manual  (Trigger), Switch, Loop / Batches for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+11</span>
       </div>
@@ -417,7 +417,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-data-extraction-with-dynamic-prompts-and-baserow')">Ai Data Extraction With Dynamic Prompts And Baserow</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, split Out, Switch, Loop / Batches for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates no Op, split Out, Switch, Loop / Batches for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span> <span class="node-tag">+10</span>
       </div>
@@ -435,7 +435,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai---driven-lead-management-and-inquiry-automation-with-erpnext--n8n')">Ai Driven Lead Management And Inquiry Automation With Erpnext & N8N</h3>
-      <p class="card-desc">End-to-end sales automation template for OpenAI & LLMs. Integrates OpenAI Chat, google Sheets Tool, sticky Note, microsoft Outlook for reliable automated execution.</p>
+      <p class="card-desc">End-to-end sales automation template for OpenAI & LLMs. Integrates google Sheets Tool, AI Agent, google Docs Tool, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+8</span>
       </div>
@@ -453,7 +453,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-fitness-coach-strava-data-analysis-and-personalized-training-insights')">Ai Fitness Coach Strava Data Analysis And Personalized Training Insights</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates WhatsApp, Send Email (SMTP), sticky Note, Gmail for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates AI Agent, Gemini, Gmail, strava  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Gemini</span> <span class="node-tag">+5</span>
       </div>
@@ -471,7 +471,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-candidate-shortlisting-automation-for-erpnext')">Ai Powered Candidate Shortlisting Automation For Erpnext</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates erp Next, Switch, Extract from File, WhatsApp for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates AI Agent, Gemini, Switch, Merge for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+11</span>
       </div>
@@ -489,7 +489,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-web-scraping-with-jina-google-sheets-and-openai---the-easy-way')">Ai Powered Web Scraping With Jina, Google Sheets And Openai The Easy Way</h3>
-      <p class="card-desc">Production-grade engineering workflow for automated data synchronization and pipeline processing using OpenAI Chat, split Out, sticky Note, information Extractor.</p>
+      <p class="card-desc">Production-grade engineering workflow for automated data synchronization and pipeline processing using Google Sheets, split Out, manual  (Trigger), HTTP Request.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Google Sheets</span><span class="node-tag">HTTP Request</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+4</span>
       </div>
@@ -507,7 +507,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-woocommerce-support---agent')">Ai Powered Woocommerce Support Agent</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting aggregate, OpenAI Chat, split Out, Respond to Webhook. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting woo Commerce, split Out, AI Agent, Merge. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+15</span>
       </div>
@@ -525,7 +525,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-youtube-video-summarization--analysis')">Ai Powered Youtube Video Summarization & Analysis</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates OpenAI Chat, split Out, Respond to Webhook, youtube Transcripter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates you Tube, split Out, youtube Transcripter, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+8</span>
       </div>
@@ -543,7 +543,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-product-images')">AI product Images</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Google Drive, OpenAI Chat, split Out, Loop / Batches for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, wait, convert To File, split Out for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Google Drive</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+8</span>
       </div>
@@ -561,7 +561,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-social-media-caption-creator-creates-social-media-post-captions-in-airtable')">AI Social Media Caption Creator</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates airtable Tool, OpenAI Chat, sticky Note, Airtable Trigger for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates wait, AI Agent, Buffer Memory, Airtable for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">Airtable Trigger</span> <span class="node-tag">+6</span>
       </div>
@@ -597,7 +597,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-voice-chat-using-webhook-memory-manager-openai-google-gemini--elevenlabs')">AI Voice Chat using Webhook, Memory Manager, OpenAI, Google Gemini & ElevenLabs</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting aggregate, Respond to Webhook, open Ai, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting memory Manager, Gemini, limit, open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Buffer Memory</span><span class="node-tag">Gemini</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+8</span>
       </div>
@@ -615,7 +615,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-web-researcher-for-sales')">Ai Web Researcher For Sales</h3>
-      <p class="card-desc">End-to-end sales automation template for OpenAI & LLMs. Integrates OpenAI Chat, Loop / Batches, tool Workflow, tool Serp Api for reliable automated execution.</p>
+      <p class="card-desc">End-to-end sales automation template for OpenAI & LLMs. Integrates output Parser Structured, Google Sheets, AI Agent, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Sheets</span> <span class="node-tag">+9</span>
       </div>
@@ -633,7 +633,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai---generated-summary-block-for-wordpress-posts')">AI-Generated Summary Block for WordPress Posts - with OpenAI, WordPress, Google Sheets & Slack</h3>
-      <p class="card-desc">Production-grade operations workflow for automated data synchronization and pipeline processing using OpenAI Chat, markdown, text Classifier, Loop / Batches.</p>
+      <p class="card-desc">Production-grade operations workflow for automated data synchronization and pipeline processing using Google Sheets, text Classifier, no Op, markdown.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Sheets</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+14</span>
       </div>
@@ -651,7 +651,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ask-a-human-for-help-when-the-ai-doesn---t-know-the-answer')">Ask a human</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, tool Workflow, chat  (Trigger), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates AI Agent, tool Workflow, Buffer Memory, Slack for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+7</span>
       </div>
@@ -669,7 +669,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-customer-support-issue-resolution-using-ai-text-classifier')">Automate Customer Support Issue Resolution Using Ai Text Classifier</h3>
-      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates Jira, OpenAI Chat, aggregate, sentiment Analysis for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates output Parser Structured, Jira, jira Tool, text Classifier for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span> <span class="node-tag">+14</span>
       </div>
@@ -687,7 +687,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-image-validation-tasks-using-ai-vision')">Automate Image Validation Tasks Using Ai Vision</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Google Drive, split Out, sticky Note, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, split Out, manual  (Trigger), Gemini for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gemini</span><span class="node-tag">Google Drive</span> <span class="node-tag">+6</span>
       </div>
@@ -705,7 +705,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-your-rfp-process-with-openai-assistants')">Automate Your Rfp Process With Openai Assistants</h3>
-      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates OpenAI Chat, Loop / Batches, Extract from File, open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates output Parser Item List, Gmail, open Ai, Loop / Batches for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">Gmail</span> <span class="node-tag">+9</span>
       </div>
@@ -723,7 +723,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('suggest-meeting-slots-using-ai')">Calendar_scheduling</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, tool Workflow, sticky Note, filter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, Gmail Trigger, item Lists, AI Agent for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span> <span class="node-tag">+11</span>
       </div>
@@ -741,7 +741,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-local-llms-using-n8n-and-ollama')">Chat with local LLMs using n8n and Ollama</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting chat  (Trigger), sticky Note, Ollama, chain Llm. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting Ollama, chat  (Trigger), chain Llm, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Ollama</span><span class="node-tag">chain Llm</span><span class="node-tag">chat  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -759,7 +759,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-openai-assistant-by-adding-a-memory')">Chat With Openai Assistant (By Adding A Memory)</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting open Ai Assistant, aggregate, chat  (Trigger), sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting memory Manager, limit, tool Calculator, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">aggregate</span> <span class="node-tag">+6</span>
       </div>
@@ -777,7 +777,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-youtube-trend-finder-based-on-niche')">Complete Youtube</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates OpenAI Chat, Loop / Batches, tool Workflow, chat  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates you Tube, AI Agent, tool Workflow, Loop / Batches for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+9</span>
       </div>
@@ -795,7 +795,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generate-9---16-images-from-content-and-brand-guidelines')">Content to 9:16 Aspect Image Generator v1</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates tool Wikipedia, split Out, Loop / Batches, remove Duplicates for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates wait, split Out, manual  (Trigger), limit for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+10</span>
       </div>
@@ -813,7 +813,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('create-a-branded-ai-powered-website-chatbot')">Create A Branded Ai Powered Website Chatbot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, Switch, Respond to Webhook, tool Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Switch, tool Workflow, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+12</span>
       </div>
@@ -831,7 +831,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('daily-meetings-summarization-with-gemini-ai')">Daily meetings summarization with Gemini AI</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates sticky Note, google Calendar Tool, Slack, Gemini for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates google Calendar Tool, AI Agent, Gemini, Slack for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Gemini</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+3</span>
       </div>
@@ -849,7 +849,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('daily-podcast-summary')">Daily Podcast Summary</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates split Out, HTML Extract, OpenAI, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates wait, OpenAI, split Out, Gmail for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span> <span class="node-tag">+8</span>
       </div>
@@ -867,7 +867,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('daoxe-multi---model-chat-with-automatic-fallback')">DaoXE Multi-Model Chat with Automatic Fallback</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting sticky Note, manual  (Trigger), HTTP Request. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting sticky Note, HTTP Request, manual  (Trigger). Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -885,7 +885,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('deepseek-v3-chat--r1-reasoning-quick-start')">DeepSeek V3 Chat & R1 Reasoning Quick Start</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI Chat, chat  (Trigger), sticky Note, chain Llm. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Ollama, Buffer Memory, HTTP Request. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+5</span>
       </div>
@@ -903,7 +903,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('detect-hallucinations-using-specialised-ollama-model-bespoke---minicheck')">Detect Hallucinations Using Specialised Ollama Model Bespoke Minicheck</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates execute Workflow  (Trigger), aggregate, split Out, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates split Out, manual  (Trigger), Ollama, Merge for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Merge</span> <span class="node-tag">+9</span>
       </div>
@@ -921,7 +921,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('auto---generate-documentation-for-n8n-workflows-with-gpt-and-docsify')">Docsify example</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates execute Command, HTML Extract, Extract from File, Respond to Webhook for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates n8n, no Op, HTML Extract, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span> <span class="node-tag">+17</span>
       </div>
@@ -939,7 +939,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('dynamically-generate-a-webpage-from-user-request-using-openai-structured-output')">Dynamically generate HTML page from user request using OpenAI Structured Output</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates HTML Extract, Respond to Webhook, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates open Ai, Respond to Webhook, HTML Extract, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTML Extract</span><span class="node-tag">HTTP Request</span><span class="node-tag">Respond to Webhook</span> <span class="node-tag">+3</span>
       </div>
@@ -957,7 +957,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('easy-image-captioning-with-gemini-15-pro')">Easy Image Captioning With Gemini 1.5 Pro</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates sticky Note, Merge, manual  (Trigger), chain Llm for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, manual  (Trigger), Gemini, edit Image for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Gemini</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+6</span>
       </div>
@@ -975,7 +975,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-email-automation-for-business---summarize--respond-with-rag')">Email AI Auto-responder. Summerize and send email</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging document Default Data Loader, Google Drive, markdown, OpenAI Chat.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging text Classifier, no Op, markdown, Read Email (IMAP).</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Google Drive</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+14</span>
       </div>
@@ -993,7 +993,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('enrich-faq-sections-on-your-website-pages-at-scale-with-ai')">Enrich Faq Sections On Your Website Pages At Scale With Ai</h3>
-      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates Google Drive, OpenAI Chat, aggregate, split Out for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates Google Sheets, split Out, manual  (Trigger), Switch for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span><span class="node-tag">Google Drive</span> <span class="node-tag">+15</span>
       </div>
@@ -1011,7 +1011,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-personal-data-with-self---hosted-llm-mistral-nemo')">Extract personal data with a self-hosted LLM Mistral NeMo</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates chat  (Trigger), sticky Note, output Parser Autofixing, chain Llm for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, no Op, Ollama, output Parser Autofixing for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Ollama</span><span class="node-tag">chain Llm</span> <span class="node-tag">+5</span>
       </div>
@@ -1029,7 +1029,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('flux-ai-image-generator')">Flux Ai Image Generator</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates s3, Switch, Respond to Webhook, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Switch, Respond to Webhook, HTTP Request, s3 for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">Respond to Webhook</span> <span class="node-tag">+4</span>
       </div>
@@ -1047,7 +1047,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('interactive-image-editor-with-flux1-fill-tool-for-inpainting')">FLUX-fill standalone</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates HTML Extract, Respond to Webhook, sticky Note, Merge for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates wait, no Op, Merge, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+7</span>
       </div>
@@ -1065,7 +1065,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('gcf-token-optimization-for-llm-tool-responses')">GCF Token Optimization — Encode API Data, Decode Losslessly</h3>
-      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates gcf, manual  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates HTTP Request, gcf, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">gcf</span> <span class="node-tag">+1</span>
       </div>
@@ -1083,7 +1083,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generate-audio-from-text-using-openai-and-webhook---text-to-speech-workflow')">Generate audio from text using OpenAI - text-to-speech</h3>
-      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Respond to Webhook, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Respond to Webhook, sticky Note, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Respond to Webhook</span><span class="node-tag">Webhook</span><span class="node-tag">open Ai</span> <span class="node-tag">+1</span>
       </div>
@@ -1101,7 +1101,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generate-text---to---speech-using-elevenlabs-via-api')">Generate Text To Speech Using Elevenlabs Via Api</h3>
-      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Respond to Webhook, sticky Note, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Respond to Webhook, HTTP Request, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span><span class="node-tag">Respond to Webhook</span> <span class="node-tag">+2</span>
       </div>
@@ -1119,7 +1119,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generating-image-embeddings-via-textual-summarisation')">Generating Image Embeddings Via Textual Summarisation</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates document Default Data Loader, Google Drive, embeddings Open Ai, open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates vector Store In Memory, manual  (Trigger), edit Image, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Drive</span><span class="node-tag">Merge</span> <span class="node-tag">+8</span>
       </div>
@@ -1137,7 +1137,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">HR</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-automated-hr-workflow-for-cv-analysis-and-candidate-evaluation')">HR-focused automation pipeline with AI</h3>
-      <p class="card-desc">End-to-end hr automation template for OpenAI & LLMs. Integrates Google Drive, OpenAI Chat, Extract from File, chain Summarization for reliable automated execution.</p>
+      <p class="card-desc">End-to-end hr automation template for OpenAI & LLMs. Integrates output Parser Structured, Google Sheets, Merge, Google Drive for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">Google Drive</span> <span class="node-tag">+9</span>
       </div>
@@ -1155,7 +1155,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('configure-your-own-image-creation-api-using-openai-dalle---3')">Image Generation API</h3>
-      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Respond to Webhook, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Respond to Webhook, sticky Note, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Respond to Webhook</span><span class="node-tag">Webhook</span><span class="node-tag">open Ai</span> <span class="node-tag">+1</span>
       </div>
@@ -1173,7 +1173,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('custom-langchain-agent-written-in-javascript')">LangChain - Example - Code Node Example</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates code, OpenAI Chat, sticky Note, lm Open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates code, AI Agent, manual  (Trigger), lm Open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+4</span>
       </div>
@@ -1191,7 +1191,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai---ask-questions-about-any-data-source-using-the-n8n-workflow-retriever')">LangChain - Example - Workflow Retriever</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, sticky Note, chain Retrieval Qa, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates chain Retrieval Qa, manual  (Trigger), OpenAI Chat, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">chain Retrieval Qa</span> <span class="node-tag">+3</span>
       </div>
@@ -1209,7 +1209,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('lemlist---gpt-3---supercharge-your-sales-workflows')">Lemlist Gpt 3 Supercharge Your Sales Workflows</h3>
-      <p class="card-desc">End-to-end sales automation template for OpenAI & LLMs. Integrates lemlist  (Trigger), Switch, OpenAI, lemlist for reliable automated execution.</p>
+      <p class="card-desc">End-to-end sales automation template for OpenAI & LLMs. Integrates lemlist  (Trigger), OpenAI, lemlist, Switch for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">HubSpot</span><span class="node-tag">Merge</span> <span class="node-tag">+5</span>
       </div>
@@ -1227,7 +1227,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('fetch-dynamic-prompts-from-github-and-auto---populate-n8n-expressions-in-prompt')">Load Prompts from Github Repo and auto populate n8n expressions</h3>
-      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates Extract from File, sticky Note, AI Agent, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for OpenAI & LLMs. Integrates AI Agent, manual  (Trigger), stop And Error, Ollama for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+7</span>
       </div>
@@ -1245,7 +1245,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-assistant-openai-assistant-with-postgres-memory-and-api-calling-capabalities')">modelo do chatbot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting open Ai, chat  (Trigger), my Sql Tool, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting open Ai, memory Postgres Chat, HTTP Tool, my Sql Tool. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Tool</span><span class="node-tag">IF Condition</span> <span class="node-tag">+5</span>
       </div>
@@ -1263,7 +1263,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('narrating-over-a-video-using-multimodal-ai')">Narrating Over A Video Using Multimodal Ai</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Google Drive, OpenAI Chat, aggregate, split Out for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates convert To File, wait, split Out, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Google Drive</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+11</span>
       </div>
@@ -1281,7 +1281,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ollama---basic---workflow')">Ollama Basic</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates manual  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates HTTP Request, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> 
       </div>
@@ -1299,7 +1299,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('private--local-ollama-self---hosted-ai-assistant')">Ollama Chat</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting chat  (Trigger), sticky Note, chain Llm, lm Ollama. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting chat  (Trigger), lm Ollama, sticky Note, chain Llm. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">chain Llm</span><span class="node-tag">chat  (Trigger)</span> <span class="node-tag">+2</span>
       </div>
@@ -1317,7 +1317,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('openai-assistant-with-custom-tools')">OpenAI Assistant with custom n8n tools</h3>
-      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates open Ai Assistant, tool Workflow, manual Chat  (Trigger), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates manual Chat  (Trigger), tool Workflow, Merge, open Ai Assistant for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Code Tool</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+8</span>
       </div>
@@ -1335,7 +1335,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('openai-assistant-workflow---upload-file-create-an-assistant-chat-with-it')">OpenAI Assistant workflow: uploa file, create an Assistant, chat with it!</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting Google Drive, chat  (Trigger), open Ai, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting manual  (Trigger), open Ai, Google Drive, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Google Drive</span><span class="node-tag">chat  (Trigger)</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+2</span>
       </div>
@@ -1353,7 +1353,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('personal-shopper-chatbot-for-woocommerce-with-rag-using-google-drive-and-openai')">OpenAI Personal Shopper with RAG and WooCommerce</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting document Default Data Loader, Google Drive, OpenAI Chat, Qdrant. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, manual  (Trigger), tool Calculator, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+14</span>
       </div>
@@ -1371,7 +1371,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('openai-examples---chatgpt-dalle-2-whisper-1---5-in-1')">OpenAI-model-examples</h3>
-      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates HTML Extract, OpenAI, sticky Note, read Binary Files for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for OpenAI & LLMs. Integrates OpenAI, manual  (Trigger), read Binary Files, HTML Extract for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span> <span class="node-tag">+5</span>
       </div>
@@ -1389,7 +1389,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('organise-your-local-file-directories-with-ai')">Organise Your Local File Directories With Ai</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates execute Command, split Out, local File  (Trigger), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, execute Command, split Out, lm Chat Mistral Cloud for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span><span class="node-tag">chain Llm</span> <span class="node-tag">+6</span>
       </div>
@@ -1407,7 +1407,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai---summarize-podcast-episode-and-enhance-using-wikipedia')">Podcast Digest</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates tool Wikipedia, OpenAI Chat, chain Summarization, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates output Parser Structured, document Json Input Loader, item Lists, AI Agent for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Gmail</span> <span class="node-tag">+10</span>
       </div>
@@ -1425,7 +1425,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('prompt---based-object-detection-with-gemini-20')">Prompt Based Object Detection With Gemini 2.0</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates sticky Note, manual  (Trigger), edit Image, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates manual  (Trigger), edit Image, HTTP Request, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+3</span>
       </div>
@@ -1443,7 +1443,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('proxmox-ai-agent-with-n8n-and-generative-ai-integration')">Proxmox Ai Agent With N8N And Generative Ai Integration</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting Telegram Trigger, Switch, chat  (Trigger), sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting output Parser Structured, Gmail Trigger, AI Agent, Gemini. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Gemini</span> <span class="node-tag">+12</span>
       </div>
@@ -1461,7 +1461,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('query-n8n-credentials-with-ai-sql-agent')">Query N8N Credentials With Ai Sql Agent</h3>
-      <p class="card-desc">Autonomous engineering automation workflow connecting n8n, OpenAI Chat, chat  (Trigger), sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous engineering automation workflow connecting n8n, AI Agent, manual  (Trigger), Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+7</span>
       </div>
@@ -1479,7 +1479,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Executive</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-rag-workflow-for-stock-earnings-report-analysis')">RAG Workflow For Stock Earnings Report Analysis</h3>
-      <p class="card-desc">Autonomous executive automation workflow connecting document Default Data Loader, Google Drive, OpenAI Chat, Loop / Batches. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous executive automation workflow connecting Google Sheets, AI Agent, manual  (Trigger), Gemini. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Gemini</span><span class="node-tag">Google Docs</span> <span class="node-tag">+11</span>
       </div>
@@ -1497,7 +1497,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-social-media-amplifier')">Social Media AI Agent - Telegram</h3>
-      <p class="card-desc">Autonomous marketing automation workflow connecting markdown, wait, open Ai, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous marketing automation workflow connecting wait, no Op, markdown, open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+11</span>
       </div>
@@ -1515,7 +1515,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-crew-to-automate-fundamental-stock-analysis---q--a-workflow')">Stock Q&A</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Google Drive, OpenAI Chat, Qdrant, Respond to Webhook for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates manual Chat  (Trigger), chain Retrieval Qa, manual  (Trigger), Qdrant for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Google Drive</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">Qdrant</span> <span class="node-tag">+10</span>
       </div>
@@ -1533,7 +1533,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('summarize-youtube-videos-from-transcript')">Summarize Youtube Videos From Transcript</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates OpenAI Chat, chain Summarization, sticky Note, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates no Op, HTTP Request, OpenAI Chat, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">chain Summarization</span> <span class="node-tag">+3</span>
       </div>
@@ -1551,7 +1551,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('supportflow-lite---simple-ai-customer-support-chatbot')">SupportFlow Lite — Simple AI Support Bot (No RAG)</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting OpenAI, Respond to Webhook, sticky Note, Google Sheets. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting Google Sheets, OpenAI, Respond to Webhook, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Google Sheets</span><span class="node-tag">OpenAI</span> <span class="node-tag">+3</span>
       </div>
@@ -1569,7 +1569,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('local-multi---llm-testing--performance-tracker')">Testing Mulitple Local LLM with LM Studio</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, split Out, chat  (Trigger), sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates Google Sheets, split Out, date Time, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Sheets</span> <span class="node-tag">+7</span>
       </div>
@@ -1587,7 +1587,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('convert-text-to-speech-with-openai')">Text to Speech (OpenAI)</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates sticky Note, manual  (Trigger), HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates sticky Note, HTTP Request, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -1605,7 +1605,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('transform-image-to-lego-style-using-line-and-dall---e')">Transform Image to Lego Style Using Line and Dall-E</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates open Ai, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates HTTP Request, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">Webhook</span><span class="node-tag">open Ai</span> 
       </div>
@@ -1623,7 +1623,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('translate-audio-using-ai')">Translate Audio Using Ai</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, sticky Note, chain Llm, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates manual  (Trigger), HTTP Request, OpenAI Chat, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+3</span>
       </div>
@@ -1641,7 +1641,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('use-openrouter-in-n8n-versions---178')">Use any LLM-Model via OpenRouter</h3>
-      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates OpenAI Chat, chat  (Trigger), sticky Note, Buffer Memory for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for OpenAI & LLMs. Integrates AI Agent, Buffer Memory, chat  (Trigger), OpenAI Chat for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+3</span>
       </div>
@@ -1659,7 +1659,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-voice-chatbot-with-elevenlabs--openai-for-customer-service-and-restaurants')">Voice RAG Chatbot with ElevenLabs and OpenAI</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting document Default Data Loader, Google Drive, OpenAI Chat, Qdrant. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, manual  (Trigger), embeddings Open Ai, tool Vector Store. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Google Drive</span> <span class="node-tag">+11</span>
       </div>
@@ -1677,7 +1677,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('youtube-transcript-to-executive-summary-free')">YouTube Transcript → Executive Summary (Free)</h3>
-      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates Respond to Webhook, OpenAI for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for OpenAI & LLMs. Integrates OpenAI, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">OpenAI</span><span class="node-tag">Respond to Webhook</span> <span class="node-tag">+1</span>
       </div>
@@ -1695,7 +1695,7 @@ description: "93 n8n openai & llms templates. Autonomous agents, LangChain tool 
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-for-top-n8n-creators-leaderboard-reporting')">‍ AI Agent for Top n8n Creators Leaderboard Reporting</h3>
-      <p class="card-desc">Autonomous sales automation workflow connecting aggregate, tool Workflow, Merge, chain Llm. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous sales automation workflow connecting Google Drive, tool Workflow, sticky Note, Read/Write File. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gemini</span> <span class="node-tag">+18</span>
       </div>

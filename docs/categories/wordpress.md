@@ -39,7 +39,7 @@ description: "6 n8n wordpress templates. AI blog categorization, content generat
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('auto---categorize-blog-posts-in-wordpress-using-ai')">Auto categorize wordpress template</h3>
-      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates OpenAI Chat, sticky Note, wordpress, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates AI Agent, manual  (Trigger), wordpress, OpenAI Chat for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+2</span>
       </div>
@@ -57,7 +57,7 @@ description: "6 n8n wordpress templates. AI blog categorization, content generat
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('auto---tag-blog-posts-in-wordpress-with-ai')">Auto-Tag Blog Posts in WordPress with AI</h3>
-      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates OpenAI Chat, aggregate, split Out, Loop / Batches for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates output Parser Structured, rss Feed Read  (Trigger), split Out, wordpress for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span> <span class="node-tag">+14</span>
       </div>
@@ -75,7 +75,7 @@ description: "6 n8n wordpress templates. AI blog categorization, content generat
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-blog-creation-in-brand-voice-with-ai')">Automate Blog Creation In Brand Voice With Ai</h3>
-      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates OpenAI Chat, aggregate, split Out, HTML Extract for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates split Out, markdown, manual  (Trigger), limit for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTML Extract</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+11</span>
       </div>
@@ -93,7 +93,7 @@ description: "6 n8n wordpress templates. AI blog categorization, content generat
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-content-generator-for-wordpress-with-deepseek-r1')">Automate Content Generator for WordPress with DeepSeek R1</h3>
-      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates open Ai, sticky Note, wordpress, Google Sheets for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for WordPress. Integrates Google Sheets, manual  (Trigger), wordpress, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Sheets</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -111,7 +111,7 @@ description: "6 n8n wordpress templates. AI blog categorization, content generat
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('wordpress---ai-chatbot-to-enhance-user-experience---with-supabase-and-openai')">RAG & GenAI App With WordPress Content</h3>
-      <p class="card-desc">Autonomous marketing automation workflow connecting aggregate, Respond to Webhook, filter, Merge. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous marketing automation workflow connecting embeddings Open Ai, text Splitter Token Splitter, sticky Note, PostgreSQL. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+20</span>
       </div>
@@ -129,7 +129,7 @@ description: "6 n8n wordpress templates. AI blog categorization, content generat
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('write-a-wordpress-post-with-ai-starting-from-a-few-keywords')">Write a WordPress post with AI (starting from a few keywords)</h3>
-      <p class="card-desc">End-to-end operations automation template for WordPress. Integrates tool Wikipedia, split Out, Respond to Webhook, open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for WordPress. Integrates split Out, wordpress, open Ai, Merge for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+9</span>
       </div>

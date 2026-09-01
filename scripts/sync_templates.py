@@ -462,7 +462,7 @@ def main():
 
     generate_json_and_js_registry(all_categories_data, flat_templates_list, total_templates)
     generate_readme(all_categories_data, total_templates)
-    generate_docs_index(all_categories_data, total_templates)
+    generate_docs_index(all_categories_data, total_templates, total_node_types=len(node_counter))
     generate_docs_categories(all_categories_data)
     generate_unique_nodes_txt(node_counter, total_templates)
     generate_static_html(all_categories_data, total_templates)
@@ -684,7 +684,7 @@ def generate_readme(categories_data, total_templates):
         f.write('\n'.join(lines))
     print(f"README.md written successfully ({len(lines)} lines)")
 
-def generate_docs_index(categories_data, total_templates):
+def generate_docs_index(categories_data, total_templates, total_node_types=200):
     index_path = os.path.join(ROOT, 'docs', 'index.md')
     lines = []
     
@@ -719,19 +719,19 @@ def generate_docs_index(categories_data, total_templates):
     lines.append('    <div class="stat-label">Production Workflows</div>')
     lines.append('  </div>')
     lines.append('  <div class="stat-box">')
-    lines.append(f'    <div class="stat-icon">{get_svg_icon("star", size=22)}</div>')
-    lines.append('    <div class="stat-number">19k+</div>')
-    lines.append('    <div class="stat-label">GitHub Stars</div>')
-    lines.append('  </div>')
-    lines.append('  <div class="stat-box">')
     lines.append(f'    <div class="stat-icon">{get_svg_icon("folder", size=22)}</div>')
     lines.append(f'    <div class="stat-number">{len(categories_data)}</div>')
     lines.append('    <div class="stat-label">Specialized Hubs</div>')
     lines.append('  </div>')
     lines.append('  <div class="stat-box">')
     lines.append(f'    <div class="stat-icon">{get_svg_icon("plug", size=22)}</div>')
-    lines.append('    <div class="stat-number">400+</div>')
+    lines.append(f'    <div class="stat-number">{total_node_types}+</div>')
     lines.append('    <div class="stat-label">Node Integrations</div>')
+    lines.append('  </div>')
+    lines.append('  <div class="stat-box">')
+    lines.append(f'    <div class="stat-icon">{get_svg_icon("shield", size=22)}</div>')
+    lines.append('    <div class="stat-number">100%</div>')
+    lines.append('    <div class="stat-label">Free & MIT Licensed</div>')
     lines.append('  </div>')
     lines.append('</div>')
     lines.append('')

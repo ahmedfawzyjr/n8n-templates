@@ -364,11 +364,13 @@ a:hover {
   z-index: 1050;
   opacity: 0;
   pointer-events: none;
+  display: none;
   transition: opacity var(--transition-base);
 }
 .mobile-nav-backdrop.open {
   opacity: 1;
   pointer-events: auto;
+  display: block;
 }
 
 .mobile-nav-drawer {
@@ -385,12 +387,17 @@ a:hover {
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
-  transition: transform var(--transition-base) cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--transition-base) cubic-bezier(0.16, 1, 0.3, 1), visibility 0ms var(--transition-base);
   padding: 24px 20px;
   overflow-y: auto;
 }
 .mobile-nav-drawer.open {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform var(--transition-base) cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mobile-drawer-header {
@@ -1635,6 +1642,18 @@ a:hover {
   }
 }
 
+@media (min-width: 901px) {
+  .mobile-nav-backdrop,
+  .mobile-nav-drawer {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
 @media (max-width: 900px) {
   .stats-bento {
     grid-template-columns: repeat(2, 1fr);
@@ -1643,10 +1662,10 @@ a:hover {
     grid-template-columns: 1fr 1fr;
   }
   .nav-links {
-    display: none;
+    display: none !important;
   }
   .mobile-menu-btn {
-    display: flex;
+    display: flex !important;
   }
 }
 

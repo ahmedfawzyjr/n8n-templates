@@ -39,7 +39,7 @@ description: "4 n8n discord templates. AI Discord bot routing, daily comic trans
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('discord-ai-powered-bot')">Discord AI bot</h3>
-      <p class="card-desc">End-to-end support automation template for Discord. Integrates Switch, OpenAI, Discord, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Discord. Integrates OpenAI, no Op, manual  (Trigger), Switch for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Discord</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI</span> <span class="node-tag">+4</span>
       </div>
@@ -57,7 +57,7 @@ description: "4 n8n discord templates. AI Discord bot routing, daily comic trans
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('post-new-live-tennis-matches-to-discord-on-a-schedule')">Post New Live Tennis Matches To Discord On A Schedule</h3>
-      <p class="card-desc">End-to-end operations automation template for Discord. Integrates split Out, Discord, remove Duplicates, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Discord. Integrates split Out, remove Duplicates, HTTP Request, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Discord</span><span class="node-tag">HTTP Request</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+3</span>
       </div>
@@ -75,7 +75,7 @@ description: "4 n8n discord templates. AI Discord bot routing, daily comic trans
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('send-daily-translated-calvin-and-hobbes-comics-to-discord')">Send Daily Translated Calvin And Hobbes Comics To Discord</h3>
-      <p class="card-desc">End-to-end marketing automation template for Discord. Integrates OpenAI Chat, Discord, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Discord. Integrates open Ai, HTTP Request, OpenAI Chat, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Discord</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+5</span>
       </div>
@@ -93,7 +93,7 @@ description: "4 n8n discord templates. AI Discord bot routing, daily comic trans
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('share-youtube-videos-with-ai-summaries-on-discord')">YouTube Videos with AI Summaries on Discord</h3>
-      <p class="card-desc">End-to-end marketing automation template for Discord. Integrates Discord, Extract from File, open Ai, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Discord. Integrates rss Feed Read  (Trigger), Extract from File, open Ai, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Discord</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span> <span class="node-tag">+4</span>
       </div>
