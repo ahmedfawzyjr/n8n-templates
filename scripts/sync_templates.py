@@ -3,6 +3,7 @@ import sys
 import json
 import re
 import urllib.parse
+from datetime import datetime
 from collections import Counter
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -572,8 +573,10 @@ def generate_readme(categories_data, total_templates):
     lines.append('')
     lines.append('Workflows are ready-to-import `.json` files. Download or copy any template and import it directly into your n8n instance (Cloud or self-hosted). Always review and test imported templates before deploying them in production.')
     lines.append('')
+    current_date_badge = datetime.now().strftime("%b_%d,_%Y")
     lines.append(f'[![Templates](https://img.shields.io/badge/Templates-{total_templates}+-blue.svg?style=flat-square)](#categories--template-list)')
     lines.append(f'[![Categories](https://img.shields.io/badge/Categories-18-green.svg?style=flat-square)](#categories--template-list)')
+    lines.append(f'[![Last Updated](https://img.shields.io/badge/Updated-{current_date_badge}-brightgreen.svg?style=flat-square)](#)')
     lines.append('[![n8n](https://img.shields.io/badge/n8n-Compatible-FF6D5A.svg?style=flat-square&logo=n8n)](https://n8n.partnerlinks.io/h1pwwf5m4toe)')
     lines.append('[![n8n Portal](https://img.shields.io/badge/Live_Portal-n8nportal.vercel.app-success.svg?style=flat-square)](https://n8nportal.vercel.app/)')
     lines.append('')
