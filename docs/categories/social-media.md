@@ -39,7 +39,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-omnichannel-social-media-content-repurposing-engine')">AI Omnichannel Social Media Content Repurposing Engine</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, Slack, Respond to Webhook, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, OpenAI Chat, HTTP Request, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -75,7 +75,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('grounded-article-to-thread-and-linkedin-post')">Article to Thread + LinkedIn Post (Lite)</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, form, n8n Form Trigger, OpenAI Chat for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, OpenAI Chat, form, n8n Form Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">form</span> <span class="node-tag">+1</span>
       </div>
@@ -93,7 +93,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automated-ai-viral-reel-and-short-video-script-generator-with-voiceover')">Automated AI Viral Reel and Short Video Script Generator with Voiceover</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, Slack, Respond to Webhook, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, OpenAI Chat, HTTP Request, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -111,7 +111,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automated-social-media-lead-capture-comment-to-dm-funnel-and-crm-sync')">Automated Social Media Lead Capture Comment-to-DM Funnel and CRM Sync</h3>
-      <p class="card-desc">Production-grade marketing workflow for automated data synchronization and pipeline processing using AI Agent, HubSpot, Slack, Respond to Webhook.</p>
+      <p class="card-desc">Production-grade marketing workflow for automated data synchronization and pipeline processing using AI Agent, OpenAI Chat, HTTP Request, HubSpot.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+6</span>
       </div>
@@ -129,7 +129,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('create-dynamic-twitter-profile-banner')">Create Dynamic Twitter Profile Banner</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates item Lists, manual  (Trigger), edit Image, Function for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates edit Image, Function, HTTP Request, item Lists for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Function</span><span class="node-tag">HTTP Request</span><span class="node-tag">Merge</span> <span class="node-tag">+3</span>
       </div>
@@ -165,7 +165,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generate-instagram-content-from-top-trends-with-ai-image-generation')">Generate Instagram Content from Top Trends with AI Image Generation</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates open Ai, Loop / Batches, Merge, facebook Graph Api for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates open Ai, facebook Graph Api, HTTP Request, Merge for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+9</span>
       </div>
@@ -183,7 +183,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-for-instagram-dm---inbox-manychat--open-ai-integration')">InstaTest</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, Buffer Memory, Respond to Webhook, OpenAI Chat for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, OpenAI Chat, Buffer Memory, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+4</span>
       </div>
@@ -201,7 +201,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('monitor-x-search-with-xquik')">Monitor X Search with Xquik</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates manual  (Trigger), HTTP Request, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates HTTP Request, manual  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -219,7 +219,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('openai---powered-tweet-generator')">Openai Powered Tweet Generator</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates manual  (Trigger), Airtable, function Item, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates Airtable, function Item, HTTP Request, manual  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -237,7 +237,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('post-new-youtube-videos-to-x')">Post New YouTube Videos to X</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates you Tube, open Ai, sticky Note, twitter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates open Ai, sticky Note, twitter, you Tube for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Schedule Trigger</span><span class="node-tag">open Ai</span><span class="node-tag">sticky Note</span> <span class="node-tag">+2</span>
       </div>
@@ -255,7 +255,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('reddit-ai-digest')">Reddit Ai Digest</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates OpenAI, manual  (Trigger), reddit, Merge for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates manual  (Trigger), Merge, OpenAI, reddit for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span><span class="node-tag">Merge</span> <span class="node-tag">+4</span>
       </div>
@@ -273,7 +273,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('social-media-agency-client-onboarding-brand-voice-training-and-calendar-sync')">Social Media Agency Client Onboarding Brand Voice Training and Calendar Sync</h3>
-      <p class="card-desc">Production-grade marketing workflow for automated data synchronization and pipeline processing using AI Agent, Slack, Respond to Webhook, HTTP Request.</p>
+      <p class="card-desc">Production-grade marketing workflow for automated data synchronization and pipeline processing using AI Agent, OpenAI Chat, Send Email (SMTP), HTTP Request.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+5</span>
       </div>
@@ -291,7 +291,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('social-media-analysis-and-automated-email-generation')">Social Media Analysis And Automated Email Generation</h3>
-      <p class="card-desc">Real-time event-driven marketing alert and notification workflow leveraging output Parser Structured, Google Sheets, Google Sheets Trigger, HTTP Request.</p>
+      <p class="card-desc">Real-time event-driven marketing alert and notification workflow leveraging chain Llm, OpenAI Chat, output Parser Structured, Send Email (SMTP).</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Sheets</span> <span class="node-tag">+8</span>
       </div>
@@ -309,7 +309,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('social-media-competitor-monitoring-engagement-analyzer-and-trend-radar')">Social Media Competitor Monitoring Engagement Analyzer and Trend Radar</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, Slack, HTTP Request, OpenAI Chat for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates AI Agent, OpenAI Chat, HTTP Request, PostgreSQL for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -327,7 +327,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('speed-up-social-media-banners-with-bannerbearcom')">Speed Up Social Media Banners With Bannerbear.Com</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates open Ai, HTTP Request, sticky Note, bannerbear for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates open Ai, bannerbear, Discord, n8n Form Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Discord</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -345,7 +345,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('publish-one-video-natively-to-tiktok-instagram-and-youtube-with-postwire')">Turn one video into native TikTok, Instagram and YouTube posts with PostWire</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates sticky Note, HTTP Request, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates HTTP Request, manual  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -363,7 +363,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('twitter-virtual-ai-influencer')">Twitter Virtual Ai Influencer</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates manual  (Trigger), open Ai, sticky Note, twitter for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates open Ai, manual  (Trigger), sticky Note, twitter for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+4</span>
       </div>
@@ -381,7 +381,7 @@ description: "20 n8n instagram, twitter, social media templates. Omnichannel rep
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('update-twitter-banner-using-http-request')">Update Twitter Banner Using Http Request</h3>
-      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates HTTP Request, start, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for Instagram, Twitter, Social Media. Integrates HTTP Request, manual  (Trigger), start for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">manual  (Trigger)</span><span class="node-tag">start</span> 
       </div>

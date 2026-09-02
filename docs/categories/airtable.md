@@ -39,7 +39,7 @@ description: "5 n8n airtable templates. AI agents querying Airtable, meeting not
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-for-project-management-and-meetings-with-airtable-and-fireflies')">Ai Agent For Project Management And Meetings With Airtable And Fireflies</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting google Calendar Tool, split Out, AI Agent, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting AI Agent, OpenAI Chat, tool Workflow, Airtable. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+8</span>
       </div>
@@ -57,7 +57,7 @@ description: "5 n8n airtable templates. AI agents querying Airtable, meeting not
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-to-chat-with-airtable-and-analyze-data')">Ai Agent To Chat With Airtable And Analyze Data</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Switch, Merge, tool Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">Buffer Memory</span> <span class="node-tag">+12</span>
       </div>
@@ -75,7 +75,7 @@ description: "5 n8n airtable templates. AI agents querying Airtable, meeting not
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('get-airtable-data-via-ai-and-obsidian-notes')">Get Airtable data in Obsidian Notes</h3>
-      <p class="card-desc">End-to-end operations automation template for Airtable. Integrates AI Agent, Respond to Webhook, OpenAI Chat, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Airtable. Integrates AI Agent, OpenAI Chat, airtable Tool, Respond to Webhook for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">Respond to Webhook</span> <span class="node-tag">+3</span>
       </div>
@@ -93,7 +93,7 @@ description: "5 n8n airtable templates. AI agents querying Airtable, meeting not
         <span class="dept-badge">HR</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('handling-job-application-submissions-with-ai-and-n8n-forms')">Handling Job Application Submissions With Ai And N8N Forms</h3>
-      <p class="card-desc">End-to-end hr automation template for Airtable. Integrates output Parser Structured, text Classifier, Airtable, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end hr automation template for Airtable. Integrates chain Llm, OpenAI Chat, output Parser Structured, text Classifier for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Extract from File</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+7</span>
       </div>
@@ -111,7 +111,7 @@ description: "5 n8n airtable templates. AI agents querying Airtable, meeting not
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('virtual-assistant-for-hubspot-chat-using-openai-and-airtable')">OpenAI Assistant for Hubspot Chat</h3>
-      <p class="card-desc">Autonomous sales automation workflow connecting wait, Switch, open Ai, Airtable. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous sales automation workflow connecting open Ai, Airtable, HTTP Request, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+6</span>
       </div>

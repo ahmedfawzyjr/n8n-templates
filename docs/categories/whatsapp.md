@@ -39,7 +39,7 @@ description: "8 n8n whatsapp templates. WhatsApp chatbots, meeting prep with Api
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automate-sales-meeting-prep-with-ai--apify-sent-to-whatsapp')">Automate Sales Meeting Prep With Ai & Apify Sent To Whatsapp</h3>
-      <p class="card-desc">End-to-end sales automation template for WhatsApp. Integrates split Out, Switch, Gmail, Merge for reliable automated execution.</p>
+      <p class="card-desc">End-to-end sales automation template for WhatsApp. Integrates chain Llm, information Extractor, OpenAI Chat, aggregate for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Execute Workflow</span><span class="node-tag">Gmail</span> <span class="node-tag">+15</span>
       </div>
@@ -57,7 +57,7 @@ description: "8 n8n whatsapp templates. WhatsApp chatbots, meeting prep with Api
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('building-your-first-whatsapp-chatbot')">Building Your First Whatsapp Chatbot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting vector Store In Memory, AI Agent, manual  (Trigger), Switch. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, document Default Data Loader, embeddings Open Ai, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Extract from File</span> <span class="node-tag">+12</span>
       </div>
@@ -75,7 +75,7 @@ description: "8 n8n whatsapp templates. WhatsApp chatbots, meeting prep with Api
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('complete-business-whatsapp-ai-powered-rag-chatbot-using-openai')">Business WhatsApp AI RAG Chatbot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, manual  (Trigger), embeddings Open Ai, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, document Default Data Loader, embeddings Open Ai, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Google Drive</span> <span class="node-tag">+12</span>
       </div>
@@ -111,7 +111,7 @@ description: "8 n8n whatsapp templates. WhatsApp chatbots, meeting prep with Api
         <span class="dept-badge">Sales</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('leadbot-24h---ai-whatsapp-lead-qualification')">LeadBot 24h — WhatsApp AI Lead Qualification Bot</h3>
-      <p class="card-desc">End-to-end sales automation template for WhatsApp. Integrates Google Sheets, WhatsApp, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end sales automation template for WhatsApp. Integrates Google Sheets, HTTP Request, WhatsApp for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Google Sheets</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -129,7 +129,7 @@ description: "8 n8n whatsapp templates. WhatsApp chatbots, meeting prep with Api
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('receive-and-send-messages-across-whatsapp-instagram-and-facebook-messenger-with-fiwano')">Receive and Send Messages Across WhatsApp, Instagram and Facebook Messenger with Fiwano</h3>
-      <p class="card-desc">End-to-end marketing automation template for WhatsApp. Integrates sticky Note, fiwano  (Trigger), fiwano for reliable automated execution.</p>
+      <p class="card-desc">End-to-end marketing automation template for WhatsApp. Integrates sticky Note, fiwano, fiwano  (Trigger) for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">IF Condition</span><span class="node-tag">fiwano</span><span class="node-tag">fiwano  (Trigger)</span> <span class="node-tag">+1</span>
       </div>
@@ -147,7 +147,7 @@ description: "8 n8n whatsapp templates. WhatsApp chatbots, meeting prep with Api
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('respond-to-whatsapp-messages-with-ai-like-a-pro')">Respond To Whatsapp Messages With Ai Like A Pro!</h3>
-      <p class="card-desc">End-to-end operations automation template for WhatsApp. Integrates wait, split Out, AI Agent, Switch for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for WhatsApp. Integrates AI Agent, chain Llm, Gemini, Buffer Memory for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+10</span>
       </div>

@@ -39,7 +39,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('daily-ai-digest-of-unread-emails-to-telegram-italian')">03 - Rassegna email mattutina con AI</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging Gmail, open Ai, Telegram, sticky Note.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging open Ai, Gmail, sticky Note, Telegram.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Gmail</span><span class="node-tag">IF Condition</span> <span class="node-tag">+4</span>
       </div>
@@ -75,7 +75,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-email-processing-autoresponder-and-response-approval-yes---no')">AI Email processing autoresponder with approval (Yes/No)</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging markdown, Read Email (IMAP), AI Agent, Gmail.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, chain Summarization, embeddings Open Ai, OpenAI Chat.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span> <span class="node-tag">+9</span>
       </div>
@@ -93,7 +93,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('analyze--sort-suspicious-email-contents-with-chatgpt')">Analyze & Sort Suspicious Email Contents With Chatgpt</h3>
-      <p class="card-desc">Autonomous marketing automation workflow connecting Jira, Gmail Trigger, convert To File, open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous marketing automation workflow connecting open Ai, convert To File, Gmail Trigger, HTTP Request. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+7</span>
       </div>
@@ -111,7 +111,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Marketing</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('analyze-suspicious-email-contents-with-chatgpt-vision')">Analyze Suspicious Email Contents With Chatgpt Vision</h3>
-      <p class="card-desc">Autonomous marketing automation workflow connecting Jira, Gmail Trigger, open Ai, HTTP Request. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous marketing automation workflow connecting open Ai, Gmail Trigger, HTTP Request, Jira. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+5</span>
       </div>
@@ -129,7 +129,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('auto-categorise-outlook-emails-with-ai')">Auto Categorise Outlook Emails With Ai</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging markdown, manual  (Trigger), AI Agent, Ollama.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, Ollama, filter, manual  (Trigger).</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span> <span class="node-tag">+9</span>
       </div>
@@ -147,7 +147,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('auto---label-incoming-gmail-messages-with-ai-nodes')">Auto Label Incoming Gmail Messages With Ai Nodes</h3>
-      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates output Parser Structured, Gmail Trigger, split Out, Gmail for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates chain Llm, OpenAI Chat, output Parser Structured, aggregate for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+7</span>
       </div>
@@ -165,7 +165,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('basic-automatic-gmail-email-labelling-with-openai-and-gmail-api')">Basic Automatic Gmail Email Labelling With Openai And Gmail Api</h3>
-      <p class="card-desc">Real-time event-driven engineering alert and notification workflow leveraging wait, Gmail Trigger, AI Agent, OpenAI Chat.</p>
+      <p class="card-desc">Real-time event-driven engineering alert and notification workflow leveraging AI Agent, OpenAI Chat, Buffer Memory, gmail Tool.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+4</span>
       </div>
@@ -183,7 +183,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('classify-lemlist-replies-using-openai-and-automate-reply-handling')">Classify Lemlist Replies Using Openai And Automate Reply Handling</h3>
-      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates output Parser Structured, lemlist  (Trigger), markdown, lemlist for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates chain Llm, OpenAI Chat, output Parser Structured, HTTP Request for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">Merge</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+8</span>
       </div>
@@ -201,7 +201,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('compose-reply-draft-in-gmail-with-openai-assistant')">Compose Reply Draft In Gmail With Openai Assistant</h3>
-      <p class="card-desc">End-to-end support automation template for Gmail & Email Automation. Integrates markdown, limit, Gmail, open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Gmail & Email Automation. Integrates open Ai, Gmail, HTTP Request, limit for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span> <span class="node-tag">+7</span>
       </div>
@@ -219,7 +219,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('modular--customizable-ai-powered-email-routing---text-classifier-for-ecommerce')">Contact Form Text Classifier for eCommerce</h3>
-      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates Google Sheets, text Classifier, Send Email (SMTP), OpenAI Chat for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates OpenAI Chat, text Classifier, Send Email (SMTP), n8n Form Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Google Sheets</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">Send Email (SMTP)</span> <span class="node-tag">+3</span>
       </div>
@@ -237,7 +237,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('create-email-responses-with-fastmail-and-openai')">Create Email Responses With Fastmail And Openai</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging split Out, Read Email (IMAP), open Ai, filter.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging open Ai, Read Email (IMAP), filter, HTTP Request.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span><span class="node-tag">Read Email (IMAP)</span> <span class="node-tag">+4</span>
       </div>
@@ -255,7 +255,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('daily-email-notification')">Daily IMAP Email Summary to Telegram (Local Ollama)</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging execute Command, manual  (Trigger), HTTP Request, Telegram.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging execute Command, HTTP Request, manual  (Trigger), Telegram.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span> <span class="node-tag">+4</span>
       </div>
@@ -273,7 +273,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('effortless-email-management-with-ai-powered-summarization--review')">Effortless Email Management with AI</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging text Classifier, markdown, Read Email (IMAP), AI Agent.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, chain Summarization, document Default Data Loader, embeddings Open Ai.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail</span> <span class="node-tag">+15</span>
       </div>
@@ -291,7 +291,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('email-summary-agent')">Email Summary Agent</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting Gmail, open Ai, aggregate, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting open Ai, aggregate, Gmail, sticky Note. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Gmail</span><span class="node-tag">Schedule Trigger</span><span class="node-tag">aggregate</span> <span class="node-tag">+2</span>
       </div>
@@ -309,7 +309,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('extract-spending-history-from-gmail-to-google-sheet')">Extract spend details (template)</h3>
-      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates output Parser Structured, Gmail Trigger, Google Sheets, split Out for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates chain Llm, Gemini, lm Chat Groq, output Parser Structured for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">Gemini</span> <span class="node-tag">+10</span>
       </div>
@@ -327,7 +327,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('gmail-ai-auto---responder---create-draft-replies-to-incoming-emails')">Gmail AI auto-responder: create draft replies to incoming emails</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging output Parser Structured, Gmail Trigger, Gmail, OpenAI Chat.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging chain Llm, OpenAI Chat, output Parser Structured, Gmail.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Gmail</span><span class="node-tag">Gmail Trigger</span><span class="node-tag">IF Condition</span> <span class="node-tag">+4</span>
       </div>
@@ -345,7 +345,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('inboxzero-lite---ai-email-classifier')">InboxZero Lite — Simple Email Classifier (Log Only)</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging Gmail Trigger, OpenAI, Google Sheets, sticky Note.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging Gmail Trigger, Google Sheets, OpenAI, sticky Note.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Gmail Trigger</span><span class="node-tag">Google Sheets</span> <span class="node-tag">+2</span>
       </div>
@@ -381,7 +381,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('microsoft-outlook-ai-email-assistant-with-contact-support-from-monday-and-airtable')">Microsoft Outlook AI Email Assistant</h3>
-      <p class="card-desc">Real-time event-driven support alert and notification workflow leveraging output Parser Structured, monday Com, AI Agent, manual  (Trigger).</p>
+      <p class="card-desc">Real-time event-driven support alert and notification workflow leveraging AI Agent, OpenAI Chat, output Parser Structured, Airtable.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+11</span>
       </div>
@@ -399,7 +399,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('website---grounded-cold-email-writer')">Personalized Cold Email Writer (Lite)</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, HTML Extract, HTTP Request, OpenAI Chat.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, OpenAI Chat, form, n8n Form Trigger.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">HTML Extract</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+3</span>
       </div>
@@ -435,7 +435,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('send-a-chatgpt-email-reply-and-save-responses-to-google-sheets')">Send A Chatgpt Email Reply And Save Responses To Google Sheets</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting Gmail Trigger, OpenAI, no Op, Google Sheets. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting Crypto / Hash, Gmail, Gmail Trigger, Google Sheets. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Crypto / Hash</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+11</span>
       </div>
@@ -453,7 +453,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('send-specific-pdf-attachments-from-gmail-to-google-drive-using-openai')">Send Specific Pdf Attachments From Gmail To Google Drive Using Openai</h3>
-      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates Gmail Trigger, no Op, OpenAI, Merge for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Gmail & Email Automation. Integrates Gmail Trigger, Google Drive, Merge, no Op for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Gmail Trigger</span> <span class="node-tag">+7</span>
       </div>
@@ -471,7 +471,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('summarize-your-emails-with-ai-via-openrouter-and-send-to-line-messenger')">Summarize emails with A.I. then send to messenger</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging sticky Note, HTTP Request, Read Email (IMAP).</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging Read Email (IMAP), HTTP Request, sticky Note.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">Read Email (IMAP)</span><span class="node-tag">sticky Note</span> 
       </div>
@@ -489,7 +489,7 @@ description: "26 n8n gmail & email automation templates. AI email labeling, phis
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('a-very-simple---human-in-the-loop---email-response-system-using-ai-and-imap')">Very simple Human in the loop system email with AI e IMAP</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, markdown, Read Email (IMAP), Send Email (SMTP).</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging AI Agent, chain Summarization, OpenAI Chat, Read Email (IMAP).</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span> <span class="node-tag">+6</span>
       </div>

@@ -39,7 +39,7 @@ description: "4 n8n hr & recruitment templates. AI CV screening, BambooHR policy
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('bamboohr-ai-powered-company-policies-and-benefits-chatbot')">BambooHR AI-Powered Company Policies and Benefits Chatbot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting text Classifier, embeddings Open Ai, Buffer Memory, tool Workflow. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, chain Llm, chat  (Trigger), document Default Data Loader. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+20</span>
       </div>
@@ -57,7 +57,7 @@ description: "4 n8n hr & recruitment templates. AI CV screening, BambooHR policy
         <span class="dept-badge">HR</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('cv-screening-with-openai')">Cv Screening With Openai</h3>
-      <p class="card-desc">End-to-end hr automation template for HR & Recruitment. Integrates manual  (Trigger), HTTP Request, sticky Note, Extract from File for reliable automated execution.</p>
+      <p class="card-desc">End-to-end hr automation template for HR & Recruitment. Integrates Extract from File, HTTP Request, manual  (Trigger), sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+2</span>
       </div>
@@ -75,7 +75,7 @@ description: "4 n8n hr & recruitment templates. AI CV screening, BambooHR policy
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('hr--it-helpdesk-chatbot-with-audio-transcription')">HR & IT Helpdesk Chatbot with Audio Transcription</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting text Splitter Recursive Character Text Splitter, AI Agent, manual  (Trigger), Switch. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, document Default Data Loader, embeddings Open Ai, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span> <span class="node-tag">+14</span>
       </div>
@@ -93,7 +93,7 @@ description: "4 n8n hr & recruitment templates. AI CV screening, BambooHR policy
         <span class="dept-badge">HR</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('hr-job-posting-and-evaluation-with-ai')">HR Job Posting and Evaluation with AI</h3>
-      <p class="card-desc">End-to-end hr automation template for HR & Recruitment. Integrates output Parser Structured, google Calendar Tool, AI Agent, open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end hr automation template for HR & Recruitment. Integrates AI Agent, OpenAI Chat, open Ai, output Parser Structured for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Airtable</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+12</span>
       </div>

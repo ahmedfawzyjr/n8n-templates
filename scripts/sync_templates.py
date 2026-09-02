@@ -408,7 +408,7 @@ def main():
                     node_types.append(nt)
                     node_counter[nt] += 1
             
-            unique_nodes_in_file = list(set(node_types))
+            unique_nodes_in_file = sorted(list(set(node_types)))
             dept = infer_department(title, "", f, cfg['name'])
             desc = generate_seo_description(title, unique_nodes_in_file, cfg['name'], dept)
             

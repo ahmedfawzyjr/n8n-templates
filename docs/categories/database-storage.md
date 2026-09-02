@@ -39,7 +39,7 @@ description: "5 n8n database & storage templates. Natural language SQL generatio
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-postgresql-database')">Chat with Postgresql Database</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Buffer Memory, postgres Tool, chat  (Trigger). Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+3</span>
       </div>
@@ -57,7 +57,7 @@ description: "5 n8n database & storage templates. Natural language SQL generatio
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('generate-sql-queries-from-schema-only---ai-powered')">Generate SQL queries from schema only - AI-powered</h3>
-      <p class="card-desc">End-to-end engineering automation template for Database & Storage. Integrates convert To File, no Op, AI Agent, manual  (Trigger) for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for Database & Storage. Integrates AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+11</span>
       </div>
@@ -75,7 +75,7 @@ description: "5 n8n database & storage templates. Natural language SQL generatio
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('mongodb-ai-agent---intelligent-movie-recommendations')">MongoDB Agent</h3>
-      <p class="card-desc">Autonomous engineering automation workflow connecting AI Agent, tool Workflow, mongo Db Tool, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous engineering automation workflow connecting AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+4</span>
       </div>
@@ -93,7 +93,7 @@ description: "5 n8n database & storage templates. Natural language SQL generatio
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('talk-to-your-sqlite-database-with-a-langchain-ai-agent')">SQL agent with memory</h3>
-      <p class="card-desc">Autonomous engineering automation workflow connecting Compression (Zip), AI Agent, manual  (Trigger), Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous engineering automation workflow connecting AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Compression (Zip)</span> <span class="node-tag">+7</span>
       </div>
@@ -111,7 +111,7 @@ description: "5 n8n database & storage templates. Natural language SQL generatio
         <span class="dept-badge">Engineering</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('supabase-insertion--upsertion--retrieval')">Supabase Insertion & Upsertion & Retrieval</h3>
-      <p class="card-desc">End-to-end engineering automation template for Database & Storage. Integrates chain Retrieval Qa, vector Store Supabase, supabase, embeddings Open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end engineering automation template for Database & Storage. Integrates chain Retrieval Qa, chat  (Trigger), document Default Data Loader, embeddings Open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Google Drive</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+9</span>
       </div>

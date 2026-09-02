@@ -39,7 +39,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('agentic-telegram-ai-bot-with-with-langchain-nodes-and-new-tools')">Agentic Telegram AI bot with LangChain nodes and new tools</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, telegram Tool, Buffer Memory, HTTP Tool. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, OpenAI Chat, Buffer Memory, HTTP Tool. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">HTTP Tool</span> <span class="node-tag">+5</span>
       </div>
@@ -57,7 +57,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-agent-chatbot--long-term-memory--note-storage--telegram')">AI Agent Chatbot + LONG TERM Memory + Note Storage + Telegram</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, google Docs Tool, Merge, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+8</span>
       </div>
@@ -75,7 +75,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-children---s-arabic-storytelling-on-telegram')">Ai Powered Children S Arabic Storytelling On Telegram</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates open Ai, Telegram, OpenAI Chat, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates chain Summarization, OpenAI Chat, open Ai, text Splitter Recursive Character Text Splitter for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">OpenAI Chat</span><span class="node-tag">Schedule Trigger</span><span class="node-tag">Telegram</span> <span class="node-tag">+4</span>
       </div>
@@ -93,7 +93,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('ai-powered-children---s-english-storytelling-on-telegram-with-openai')">Ai Powered Children S English Storytelling On Telegram With Openai</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates open Ai, Telegram, OpenAI Chat, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates chain Summarization, OpenAI Chat, open Ai, text Splitter Recursive Character Text Splitter for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+5</span>
       </div>
@@ -111,7 +111,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('angie-personal-ai-assistant-with-telegram-voice-and-text')">Angie, Personal Ai Assistant With Telegram Voice And Text</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates google Calendar Tool, AI Agent, OpenAI Chat, open Ai for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, OpenAI Chat, Buffer Memory, open Ai for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+9</span>
       </div>
@@ -129,7 +129,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('automated-ai-image-analysis-and-response-via-telegram')">Automated Ai Image Analysis And Response Via Telegram</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates wait, Switch, open Ai, Telegram for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates open Ai, sticky Note, Switch, Telegram for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Switch</span><span class="node-tag">Telegram</span><span class="node-tag">Telegram Trigger</span> <span class="node-tag">+3</span>
       </div>
@@ -147,7 +147,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('bitcoin-price-alert-to-telegram-with-coinpaprika')">Bitcoin price alert to Telegram with CoinPaprika</h3>
-      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging HTTP Request, Telegram, sticky Note.</p>
+      <p class="card-desc">Real-time event-driven operations alert and notification workflow leveraging HTTP Request, sticky Note, Telegram.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span><span class="node-tag">Schedule Trigger</span> <span class="node-tag">+2</span>
       </div>
@@ -165,7 +165,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('chat-with-openais-gpt-via-a-simple-telegram-bot')">Chat With Openais Gpt Via A Simple Telegram Bot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting Telegram Trigger, AI Agent, Telegram, OpenAI Chat. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, OpenAI Chat, Telegram, Telegram Trigger. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">Telegram</span> <span class="node-tag">+1</span>
       </div>
@@ -183,7 +183,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('deepseek-ai-agent--telegram--long-term-memory')">DeepSeek AI Agent + Telegram + LONG TERM Memory</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting AI Agent, Switch, google Docs Tool, Merge. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting AI Agent, chat  (Trigger), OpenAI Chat, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+10</span>
       </div>
@@ -201,7 +201,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('detect-toxic-language-in-telegram-messages')">Detect Toxic Language In Telegram Messages</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates no Op, google Perspective, Telegram, Telegram Trigger for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates google Perspective, no Op, Telegram, Telegram Trigger for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">IF Condition</span><span class="node-tag">Telegram</span><span class="node-tag">Telegram Trigger</span> <span class="node-tag">+2</span>
       </div>
@@ -219,7 +219,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('image-creation-with-openai-and-telegram')">Image Creation With Openai And Telegram</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates open Ai, Merge, Telegram, aggregate for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates open Ai, aggregate, Merge, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Merge</span><span class="node-tag">Telegram</span><span class="node-tag">Telegram Trigger</span> <span class="node-tag">+3</span>
       </div>
@@ -237,7 +237,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('internship-informer')">Internship Informer</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates wait, Google Sheets, AI Agent, data Table Tool for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates AI Agent, lm Chat Groq, OpenAI Chat, data Table for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Code JS/Python</span><span class="node-tag">Execute Workflow</span> <span class="node-tag">+14</span>
       </div>
@@ -273,7 +273,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-ai-bot---neurochainai-text--image---neurochainai-basic-api-integration')">NeurochainAI Basic API Integration</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates Switch, HTTP Request, Telegram, sticky Note for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates HTTP Request, sticky Note, Switch, Telegram for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">HTTP Request</span><span class="node-tag">Switch</span> <span class="node-tag">+3</span>
       </div>
@@ -291,7 +291,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-to-spotify-with-openai')">Play with Spotify from Telegram</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates spotify, Merge, open Ai, Telegram for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates open Ai, Merge, spotify, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">IF Condition</span><span class="node-tag">Merge</span> <span class="node-tag">+5</span>
       </div>
@@ -309,7 +309,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('resumebot')">Resumebot</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, Switch, OpenAI Chat, SSH for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, OpenAI Chat, Buffer Memory, Extract from File for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Code JS/Python</span> <span class="node-tag">+8</span>
       </div>
@@ -327,7 +327,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('send-a-random-recipe-once-a-day-to-telegram')">Send A Random Recipe Once A Day To Telegram</h3>
-      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates cron, Airtable, Telegram, HTTP Request for reliable automated execution.</p>
+      <p class="card-desc">End-to-end operations automation template for Telegram. Integrates Airtable, cron, HTTP Request, Telegram for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Airtable</span><span class="node-tag">Edit Fields (Set)</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+4</span>
       </div>
@@ -345,7 +345,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-ai-support-bot-with-conversation-memory')">Simple Telegram AI Bot (Lite)</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, Buffer Memory, Telegram, OpenAI Chat for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, OpenAI Chat, Buffer Memory, Telegram for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">OpenAI Chat</span> <span class="node-tag">+2</span>
       </div>
@@ -363,7 +363,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telebot---knowledgehub')">Telebot Knowledgehub</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates vector Store In Memory, AI Agent, sticky Note, Buffer Memory for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, document Default Data Loader, embeddings Hugging Face Inference, lm Chat Groq for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Telegram</span> <span class="node-tag">+8</span>
       </div>
@@ -381,7 +381,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-ai-bot-with-langchain-nodes')">Telegram AI Langchain bot</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, tool Workflow, Buffer Memory, Telegram for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates AI Agent, OpenAI Chat, Buffer Memory, tool Workflow for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+7</span>
       </div>
@@ -399,7 +399,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-ai-bot-assistant---ready---made-template-for-voice--text-messages')">Telegram AI multi-format chatbot</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, Switch, open Ai, Buffer Memory. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting AI Agent, OpenAI Chat, Buffer Memory, open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">AI Agent</span><span class="node-tag">Buffer Memory</span><span class="node-tag">Edit Fields (Set)</span> <span class="node-tag">+6</span>
       </div>
@@ -417,7 +417,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-ai-chatbot')">Telegram AI-bot</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates OpenAI, Switch, Merge, Telegram for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates Merge, OpenAI, sticky Note, Switch for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Merge</span><span class="node-tag">OpenAI</span> <span class="node-tag">+4</span>
       </div>
@@ -435,7 +435,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-bot-with-supabase-memory-and-openai-assistant-integration')">Telegram Bot With Supabase Memory And Openai Assistant Integration</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates Merge, HTTP Request, Telegram, supabase for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates HTTP Request, Merge, sticky Note, supabase for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">HTTP Request</span><span class="node-tag">IF Condition</span><span class="node-tag">Merge</span> <span class="node-tag">+4</span>
       </div>
@@ -453,7 +453,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Operations</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-messaging-agent-for-text---audio---images')">Telegram Messaging Agent for Text/Audio/Images</h3>
-      <p class="card-desc">Autonomous operations automation workflow connecting convert To File, text Classifier, Switch, open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous operations automation workflow connecting OpenAI Chat, open Ai, text Classifier, convert To File. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">Extract from File</span><span class="node-tag">HTTP Request</span> <span class="node-tag">+9</span>
       </div>
@@ -471,7 +471,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('telegram-chat-with-pdf')">Telegram RAG pdf</h3>
-      <p class="card-desc">Autonomous support automation workflow connecting chain Retrieval Qa, stop And Error, limit, embeddings Open Ai. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
+      <p class="card-desc">Autonomous support automation workflow connecting chain Retrieval Qa, document Default Data Loader, embeddings Open Ai, lm Chat Groq. Implements intelligent data retrieval, AI reasoning, and instant responses.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Code JS/Python</span><span class="node-tag">IF Condition</span><span class="node-tag">Pinecone</span> <span class="node-tag">+11</span>
       </div>
@@ -489,7 +489,7 @@ description: "26 n8n telegram templates. AI chatbots with LangChain, voice-to-te
         <span class="dept-badge">Support</span>
       </div>
       <h3 class="card-title" onclick="window.n8nExplorer.openModal('translate-telegram-audio-messages-with-ai-55-supported-languages')">Translate Telegram audio messages with AI (55 supported languages) v1</h3>
-      <p class="card-desc">End-to-end support automation template for Telegram. Integrates open Ai, Telegram, chain Llm, OpenAI Chat for reliable automated execution.</p>
+      <p class="card-desc">End-to-end support automation template for Telegram. Integrates chain Llm, OpenAI Chat, open Ai, sticky Note for reliable automated execution.</p>
       <div class="card-nodes-list">
         <span class="node-tag">Edit Fields (Set)</span><span class="node-tag">OpenAI Chat</span><span class="node-tag">Telegram</span> <span class="node-tag">+4</span>
       </div>
