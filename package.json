@@ -6,7 +6,7 @@
     "build": "python scripts/sync_templates.py",
     "dev": "python -m http.server 8080 --directory docs",
     "sync": "python scripts/sync_templates.py",
-    "test": "node -e \"console.log('Build OK')\""
+    "test": "node --test test/smoke.test.js"
   },
   "keywords": [
     "n8n",

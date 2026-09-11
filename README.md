@@ -6,9 +6,12 @@ Workflows are ready-to-import `.json` files. Download or copy any template and i
 
 [![Templates](https://img.shields.io/badge/Templates-358+-blue.svg?style=flat-square)](#categories--template-list)
 [![Categories](https://img.shields.io/badge/Categories-18-green.svg?style=flat-square)](#categories--template-list)
-[![Last Updated](https://img.shields.io/badge/Updated-Sep_05,_2026-brightgreen.svg?style=flat-square)](#)
+[![Last Updated](https://img.shields.io/badge/Updated-Sep_11,_2026-brightgreen.svg?style=flat-square)](#)
 [![n8n](https://img.shields.io/badge/n8n-Compatible-FF6D5A.svg?style=flat-square&logo=n8n)](https://n8n.partnerlinks.io/h1pwwf5m4toe)
 [![n8n Portal](https://img.shields.io/badge/Live_Portal-n8nportal.vercel.app-success.svg?style=flat-square)](https://n8nportal.vercel.app/)
+[![CI](https://github.com/ahmedfawzyjr/N8N-Templates/actions/workflows/ci.yml/badge.svg)](https://github.com/ahmedfawzyjr/N8N-Templates/actions)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-blue.svg?style=flat-square)](SECURITY.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 ---
 
