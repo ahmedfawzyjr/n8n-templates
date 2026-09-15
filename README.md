@@ -1,4 +1,4 @@
-# n8n Portal — Production Automation Templates Directory [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# n8n Portal: Production Automation Templates Directory [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated directory of **358+** production-ready n8n automation workflow templates, AI agents, RAG pipelines, and enterprise integrations.
 
