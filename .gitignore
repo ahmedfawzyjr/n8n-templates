@@ -35,10 +35,15 @@ desktop.ini
 *.swp
 *.swo
 
-# Node / Jekyll / Vercel
+# Node / Jekyll / Vercel / Environment
 node_modules/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata/
 _site/
 .vercel/
+vercel.json
+.env
+.env.*
+!.env.example
+
