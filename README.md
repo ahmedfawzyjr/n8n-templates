@@ -295,7 +295,7 @@ This comprehensive collection features n8n templates for OpenAI, Anthropic Claud
 
 | Title | Description | Department | Link |
 |---|---|---|---|
-| [AI/LangChain] Output Parser 4 | End-to-end operations automation template for OpenAI & LLMs. Integrates chain Llm, OpenAI Chat, output Parser Autofixing, output Parser Structured for reliable automated execution. | Operations | [Force AI to Use a Specific Output Format.json](OpenAI%20and%20LLMs/Force%20AI%20to%20Use%20a%20Specific%20Output%20Format.json) |
+| [AI/LangChain] Output Parser 4 | End-to-end operations automation template for OpenAI & LLMs. Integrates chain Llm, OpenAI Chat, output parser autofixing, and output parser structured for reliable automated execution. | Operations | [Force AI to Use a Specific Output Format.json](OpenAI%20and%20LLMs/Force%20AI%20to%20Use%20a%20Specific%20Output%20Format.json) |
 | [n8n Template] AI Content Generator | End-to-end marketing automation template for OpenAI & LLMs. Integrates HTTP Request, Respond to Webhook for reliable automated execution. | Marketing | [Claude AI Content Generator.json](OpenAI%20and%20LLMs/Claude%20AI%20Content%20Generator.json) |
 | [n8n Template] AI Morning Brief | End-to-end operations automation template for OpenAI & LLMs. Integrates HTTP Request for reliable automated execution. | Operations | [Claude AI Morning Brief.json](OpenAI%20and%20LLMs/Claude%20AI%20Morning%20Brief.json) |
 | [n8n Template] Claude AI LINE Chatbot | Autonomous support automation workflow connecting HTTP Request, Respond to Webhook. Implements intelligent data retrieval, AI reasoning, and instant responses. | Support | [Claude AI LINE Chatbot.json](OpenAI%20and%20LLMs/Claude%20AI%20LINE%20Chatbot.json) |
