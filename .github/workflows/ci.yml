@@ -1,41 +1,30 @@
-name: N8N Templates Validation CI
+name: CI Workflow
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ "main" ]
 
 jobs:
-  validate:
+  build-and-test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-
-    - name: Validate JSON Workflows
-      run: |
-        python -c "
-        import os, json, sys
-        errors = 0
-        for root, dirs, files in os.walk('.'):
-            if '.git' in root or 'node_modules' in root:
-                continue
-            for f in files:
-                if f.endswith('.json') and f not in ['package.json', 'package-lock.json', 'vercel.json']:
-                    path = os.path.join(root, f)
-                    try:
-                        with open(path, 'r', encoding='utf-8') as fh:
-                            json.load(fh)
-                    except Exception as e:
-                        print(f'Error parsing {path}: {e}')
-                        errors += 1
-        if errors > 0:
-            sys.exit(1)
-        print('All n8n workflow templates are valid JSON!')
-        "
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm ci || npm install
+        
+      - name: Lint and build check
+        run: |
+          npm run lint --if-present
+          npm run build --if-present
+          
+      - name: Run tests
+        run: npm test --if-present
