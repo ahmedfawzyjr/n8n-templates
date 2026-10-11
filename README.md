@@ -13,8 +13,8 @@ Curated collection of 350+ production-ready n8n automation workflow templates fo
 - **Security Policy**: Comprehensive security guidelines and vulnerability reporting standard.
 
 ## 🛠️ Technology Stack
-- **Languages**: JavaScript/TypeScript/Node.js, HTML/CSS
-- **Platform**: GitHub Actions CI/CD, Cross-platform compatibility
+- Languages: JavaScript/TypeScript/Node.js, HTML/CSS
+- Platform: GitHub Actions CI/CD, Cross-platform compatibility
 
 ## 🚀 Getting Started
 
