@@ -8,9 +8,9 @@
 Curated collection of 350+ production-ready n8n automation workflow templates for AI agents, RAG pipelines, LLM orchestration, chatbots, and enterprise DevOps workflows.
 
 ## ✨ Key Features
-- **Modern Architecture**: Clean, modular structure for scalability and maintainability.
-- **Automated Testing & CI/CD**: Verified GitHub Actions workflows for reliable integration.
-- **Security Policy**: Comprehensive security guidelines and vulnerability reporting standard.
+- Modern Architecture: Clean, modular structure for scalability and maintainability.
+- Automated Testing & CI/CD: Verified GitHub Actions workflows for reliable integration.
+- Security Policy: Comprehensive security guidelines and vulnerability reporting standard.
 
 ## 🛠️ Technology Stack
 - Languages: JavaScript/TypeScript/Node.js, HTML/CSS
